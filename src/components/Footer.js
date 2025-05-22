@@ -23,7 +23,7 @@ export default function Footer() {
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <GraduationCap className="h-6 w-6 text-blue-600" />
-                <span className="font-bold text-xl">Exam Elite</span>
+                <span className="font-bold text-xl  text-black">Exam Elite</span>
               </div>
               <p className="text-sm text-gray-600 mb-4">
                 The ultimate computer-based testing platform for educational institutions.
@@ -48,7 +48,7 @@ export default function Footer() {
             </div>
 
             <div>
-              <h3 className="font-semibold mb-4">Quick Links</h3>
+              <h3 className="font-semibold mb-4  text-black">Quick Links</h3>
               <ul className="space-y-2 text-sm">
                 <li>
                   <Link  href="/" className="text-gray-600 hover:text-gray-900">
@@ -74,7 +74,7 @@ export default function Footer() {
             </div>
 
             <div>
-              <h3 className="font-semibold mb-4">User Resources</h3>
+              <h3 className="font-semibold mb-4  text-black">User Resources</h3>
               <ul className="space-y-2 text-sm">
                 <li>
                   <Link  href="/login" className="text-gray-600 hover:text-gray-900">
@@ -100,7 +100,7 @@ export default function Footer() {
             </div>
 
             <div>
-              <h3 className="font-semibold mb-4">Contact</h3>
+              <h3 className="font-semibold mb-4  text-black">Contact</h3>
               <ul className="space-y-2 text-sm">
                 <li className="text-gray-600">
                   123 Education Street, Learning City

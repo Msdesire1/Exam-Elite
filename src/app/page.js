@@ -35,7 +35,7 @@ export default function Home() {
               <span className="w-fit px-3 py-1 rounded-full bg-blue-600 text-white text-sm font-medium">
                 Modern CBT Platform
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-black">
                 The Ultimate <span className="text-blue-600">Examination</span> Platform
               </h1>
               <p className="text-lg text-gray-600">
@@ -75,7 +75,7 @@ export default function Home() {
               <div className="absolute bottom-4 left-4 right-4 bg-white/70 backdrop-blur-sm rounded-lg p-4 shadow-lg border border-gray-200">
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 rounded-full bg-green-500"></div>
-                  <span className="text-sm font-medium">Live Exam in Progress</span>
+                  <span className="text-sm font-medium text-black">Live Exam in Progress</span>
                 </div>
                 <div className="mt-2 flex justify-between items-center">
                   <span className="text-sm text-gray-600">Mathematics - Grade 10</span>
@@ -92,7 +92,7 @@ export default function Home() {
               <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mb-4">
                 <Users className="h-6 w-6 text-blue-600" />
               </div>
-              <h3 className="font-semibold">5,000+</h3>
+              <h3 className="font-semibold  text-black">5,000+</h3>
               <p className="text-sm text-gray-600">Students</p>
             </div>
 
@@ -100,7 +100,7 @@ export default function Home() {
               <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mb-4">
                 <GraduationCap className="h-6 w-6 text-blue-600" />
               </div>
-              <h3 className="font-semibold">250+</h3>
+              <h3 className="font-semibold  text-black">250+</h3>
               <p className="text-sm text-gray-600">Teachers</p>
             </div>
 
@@ -108,7 +108,7 @@ export default function Home() {
               <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mb-4">
                 <Book className="h-6 w-6 text-blue-600" />
               </div>
-              <h3 className="font-semibold">1,200+</h3>
+              <h3 className="font-semibold text-black">1,200+</h3>
               <p className="text-sm text-gray-600">Exams</p>
             </div>
 
@@ -116,7 +116,7 @@ export default function Home() {
               <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mb-4">
                 <CheckCircle className="h-6 w-6 text-blue-600" />
               </div>
-              <h3 className="font-semibold">95%</h3>
+              <h3 className="font-semibold  text-black">95%</h3>
               <p className="text-sm text-gray-600">Satisfaction</p>
             </div>
           </div>
@@ -130,7 +130,7 @@ export default function Home() {
             <span className="inline-block px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-sm font-medium mb-2">
               Features
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold">Why Choose Exam Elite?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold  text-black">Why Choose Exam Elite?</h2>
             <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
               Our platform offers a comprehensive suite of tools to make computer-based testing efficient, secure, and effective for educational institutions.
             </p>
@@ -141,7 +141,7 @@ export default function Home() {
               <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mb-4">
                 <Monitor className="h-6 w-6 text-blue-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Easy Exam Creation</h3>
+              <h3 className="text-xl font-semibold mb-2  text-black">Easy Exam Creation</h3>
               <p className="text-gray-600">
                 Teachers can quickly create multiple-choice questions with our intuitive interface. Automatic grading saves time and reduces errors.
               </p>
@@ -151,7 +151,7 @@ export default function Home() {
               <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mb-4">
                 <Shield className="h-6 w-6 text-blue-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Secure Testing</h3>
+              <h3 className="text-xl font-semibold mb-2  text-black">Secure Testing</h3>
               <p className="text-gray-600">
                 Our platform ensures exam integrity with randomized questions, time limits, and access controls to prevent cheating.
               </p>
@@ -161,7 +161,7 @@ export default function Home() {
               <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mb-4">
                 <LineChart className="h-6 w-6 text-blue-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Comprehensive Analytics</h3>
+              <h3 className="text-xl font-semibold mb-2  text-black">Comprehensive Analytics</h3>
               <p className="text-gray-600">
                 Get detailed insights into student performance with our advanced analytics dashboard, helping identify areas for improvement.
               </p>
@@ -170,7 +170,7 @@ export default function Home() {
 
           <div className="text-center mt-12">
             <Link  href="/website/features">
-              <button className="px-4 py-2 text-sm font-medium rounded-md border border-gray-300 hover:bg-gray-50">
+              <button className="px-4 py-2 text-sm font-medium  text-black rounded-md border border-gray-300 hover:bg-gray-50">
                 View All Features
               </button>
             </Link>
@@ -182,10 +182,10 @@ export default function Home() {
 <section className="py-20 bg-gradient-to-b from-education-primary/20 from-blue-100">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-10 lg:px-20 px-5">
          <div>
-        <h2 className="text-3xl font-bold dark:text-gray-300 mb-6">
+        <h2 className="text-3xl font-bold text-gray-300 mb-6">
         Ready to Transform Your Examination Process?
           </h2>
-          <p className="text-xl dark:text-gray-300 max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
           Join thousands of educational institutions that have already streamlined their assessment workflow with Exam Elite.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 lg:py-40 py-20">

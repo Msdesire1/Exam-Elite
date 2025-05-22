@@ -29,7 +29,7 @@ const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
         <div className="container flex h-16 items-center justify-between px-4 sm:px-6 lg:px-10">
           <div className="flex items-center gap-2">
             <GraduationCap className="h-6 w-6 text-blue-600" />
-            <span className="font-bold text-xl">Exam Elite</span>
+            <span className="font-bold text-xl  text-black">Exam Elite</span>
           </div>
 
           <nav className="hidden md:flex items-center gap-6">
