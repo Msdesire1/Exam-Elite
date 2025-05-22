@@ -114,7 +114,7 @@ const Contact = () => {
                   </label>
                   <select
                     id="subject"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border  text-black border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   >
                     <option value="">Select a subject</option>
                     <option value="general">General Inquiry</option>
@@ -140,7 +140,7 @@ const Contact = () => {
                   type="submit"
                   className="w-full px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 flex items-center justify-center"
                 >
-                  <Send className="mr-2 h-4 w-4" />
+                  <Send className="mr-2 h-4 w-4 text-black" />
                   Send Message
                 </button>
               </form>
@@ -285,7 +285,7 @@ const Contact = () => {
               href="mailto:support@examelite.com"
               className="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50"
             >
-              <Mail className="mr-2 h-4 w-4" />
+              <Mail className="mr-2 h-4 w-4  text-black" />
               Email Support
             </a>
           </div>

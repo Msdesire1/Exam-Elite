@@ -64,7 +64,7 @@ const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
               </Link>
             </div>
             <button className="md:hidden" onClick={toggleMobileMenu}>
-              <Menu className="h-6 w-6" />
+              <Menu className="h-6 w-6  text-black" />
             </button>
           </div>
         </div>
@@ -77,10 +77,10 @@ const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <GraduationCap className="h-6 w-6 text-blue-600" />
-                <span className="font-bold text-xl">Exam Elite</span>
+                <span className="font-bold text-xl  text-black">Exam Elite</span>
               </div>
               <button onClick={toggleMobileMenu}>
-                <X className="h-6 w-6" />
+                <X className="h-6 w-6  text-black" />
               </button>
             </div>
 
@@ -137,7 +137,6 @@ const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
           </div>
         </div>
       )}
-
     </div>
   )
 }
