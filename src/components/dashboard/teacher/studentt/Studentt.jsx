@@ -3,8 +3,6 @@
 
 import { useState } from 'react'
 import { Search, Mail, Download } from 'lucide-react'
-import { UserCircle2 } from 'lucide-react'
-import { useRouter } from 'next/navigation'
 
 export default function Studentt() {
   const [searchQuery, setSearchQuery] = useState('')
