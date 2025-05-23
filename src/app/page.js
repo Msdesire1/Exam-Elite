@@ -181,10 +181,10 @@ export default function Home() {
 <section className="py-20 bg-gradient-to-b from-education-primary/20 from-blue-100">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-10 lg:px-20 px-5">
          <div>
-        <h2 className="text-3xl font-bold text-gray-300 mb-6">
+        <h2 className="text-3xl font-bold  text-black mb-6">
         Ready to Transform Your Examination Process?
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-black max-w-3xl mx-auto mb-8">
           Join thousands of educational institutions that have already streamlined their assessment workflow with Exam Elite.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 lg:py-40 py-20">
