@@ -10,7 +10,7 @@ const Features = () => {
       <section className="py-10 bg-gradient-to-b from-education-primary/20 from-blue-100 to-white dark:from-education-primary/10 dark:to-gray-900">
         <div className=" px-4 mx-auto max-w-6xl lg:pt-20 pt-10">
           <div className="flex flex-col items-center text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold  text-black  mb-6">
               Powerful Features for Modern Education
             </h1>
             <p className="text-xl text-black  max-w-3xl mb-8">
@@ -29,7 +29,7 @@ const Features = () => {
               <div className="inline-block p-4 bg-education-primary/10 rounded-full mb-4">
                 <Shield className="h-8 w-8 text-[#1447E6]" />
               </div>
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+              <h2 className="text-3xl font-bold  text-black  mb-4">
                 Secure Examination Environment
               </h2>
               <p className="  text-black  mb-6">
@@ -71,7 +71,7 @@ const Features = () => {
               <div className="inline-block p-4 bg-education-primary/10 rounded-full mb-4">
                 <BookOpen className="h-8 w-8 text-[#1447E6]" />
               </div>
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+              <h2 className="text-3xl font-bold  text-black  mb-4">
                 Comprehensive Question Banks
               </h2>
               <p className=" text-black  mb-6">
@@ -99,7 +99,7 @@ const Features = () => {
               <div className="inline-block p-4 bg-education-primary/10 rounded-full mb-4">
                 <LineChart className="h-8 w-8 text-[#1447E6]" />
               </div>
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+              <h2 className="text-3xl font-bold  text-black  mb-4">
                 Advanced Analytics & Reporting
               </h2>
               <p className=" text-black  mb-6">
@@ -135,7 +135,7 @@ const Features = () => {
       <section className="py-16 bg-gray-50">
         <div className="container px-4 mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+            <h2 className="text-3xl font-bold  text-black   mb-4">
               More Powerful Features
             </h2>
             <p className="text-xl   text-black  max-w-3xl mx-auto">
