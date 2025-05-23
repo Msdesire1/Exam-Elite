@@ -25,7 +25,7 @@ const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <div className='bg-gray-50 w-full'>
  {/* Header */}
- <header className="fixed top-0 z-40 w-full border-b border-gray-300 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+ <header className="fixed top-0 z-40 w-full border-b border-gray-300 bg-gray-50 backdrop-blur supports-[backdrop-filter]:bg-white/60">
         <div className="container flex h-16 items-center justify-between px-4 sm:px-6 lg:px-10">
           <div className="flex items-center gap-2">
             <GraduationCap className="h-6 w-6 text-blue-600" />
@@ -33,19 +33,19 @@ const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
           </div>
 
           <nav className="hidden md:flex items-center gap-6">
-            <Link  href="/" className="text-sm font-medium transition-colors hover:text-blue-600">
+            <Link  href="/" className="text-sm font-medium text-black transition-colors hover:text-blue-600">
               Home
             </Link>
-            <Link href="/website/features" className="text-sm font-medium transition-colors hover:text-blue-600">
+            <Link href="/website/features" className="text-sm  text-black  font-medium transition-colors hover:text-blue-600">
               Features
             </Link>
-            <Link  href="/website/about" className="text-sm font-medium transition-colors hover:text-blue-600">
+            <Link  href="/website/about" className="text-sm   text-black font-medium transition-colors hover:text-blue-600">
               About
             </Link>
-            <Link  href="/website/teachers" className="text-sm font-medium transition-colors hover:text-blue-600">
+            <Link  href="/website/teachers" className="text-sm  text-black  font-medium transition-colors hover:text-blue-600">
               Teachers
             </Link>
-            <Link  href="/website/contact" className="text-sm font-medium transition-colors hover:text-blue-600">
+            <Link  href="/website/contact" className="text-sm  text-black  font-medium transition-colors hover:text-blue-600">
               Contact
             </Link>
           </nav>
@@ -53,7 +53,7 @@ const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
           <div className="flex items-center gap-2">
             <div className="hidden md:flex items-center gap-2">
               <Link  href="/auth/login">
-                <button className="px-4 py-2 text-sm font-medium rounded-md border border-gray-300 hover:bg-gray-50">
+                <button className="px-4 py-2 text-sm  text-black  font-medium rounded-md border border-gray-300 hover:bg-gray-50">
                   Login
                 </button>
               </Link>
@@ -72,7 +72,7 @@ const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-50 bg-white/95 backdrop-blur-sm md:hidden">
+        <div className="fixed inset-0 z-50 bg-gray-50 backdrop-blur-sm md:hidden">
           <div className="container flex flex-col gap-8 p-6">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
@@ -87,35 +87,35 @@ const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
             <nav className="flex flex-col gap-4">
               <Link
                  href="/"
-                className="text-lg font-medium transition-colors hover:text-blue-600"
+                className="text-lg font-medium  text-black  transition-colors hover:text-blue-600"
                 onClick={toggleMobileMenu}
               >
                 Home
               </Link>
               <Link
                  href="/website/features"
-                className="text-lg font-medium transition-colors hover:text-blue-600"
+                className="text-lg font-medium  text-black  transition-colors hover:text-blue-600"
                 onClick={toggleMobileMenu}
               >
                 Features
               </Link>
               <Link
                  href="/website/about"
-                className="text-lg font-medium transition-colors hover:text-blue-600"
+                className="text-lg font-medium  text-black  transition-colors hover:text-blue-600"
                 onClick={toggleMobileMenu}
               >
                 About
               </Link>
               <Link
                  href="/website/teachers"
-                className="text-lg font-medium transition-colors hover:text-blue-600"
+                className="text-lg font-medium  text-black  transition-colors hover:text-blue-600"
                 onClick={toggleMobileMenu}
               >
                 Teachers
               </Link>
               <Link
                  href="/website/contact"
-                className="text-lg font-medium transition-colors hover:text-blue-600"
+                className="text-lg font-medium  text-black  transition-colors hover:text-blue-600"
                 onClick={toggleMobileMenu}
               >
                 Contact
@@ -124,7 +124,7 @@ const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
             <div className="flex flex-col gap-2">
               <Link  href="/auth/login">
-                <button className="w-full px-4 py-2 text-sm font-medium rounded-md border border-gray-300 hover:bg-gray-50">
+                <button className="w-full px-4 py-2  text-black  text-sm font-medium rounded-md border border-gray-300 hover:bg-gray-50">
                   Login
                 </button>
               </Link>

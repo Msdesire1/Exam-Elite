@@ -22,7 +22,7 @@ const Features = () => {
       </section>
 
       {/* Main Features Section */}
-      <section className="py-5 bg-white dark:bg-gray-900">
+      <section className="py-5 ">
         <div className=" px-4 mx-auto max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-20">
             <div>
@@ -132,7 +132,7 @@ const Features = () => {
       </section>
 
       {/* Additional Features Grid */}
-      <section className="py-16 bg-gray-50 dark:bg-gray-800">
+      <section className="py-16 bg-gray-50">
         <div className="container px-4 mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
@@ -144,7 +144,7 @@ const Features = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-md">
+            <div className="bg-white  p-8 rounded-lg shadow-md">
               <div className="inline-block p-4 bg-blue-100 dark:bg-blue-900/30 rounded-full mb-4">
                 <Clock className="h-6 w-6 text-blue-600 dark:text-blue-400" />
               </div>
@@ -156,8 +156,8 @@ const Features = () => {
               </p>
             </div>
 
-            <div className="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-md">
-              <div className="inline-block p-4 bg-green-100 dark:bg-green-900/30 rounded-full mb-4">
+            <div className="bg-white  p-8 rounded-lg shadow-md">
+              <div className="inline-block p-4 bg-green-100  rounded-full mb-4">
                 <Zap className="h-6 w-6 text-green-600 dark:text-green-400" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
@@ -168,7 +168,7 @@ const Features = () => {
               </p>
             </div>
 
-            <div className="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-md">
+            <div className="bg-white p-8 rounded-lg shadow-md">
               <div className="inline-block p-4 bg-purple-100 dark:bg-purple-900/30 rounded-full mb-4">
                 <Users className="h-6 w-6 text-purple-600 dark:text-purple-400" />
               </div>
@@ -180,7 +180,7 @@ const Features = () => {
               </p>
             </div>
 
-            <div className="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-md">
+            <div className="bg-white  p-8 rounded-lg shadow-md">
               <div className="inline-block p-4 bg-amber-100 dark:bg-amber-900/30 rounded-full mb-4">
                 <BarChart3 className="h-6 w-6 text-amber-600 dark:text-amber-400" />
               </div>
@@ -192,7 +192,7 @@ const Features = () => {
               </p>
             </div>
 
-            <div className="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-md">
+            <div className="bg-white p-8 rounded-lg shadow-md">
               <div className="inline-block p-4 bg-red-100 dark:bg-red-900/30 rounded-full mb-4">
                 <Settings className="h-6 w-6 text-red-600 dark:text-red-400" />
               </div>
@@ -204,7 +204,7 @@ const Features = () => {
               </p>
             </div>
 
-            <div className="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-md">
+            <div className="bg-white  p-8 rounded-lg shadow-md">
               <div className="inline-block p-4 bg-teal-100 dark:bg-teal-900/30 rounded-full mb-4">
                 <Shield className="h-6 w-6 text-teal-600 dark:text-teal-400" />
               </div>
