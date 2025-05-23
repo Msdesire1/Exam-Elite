@@ -13,7 +13,7 @@ const Features = () => {
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
               Powerful Features for Modern Education
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mb-8">
+            <p className="text-xl text-black  max-w-3xl mb-8">
               Discover how Exam Elite transforms assessment management with our comprehensive feature set
             </p>
             <div className="w-24 h-1 bg-education-primary rounded mb-12"></div>
@@ -32,21 +32,21 @@ const Features = () => {
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
                 Secure Examination Environment
               </h2>
-              <p className="text-gray-600 dark:text-gray-300 mb-6">
+              <p className="  text-black  mb-6">
                 Our platform provides a secure environment for conducting online examinations with advanced proctoring options, time restrictions, and anti-cheating measures.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-center">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                  <span className="text-gray-700 dark:text-gray-300">Browser lockdown mode</span>
+                  <span className="  text-black ">Browser lockdown mode</span>
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                  <span className="text-gray-700 dark:text-gray-300">Randomized question order</span>
+                  <span className="  text-black ">Randomized question order</span>
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                  <span className="text-gray-700 dark:text-gray-300">Copy-paste prevention</span>
+                  <span className="  text-black ">Copy-paste prevention</span>
                 </li>
               </ul>
             </div>
@@ -74,21 +74,21 @@ const Features = () => {
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
                 Comprehensive Question Banks
               </h2>
-              <p className="text-gray-600 dark:text-gray-300 mb-6">
+              <p className=" text-black  mb-6">
                 Create, organize, and manage extensive question banks categorized by subject, difficulty level, and topic for easy exam creation.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-center">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                  <span className="text-gray-700 dark:text-gray-300">Multiple question formats supported</span>
+                  <span className="  text-black ">Multiple question formats supported</span>
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                  <span className="text-gray-700 dark:text-gray-300">Collaborative question creation</span>
+                  <span className=" text-black ">Collaborative question creation</span>
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                  <span className="text-gray-700 dark:text-gray-300">Import/export capabilities</span>
+                  <span className=" text-black ">Import/export capabilities</span>
                 </li>
               </ul>
             </div>
@@ -102,21 +102,21 @@ const Features = () => {
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
                 Advanced Analytics & Reporting
               </h2>
-              <p className="text-gray-600 dark:text-gray-300 mb-6">
+              <p className=" text-black  mb-6">
                 Gain valuable insights with detailed performance analytics, helping identify strengths and areas for improvement at individual and class levels.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-center">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                  <span className="text-gray-700 dark:text-gray-300">Visual performance dashboards</span>
+                  <span className=" text-black ">Visual performance dashboards</span>
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                  <span className="text-gray-700 dark:text-gray-300">Comparative analysis tools</span>
+                  <span className=" text-black ">Comparative analysis tools</span>
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                  <span className="text-gray-700 dark:text-gray-300">Downloadable detailed reports</span>
+                  <span className=" text-black ">Downloadable detailed reports</span>
                 </li>
               </ul>
             </div>
@@ -138,20 +138,20 @@ const Features = () => {
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
               More Powerful Features
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl   text-black  max-w-3xl mx-auto">
               Everything you need for effective exam management
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white  p-8 rounded-lg shadow-md">
-              <div className="inline-block p-4 bg-blue-100 dark:bg-blue-900/30 rounded-full mb-4">
+              <div className="inline-block p-4 bg-blue-100 rounded-full mb-4">
                 <Clock className="h-6 w-6 text-blue-600 dark:text-blue-400" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                 Automated Scheduling
               </h3>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-black ">
                 Schedule exams with automated notifications, reminders, and calendar integrations to keep everyone on track.
               </p>
             </div>
@@ -163,7 +163,7 @@ const Features = () => {
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                 Instant Grading
               </h3>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-black ">
                 Automatic grading for objective questions with support for custom rubrics for subjective answers.
               </p>
             </div>
@@ -175,31 +175,31 @@ const Features = () => {
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                 Role-Based Access
               </h3>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-black ">
                 Customizable access controls for administrators, teachers, and students with detailed permission settings.
               </p>
             </div>
 
             <div className="bg-white  p-8 rounded-lg shadow-md">
-              <div className="inline-block p-4 bg-amber-100 dark:bg-amber-900/30 rounded-full mb-4">
+              <div className="inline-block p-4 bg-amber-100  rounded-full mb-4">
                 <BarChart3 className="h-6 w-6 text-amber-600 dark:text-amber-400" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                 Progress Tracking
               </h3>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-black ">
                 Monitor student progress over time with historical performance data and improvement metrics.
               </p>
             </div>
 
             <div className="bg-white p-8 rounded-lg shadow-md">
-              <div className="inline-block p-4 bg-red-100 dark:bg-red-900/30 rounded-full mb-4">
+              <div className="inline-block p-4 bg-red-100  rounded-full mb-4">
                 <Settings className="h-6 w-6 text-red-600 dark:text-red-400" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                 Customization Options
               </h3>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-black ">
                 Tailor the platform to match your institution's branding and specific examination requirements.
               </p>
             </div>
@@ -211,7 +211,7 @@ const Features = () => {
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                 Privacy Compliance
               </h3>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className=" text-black ">
                 Built with privacy and data protection in mind, ensuring compliance with educational data regulations.
               </p>
             </div>
@@ -221,10 +221,10 @@ const Features = () => {
       <section className="py-20 bg-gradient-to-b from-education-primary/20 from-blue-100">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-10 px-10">
          <div>
-        <h2 className="text-3xl font-bold dark:text-gray-300 mb-6">
+        <h2 className="text-3xl font-bold  text-black  mb-6">
         Experience These Features Yourself
           </h2>
-          <p className="text-xl dark:text-gray-300 max-w-3xl mx-auto mb-8">
+          <p className="text-xl  text-black  max-w-3xl mx-auto mb-8">
           Schedule a demo today and see how Exam Elite can transform your examination process.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 lg:py-40 py-20">
@@ -250,10 +250,7 @@ const Features = () => {
                 className="w-full h-auto"
               />
             </div>
-
-
-
-        </div>
+          </div>
       </section>
    <div className="py-5">
    <Footer/>
