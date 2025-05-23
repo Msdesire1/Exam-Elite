@@ -5,7 +5,7 @@ import { Shield, Clock, LineChart, BookOpen, Users, BarChart3, CheckCircle, Zap,
 
 const Features = () => {
   return (
-    <div className="bg-white dark:bg-gray-900">
+    <div className="bg-gray-50 ">
       {/* Hero Section */}
       <section className="py-10 bg-gradient-to-b from-education-primary/20 from-blue-100 to-white dark:from-education-primary/10 dark:to-gray-900">
         <div className=" px-4 mx-auto max-w-6xl lg:pt-20 pt-10">

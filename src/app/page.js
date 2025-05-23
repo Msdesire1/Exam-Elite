@@ -24,7 +24,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-50  ">
-      {/* Header */}
 
       {/* Hero */}
       <section className="relative py-20 md:py-28 bg-gradient-to-br from-blue-100  to-gray-100 overflow-hidden">
@@ -49,7 +48,7 @@ export default function Home() {
                   </button>
                 </Link>
                 <Link  href="/website/features">
-                  <button className="w-full sm:w-auto px-6 py-3 rounded-md border border-gray-300 font-medium hover:bg-gray-50">
+                  <button className="w-full sm:w-auto px-6 py-3 text-black rounded-md border border-gray-300 font-medium hover:bg-gray-50">
                     Learn More
                   </button>
                 </Link>

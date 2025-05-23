@@ -5,7 +5,7 @@ import { CheckCircle, Book, Clock, Award, Users, GraduationCap } from "lucide-re
 
 const About = () => {
   return (
-    <div className="bg-white dark:bg-gray-900">
+    <div className="bg-white">
       {/* Hero Section */}
       <section className="py-28 bg-gradient-to-b from-education-primary/20 from-blue-100 to-white dark:from-education-primary/10 dark:to-gray-900">
         <div className="px-4 mx-auto max-w-6xl">

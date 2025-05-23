@@ -57,7 +57,7 @@ const Contact = () => {
   ];
 
   return (
-    <div className="bg-white">
+    <div className="bg-gray-50 ">
       {/* Hero Section */}
       <section className="py-28 bg-gradient-to-b from-blue-100 to-white">
         <div className=" px-4 mx-auto max-w-6xl">
