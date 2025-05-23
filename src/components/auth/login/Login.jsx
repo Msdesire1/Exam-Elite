@@ -285,7 +285,7 @@ const Login = () => {
                   onChange={handleRoleChange}
                   value={formData.role}
                   disabled={isLoading}
-                  className="w-full h-11 rounded-md border border-gray-300 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:opacity-50"
+                  className="w-full h-11 text-gray-700 rounded-md border border-gray-300 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:opacity-50"
                 >
                   <option value="student">Student</option>
                   <option value="teacher">Teacher</option>
@@ -303,7 +303,7 @@ const Login = () => {
                   value={formData.school}
                   onChange={handleSchoolChange}
                   required
-                  className="w-full h-11 rounded-md border border-gray-300 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full h-11 text-gray-700 rounded-md border border-gray-300 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 >
                   <option value="">Select a school</option>
                   {schools.map((school) => (
@@ -331,7 +331,7 @@ const Login = () => {
                     placeholder="your.email@school.edu"
                     value={formData.email}
                     onChange={handleChange}
-                    className="block w-full pl-10 h-11 rounded-md border border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                    className="block w-full  text-gray-700 pl-10 h-11 rounded-md border border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                     required
                   />
                 </div>

@@ -63,7 +63,7 @@ const Sidebar = ({ children }) => {
           <div className="flex items-center justify-between p-4 border-b border-gray-200">
             <div className="flex items-center gap-2">
               <FileText className="h-5 w-5 text-blue-600" />
-              <span className="font-bold text-lg">Exam Elite</span>
+              <span className="font-bold text-lg text-black ">Exam Elite</span>
             </div>
             <button
               onClick={toggleSidebar}

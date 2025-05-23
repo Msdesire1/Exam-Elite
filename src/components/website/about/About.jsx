@@ -142,7 +142,7 @@ const About = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-800">
+      <section className="py-20 bg-gray-50 ">
         <div className="container px-4 mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold  text-black  mb-4">
@@ -181,7 +181,7 @@ const About = () => {
                 <h3 className="text-xl font-bold  text-black  mb-1">
                   James Thompson
                 </h3>
-                <p className="text-education-primary mb-3">Chief Technology Officer</p>
+                <p className="text-education-primary mb-3 text-black ">Chief Technology Officer</p>
                 <p className=" text-black ">
                   Software architect specialized in secure assessment platforms.
                 </p>
@@ -198,7 +198,7 @@ const About = () => {
                 <h3 className="text-xl font-bold  text-black  mb-1">
                   Emily Chen
                 </h3>
-                <p className="text-education-primary mb-3">Head of Educational Content</p>
+                <p className="text-education-primary mb-3 text-black ">Head of Educational Content</p>
                 <p className=" text-black ">
                   PhD in Education with expertise in assessment methodologies.
                 </p>

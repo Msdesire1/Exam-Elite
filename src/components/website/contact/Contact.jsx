@@ -92,7 +92,7 @@ const Contact = () => {
                       id="name"
                       type="text"
                       placeholder="Your name"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-4 py-2 border text-gray-700 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
                   </div>
                   <div className="space-y-2">
@@ -103,7 +103,7 @@ const Contact = () => {
                       id="email"
                       type="email"
                       placeholder="Your email"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-4 py-2 border text-gray-700 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
                   </div>
                 </div>
@@ -132,7 +132,7 @@ const Contact = () => {
                   <textarea
                     id="message"
                     placeholder="How can we help you?"
-                    className="w-full min-h-[150px] px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full min-h-[150px] px-4 py-2 border text-gray-700 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                   ></textarea>
                 </div>
 

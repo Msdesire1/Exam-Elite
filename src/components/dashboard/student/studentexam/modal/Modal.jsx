@@ -177,13 +177,13 @@ export default function Modal({ isOpen, onClose, onStart, subject }) {
                 </button>
 
                 <div className="p-6">
-                    <h2 className="text-xl font-semibold mb-2">Begin Exam: {examDetails.examTitle}</h2>
+                    <h2 className="text-xl font-semibold mb-2 text-black">Begin Exam: {examDetails.examTitle}</h2>
                     <p className="text-gray-600 mb-6">
                         {examDetails.description || EXAM_DATA.default.description}
                     </p>
 
                     <div className="mb-6">
-                        <h3 className="font-semibold mb-2">Exam Details:</h3>
+                        <h3 className="font-semibold mb-2 text-black">Exam Details:</h3>
                         <ul className="space-y-1 text-gray-600">
                             <li>• Duration: {examDetails.duration} minutes</li>
                             <li>• Questions: {examDetails.questions}</li>
@@ -194,7 +194,7 @@ export default function Modal({ isOpen, onClose, onStart, subject }) {
                     <div className="flex justify-end gap-3">
                         <button
                             onClick={onClose}
-                            className="px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors"
+                            className="px-4 py-2 border text-black border-gray-300 rounded-md hover:bg-gray-50 transition-colors"
                         >
                             Cancel
                         </button>

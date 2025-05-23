@@ -39,7 +39,7 @@ const Navbar = () => {
             <Link href="/" className="flex items-center">
             <div className="flex items-center gap-2">
               <User className="h-5 w-5 text-blue-600" />
-              <span className="font-bold text-lg">Student Dashboard</span>
+              <span className="font-bold text-lg text-black">Student Dashboard</span>
             </div>
             </Link>
           </div>

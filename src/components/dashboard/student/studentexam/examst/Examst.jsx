@@ -150,7 +150,7 @@ const Examst = () => {
       <div className="bg-white p-4 border-b sticky top-0 z-10">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <div>
-            <h1 className="text-xl font-bold">{examData.title}</h1>
+            <h1 className="text-xl font-bold text-black">{examData.title}</h1>
             <p className="text-sm text-gray-500">Question {currentQuestion + 1} of {questions.length}</p>
           </div>
 
@@ -162,7 +162,7 @@ const Examst = () => {
 
             <button
               onClick={() => setShowEndExamDialog(true)}
-              className="inline-flex items-center px-4  py-2 bg-red-600 text-white rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500"
+              className="inline-flex text-black items-center px-4  py-2 bg-red-600 text-white rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500"
             >
               End Exam
             </button>
@@ -170,7 +170,7 @@ const Examst = () => {
         </div>
 
         <div className="mt-4">
-          <div className="flex justify-between items-center text-sm mb-1">
+          <div className="flex justify-between items-center text-sm mb-1 text-black">
             <span>Progress</span>
             <span>{answeredQuestionsCount} of {questions.length} questions answered</span>
           </div>
@@ -188,13 +188,13 @@ const Examst = () => {
         <div className="border border-gray-200 rounded-lg shadow-md overflow-hidden">
           <div className="p-6">
             <div className="mb-6">
-              <h2 className="text-lg font-medium mb-4">Question {currentQuestion + 1}</h2>
-              <p className="text-lg">{questions[currentQuestion].text}</p>
+              <h2 className="text-lg font-medium mb-4 text-black">Question {currentQuestion + 1}</h2>
+              <p className="text-lg text-black">{questions[currentQuestion].text}</p>
             </div>
 
             <div className="space-y-4">
               {questions[currentQuestion].options.map((option) => (
-                <div key={option.id} className="flex items-center space-x-2 border p-4 rounded-md hover:border-blue-500 transition-colors">
+                <div key={option.id} className="flex items-center text-black space-x-2 border p-4 rounded-md hover:border-blue-500 transition-colors">
                   <input
                     type="radio"
                     id={option.id}
@@ -202,9 +202,9 @@ const Examst = () => {
                     value={option.id}
                     checked={answers[questions[currentQuestion].id] === option.id}
                     onChange={() => handleAnswerChange(questions[currentQuestion].id, option.id)}
-                    className="h-4 w-4 text-blue-600 focus:ring-blue-500"
+                    className="h-4 w-4 text-blue-600  focus:ring-blue-500"
                   />
-                  <label htmlFor={option.id} className="flex-grow cursor-pointer ml-2 block">
+                  <label htmlFor={option.id} className="flex-grow text-black cursor-pointer ml-2 block">
                     {option.text}
                   </label>
                 </div>
@@ -220,7 +220,7 @@ const Examst = () => {
           <button
             onClick={handlePrevious}
             disabled={currentQuestion === 0}
-            className={`inline-flex items-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium ${currentQuestion === 0 ? 'bg-gray-100 text-gray-400 cursor-not-allowed' : 'bg-white text-gray-700 hover:bg-gray-50'} focus:outline-none focus:ring-2 focus:ring-blue-500`}
+            className={`inline-flex items-center px-4 text-black py-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium ${currentQuestion === 0 ? 'bg-gray-100 text-gray-400 cursor-not-allowed' : 'bg-white text-gray-700 hover:bg-gray-50'} focus:outline-none focus:ring-2 focus:ring-blue-500`}
           >
             Previous
           </button>
@@ -228,14 +228,14 @@ const Examst = () => {
           {currentQuestion < questions.length - 1 ? (
             <button
               onClick={handleNext}
-              className="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="inline-flex items-center text-black px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
               Next
             </button>
           ) : (
             <button
               onClick={() => setShowSubmitDialog(true)}
-              className="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="inline-flex items-center px-4 text-black py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
               Finish Exam
             </button>
@@ -248,7 +248,7 @@ const Examst = () => {
         // <div className="fixed inset-0 bg-black backdrop-blur-sm bg-opacity-50 flex items-center justify-center z-50">
         <div className="fixed inset-0 bg-black/20 backdrop-blur-[2px] flex items-center justify-center z-50">
           <div className="bg-white rounded-lg p-6 max-w-md w-full">
-            <h3 className="text-lg font-medium mb-2">Submit your exam?</h3>
+            <h3 className="text-lg font-medium mb-2 text-black">Submit your exam?</h3>
             <p className="text-gray-600 mb-4">
               You have answered {answeredQuestionsCount} of {questions.length} questions.
               Are you sure you want to submit your exam?
@@ -256,14 +256,14 @@ const Examst = () => {
             <div className="flex justify-end space-x-3">
               <button
                 onClick={() => setShowSubmitDialog(false)}
-                className="px-4 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="px-4 py-2 border text-black border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
                 Review Answers
               </button>
               <button
                 onClick={handleSubmit}
                 disabled={isSubmitting}
-                className="px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50"
+                className="px-4 py-2 border border-transparent text-black rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50"
               >
                 {isSubmitting ? "Submitting..." : "Submit Exam"}
               </button>
@@ -277,14 +277,14 @@ const Examst = () => {
         // <div className="fixed inset-0 bg-black bg-opacity-70 backdrop-blur-2xl flex items-center justify-center z-50">
         <div className="fixed inset-0 bg-black/20 backdrop-blur-[2px] flex items-center justify-center z-50">
           <div className="bg-white rounded-lg p-6 max-w-md w-full">
-            <h3 className="text-lg font-medium mb-2">Are you sure?</h3>
+            <h3 className="text-lg font-medium mb-2 text-black">Are you sure?</h3>
             <p className="text-gray-600 mb-4">
               You are about to end the exam. This action cannot be undone. All your answers will be submitted.
             </p>
             <div className="flex justify-end space-x-3">
               <button
                 onClick={() => setShowEndExamDialog(false)}
-                className="px-4 py-2 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="px-4 py-2 border border-gray-300 text-black rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
                 Cancel
               </button>
