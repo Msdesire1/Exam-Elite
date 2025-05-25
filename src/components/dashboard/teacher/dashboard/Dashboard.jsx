@@ -68,11 +68,11 @@ const TeacherDashboard = () => {
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         <div className="bg-white p-6 rounded-lg shadow">
           <div className="flex flex-row items-center justify-between">
-            <h3 className="text-sm font-medium">My Classes</h3>
+            <h3 className="text-sm font-medium  text-black">My Classes</h3>
             <BookOpen className="h-4 w-4 text-gray-400" />
           </div>
           <div className="mt-4">
-            <div className="text-2xl font-bold">{teacherClasses.length}</div>
+            <div className="text-2xl font-bold  text-black">{teacherClasses.length}</div>
             <p className="text-xs text-gray-500">
               Assigned classes
             </p>
@@ -81,11 +81,11 @@ const TeacherDashboard = () => {
 
         <div className="bg-white p-6 rounded-lg shadow">
           <div className="flex flex-row items-center justify-between">
-            <h3 className="text-sm font-medium">Created Exams</h3>
+            <h3 className="text-sm font-medium  text-black">Created Exams</h3>
             <FileText className="h-4 w-4 text-gray-400" />
           </div>
           <div className="mt-4">
-            <div className="text-2xl font-bold">12</div>
+            <div className="text-2xl font-bold  text-black">12</div>
             <p className="text-xs text-gray-500">
               3 pending exams
             </p>
@@ -94,11 +94,11 @@ const TeacherDashboard = () => {
 
         <div className="bg-white p-6 rounded-lg shadow">
           <div className="flex flex-row items-center justify-between">
-            <h3 className="text-sm font-medium">Total Students</h3>
+            <h3 className="text-sm font-medium  text-black">Total Students</h3>
             <Users className="h-4 w-4 text-gray-400" />
           </div>
           <div className="mt-4">
-            <div className="text-2xl font-bold">87</div>
+            <div className="text-2xl font-bold  text-black">87</div>
             <p className="text-xs text-gray-500">
               Across all classes
             </p>
@@ -133,8 +133,8 @@ const TeacherDashboard = () => {
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
               <div className="bg-white p-6 rounded-lg shadow">
                 <div className="mb-4">
-                  <h2 className="text-lg font-semibold">Upcoming Exams</h2>
-                  <p className="text-sm text-gray-500">
+                  <h2 className="text-lg font-semibold  text-black">Upcoming Exams</h2>
+                  <p className="text-sm text-gray-900">
                     Exams scheduled in the next 7 days
                   </p>
                 </div>
@@ -143,30 +143,30 @@ const TeacherDashboard = () => {
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
                         <CalendarDays className="h-4 w-4 text-blue-600" />
-                        <span className="font-medium">End of Term Mathematics</span>
+                        <span className="font-medium  text-black">End of Term Mathematics</span>
                       </div>
-                      <span className="text-xs text-gray-500">Tomorrow</span>
+                      <span className="text-xs text-gray-900">Tomorrow</span>
                     </div>
-                    <div className="pl-6 text-sm text-gray-500">JSS 2 • 45 min</div>
+                    <div className="pl-6 text-sm text-gray-900">JSS 2 • 45 min</div>
                   </div>
 
                   <div className="space-y-1 rounded-md p-2 hover:bg-gray-50">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
                         <CalendarDays className="h-4 w-4 text-blue-600" />
-                        <span className="font-medium">Physics Quiz</span>
+                        <span className="font-medium  text-black">Physics Quiz</span>
                       </div>
-                      <span className="text-xs text-gray-500">In 3 days</span>
+                      <span className="text-xs text-gray-900">In 3 days</span>
                     </div>
-                    <div className="pl-6 text-sm text-gray-500">JSS 1 • 30 min</div>
+                    <div className="pl-6 text-sm text-gray-900">JSS 1 • 30 min</div>
                   </div>
                 </div>
                 <div className="mt-6">
                   <button
                     onClick={handleCreateExam}
-                    className="w-full flex items-center justify-center gap-2 px-4 py-2 border border-gray-300 rounded-md text-sm font-medium hover:bg-gray-50"
+                    className="w-full flex items-center  text-black justify-center gap-2 px-4 py-2 border border-gray-300 rounded-md text-sm font-medium hover:bg-gray-50"
                   >
-                    <Plus className="h-4 w-4" />
+                    <Plus className="h-4 w-4 text-black" />
                     Create New Exam
                   </button>
                 </div>
@@ -174,8 +174,8 @@ const TeacherDashboard = () => {
 
               <div className="bg-white p-6 rounded-lg shadow">
                 <div className="mb-4">
-                  <h2 className="text-lg font-semibold">Recent Results</h2>
-                  <p className="text-sm text-gray-500">
+                  <h2 className="text-lg font-semibold  text-black">Recent Results</h2>
+                  <p className="text-sm text-gray-900">
                     Latest exam performance statistics
                   </p>
                 </div>
@@ -184,28 +184,28 @@ const TeacherDashboard = () => {
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
                         <BarChart3 className="h-4 w-4 text-blue-600" />
-                        <span className="font-medium">English Test</span>
+                        <span className="font-medium  text-black">English Test</span>
                       </div>
-                      <span className="text-sm font-medium">Avg: 78%</span>
+                      <span className="text-sm font-medium  text-black">Avg: 78%</span>
                     </div>
-                    <div className="pl-6 text-sm text-gray-500">JSS 2 • 32 students</div>
+                    <div className="pl-6 text-sm text-gray-900">JSS 2 • 32 students</div>
                   </div>
 
                   <div className="space-y-1 rounded-md p-2 hover:bg-gray-50">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
                         <BarChart3 className="h-4 w-4 text-blue-600" />
-                        <span className="font-medium">Mathematics Quiz</span>
+                        <span className="font-medium  text-black">Mathematics Quiz</span>
                       </div>
-                      <span className="text-sm font-medium">Avg: 65%</span>
+                      <span className="text-sm font-medium  text-black">Avg: 65%</span>
                     </div>
-                    <div className="pl-6 text-sm text-gray-500">JSS 1 • 45 students</div>
+                    <div className="pl-6 text-sm text-gray-900">JSS 1 • 45 students</div>
                   </div>
                 </div>
                 <div className="mt-6">
                   <button
                     onClick={handleViewResults}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md text-sm font-medium hover:bg-gray-50"
+                    className="w-full px-4 py-2  text-black border border-gray-300 rounded-md text-sm font-medium hover:bg-gray-50"
                   >
                     View All Results
                   </button>
@@ -215,8 +215,8 @@ const TeacherDashboard = () => {
 
             <div className="bg-white p-6 rounded-lg shadow">
               <div className="mb-4">
-                <h2 className="text-lg font-semibold">Quick Actions</h2>
-                <p className="text-sm text-gray-500">
+                <h2 className="text-lg font-semibold  text-black">Quick Actions</h2>
+                <p className="text-sm text-gray-900">
                   Frequently used teacher actions
                 </p>
               </div>
@@ -225,32 +225,32 @@ const TeacherDashboard = () => {
                   onClick={handleCreateExam}
                   className="h-24 flex flex-col items-center justify-center border border-gray-300 rounded-lg p-4 hover:bg-gray-50"
                 >
-                  <FileQuestion className="mb-2 h-6 w-6" />
-                  <span>Create Exam</span>
+                  <FileQuestion className="mb-2 h-6 w-6  text-black" />
+                  <span className=" text-black">Create Exam</span>
                 </button>
 
                 <button
                   onClick={handleViewClasses}
                   className="h-24 flex flex-col items-center justify-center border border-gray-300 rounded-lg p-4 hover:bg-gray-50"
                 >
-                  <BookOpen className="mb-2 h-6 w-6" />
-                  <span>View Classes</span>
+                  <BookOpen className="mb-2 h-6 w-6  text-black" />
+                  <span className=" text-black">View Classes</span>
                 </button>
 
                 <button
                   onClick={handleViewResults}
                   className="h-24 flex flex-col items-center justify-center border border-gray-300 rounded-lg p-4 hover:bg-gray-50"
                 >
-                  <BarChart3 className="mb-2 h-6 w-6" />
-                  <span>View Results</span>
+                  <BarChart3 className="mb-2 h-6 w-6  text-black" />
+                  <span className=" text-black">View Results</span>
                 </button>
 
                 <button
                   onClick={handleViewExams}
                   className="h-24 flex flex-col items-center justify-center border border-gray-300 rounded-lg p-4 hover:bg-gray-50"
                 >
-                  <Edit className="mb-2 h-6 w-6" />
-                  <span>Edit Exams</span>
+                  <Edit className="mb-2 h-6 w-6  text-black" />
+                  <span className=" text-black">Edit Exams</span>
                 </button>
               </div>
             </div>
@@ -259,12 +259,12 @@ const TeacherDashboard = () => {
 
         {activeTab === "classes" && (
           <div className="bg-white p-6 rounded-lg shadow">
-            <h2 className="text-lg font-semibold mb-4">My Classes</h2>
+            <h2 className="text-lg font-semibold mb-4  text-black">My Classes</h2>
             <div className="space-y-4">
               {teacherClasses.map((classItem) => (
                 <div key={classItem.id} className="border rounded-lg p-4 hover:bg-gray-50 border-gray-300">
-                  <h3 className="font-medium">{classItem.name} - {classItem.subject}</h3>
-                  <p className="text-sm text-gray-500">{classItem.students} students</p>
+                  <h3 className="font-medium  text-black">{classItem.name} - {classItem.subject}</h3>
+                  <p className="text-sm text-gray-900">{classItem.students} students</p>
                 </div>
               ))}
             </div>
@@ -278,7 +278,7 @@ const TeacherDashboard = () => {
                 onClick={handleCreateExam}
                 className="flex items-center gap-1 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
               >
-                <Plus className="h-4 w-4" /> Create Exam
+                <Plus className="h-4 w-4  text-black" /> Create Exam
               </button>
             </div>
 
@@ -286,32 +286,32 @@ const TeacherDashboard = () => {
               <div className="bg-white p-6 rounded-lg shadow">
                 <div className="mb-4">
                   <div className="flex justify-between items-start">
-                    <h3 className="font-semibold">End of Term Mathematics</h3>
+                    <h3 className="font-semibold  text-black">End of Term Mathematics</h3>
                     <span className="px-2 py-1 text-xs rounded-full bg-yellow-100 text-yellow-800">Upcoming</span>
                   </div>
-                  <p className="text-sm text-gray-500">JSS 2 • Tomorrow</p>
+                  <p className="text-sm text-gray-900">JSS 2 • Tomorrow</p>
                 </div>
                 <div className="space-y-3">
                   <div className="flex items-center gap-2 text-sm">
-                    <Clock className="h-4 w-4 text-gray-400" />
-                    <span>45 minutes • 20 questions</span>
+                    <Clock className="h-4 w-4 text-gray-900" />
+                    <span className=" text-black">45 minutes • 20 questions</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm">
-                    <Users className="h-4 w-4 text-gray-400" />
-                    <span>32 students assigned</span>
+                    <Users className="h-4 w-4 text-gray-900" />
+                    <span  className=" text-black">32 students assigned</span>
                   </div>
                 </div>
                 <div className="mt-6 flex gap-2">
                   <button
                     onClick={() => handleEditExam("exam1")}
-                    className="flex-1 flex items-center justify-center gap-1 px-4 py-2 border border-gray-300 rounded-md text-sm hover:bg-gray-50"
+                    className="flex-1 flex items-center  text-black justify-center gap-1 px-4 py-2 border border-gray-300 rounded-md text-sm hover:bg-gray-50"
                   >
                     <Edit className="h-4 w-4" />
                     Edit
                   </button>
                   <button
                     onClick={() => handleViewExam("exam1")}
-                    className="flex-1 flex items-center justify-center gap-1 px-4 py-2 bg-blue-600 text-white rounded-md text-sm hover:bg-blue-700"
+                    className="flex-1 flex items-center  justify-center gap-1 px-4 py-2 bg-blue-600 text-white rounded-md text-sm hover:bg-blue-700"
                   >
                     <Eye className="h-4 w-4" />
                     View
@@ -322,19 +322,19 @@ const TeacherDashboard = () => {
               <div className="bg-white p-6 rounded-lg shadow">
                 <div className="mb-4">
                   <div className="flex justify-between items-start">
-                    <h3 className="font-semibold">Physics Quiz</h3>
+                    <h3 className="font-semibold  text-black">Physics Quiz</h3>
                     <span className="px-2 py-1 text-xs rounded-full bg-blue-100 text-blue-800">In Progress</span>
                   </div>
-                  <p className="text-sm text-gray-500">JSS 1 • Active now</p>
+                  <p className="text-sm text-gray-900">JSS 1 • Active now</p>
                 </div>
                 <div className="space-y-3">
                   <div className="flex items-center gap-2 text-sm">
-                    <Clock className="h-4 w-4 text-gray-400" />
-                    <span>30 minutes • 15 questions</span>
+                    <Clock className="h-4 w-4 text-gray-900" />
+                    <span className=" text-black">30 minutes • 15 questions</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm">
-                    <Users className="h-4 w-4 text-gray-400" />
-                    <span>28/45 students completed</span>
+                    <Users className="h-4 w-4 text-gray-900" />
+                    <span className=" text-black">28/45 students completed</span>
                   </div>
                 </div>
                 <div className="mt-6">
@@ -351,27 +351,27 @@ const TeacherDashboard = () => {
               <div className="bg-white p-6 rounded-lg shadow">
                 <div className="mb-4">
                   <div className="flex justify-between items-start">
-                    <h3 className="font-semibold">English Comprehension</h3>
+                    <h3 className="font-semibold  text-black">English Comprehension</h3>
                     <span className="px-2 py-1 text-xs rounded-full bg-green-100 text-green-800">Completed</span>
                   </div>
-                  <p className="text-sm text-gray-500">JSS 2 • Last week</p>
+                  <p className="text-sm text-gray-900">JSS 2 • Last week</p>
                 </div>
                 <div className="space-y-3">
                   <div className="flex items-center gap-2 text-sm">
-                    <Clock className="h-4 w-4 text-gray-400" />
-                    <span>60 minutes • 25 questions</span>
+                    <Clock className="h-4 w-4 text-gray-900" />
+                    <span className=" text-black">60 minutes • 25 questions</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm">
-                    <BarChart3 className="h-4 w-4 text-gray-400" />
-                    <span>Avg. score: 76%</span>
+                    <BarChart3 className="h-4 w-4 text-gray-900" />
+                    <span className=" text-black">Avg. score: 76%</span>
                   </div>
                 </div>
                 <div className="mt-6 flex gap-2">
                   <button
                     onClick={handleViewResults}
-                    className="flex-1 flex items-center justify-center gap-1 px-4 py-2 border border-gray-300 rounded-md text-sm hover:bg-gray-50"
+                    className="flex-1 flex items-center   text-black justify-center gap-1 px-4 py-2 border border-gray-300 rounded-md text-sm hover:bg-gray-50"
                   >
-                    <BarChart3 className="h-4 w-4" />
+                    <BarChart3 className="h-4 w-4  text-black" />
                     Results
                   </button>
                   <button

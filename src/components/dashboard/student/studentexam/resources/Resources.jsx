@@ -95,9 +95,9 @@ const Resources = () => {
             />
           </div>
         </div>
-        <h3 className="text-lg font-semibold">{resource.title}</h3>
-        <p className="text-sm text-gray-500 mb-2">{resource.subject}</p>
-        <p className="text-sm text-gray-600 mb-4 flex-grow">{resource.description}</p>
+        <h3 className="text-lg font-semibold  text-black">{resource.title}</h3>
+        <p className="text-sm mb-2  text-black">{resource.subject}</p>
+        <p className="text-sm mb-4 flex-grow  text-black">{resource.description}</p>
         <div className="w-full flex justify-between">
           <button
             onClick={() => router.push(`/dashboard/student/studentexam/resourcesid`)}
@@ -117,25 +117,25 @@ const Resources = () => {
 
   const EmptyState = () => (
     <div className="text-center py-12 border border-gray-300 rounded-lg">
-      <BookText className="mx-auto h-12 w-12 text-gray-400" />
-      <h3 className="mt-4 text-lg font-medium">No resources found</h3>
-      <p className="text-gray-500 mt-2">Try adjusting your search or filters.</p>
+      <BookText className="mx-auto h-12 w-12  text-black" />
+      <h3 className="mt-4 text-lg font-medium  text-black">No resources found</h3>
+      <p className=" text-black mt-2">Try adjusting your search or filters.</p>
     </div>
   );
 
   return (
     <div className="space-y-8 p-4 md:p-6">
       <div>
-        <h1 className="text-3xl font-bold mb-2">Study Resources</h1>
-        <p className="text-gray-500">Access a variety of materials to help prepare for your exams</p>
+        <h1 className="text-3xl font-bold mb-2  text-black">Study Resources</h1>
+        <p className=" text-black">Access a variety of materials to help prepare for your exams</p>
       </div>
 
       <div className="flex flex-col md:flex-row gap-4 justify-between">
         <div className="relative flex-grow max-w-md">
-          <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-gray-500" />
+          <Search className="absolute left-2.5 top-2.5 h-4 w-4  text-black" />
           <input
             placeholder="Search resources..."
-            className="pl-9 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-blue-500"
+            className="pl-9 w-full px-3 py-2 border  text-black border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-blue-500"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
@@ -144,7 +144,7 @@ const Resources = () => {
         <select
           value={subjectFilter}
           onChange={(e) => setSubjectFilter(e.target.value)}
-          className="w-[180px] px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-blue-500"
+          className="w-[180px] px-3 py-2 border  text-black border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-1 focus:ring-blue-500"
         >
           {subjects.map((subject) => (
             <option key={subject} value={subject}>
@@ -180,7 +180,7 @@ const Resources = () => {
           {activeTab === 'documents' && (
             <>
               {documents.length > 0 ? (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6  text-black">
                   {documents.map(resource => (
                     <ResourceCard key={resource.id} resource={resource} />
                   ))}
@@ -194,7 +194,7 @@ const Resources = () => {
           {activeTab === 'videos' && (
             <>
               {videos.length > 0 ? (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6  text-black">
                   {videos.map(resource => (
                     <ResourceCard key={resource.id} resource={resource} />
                   ))}
@@ -208,7 +208,7 @@ const Resources = () => {
           {activeTab === 'interactive' && (
             <>
               {interactives.length > 0 ? (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6  text-black">
                   {interactives.map(resource => (
                     <ResourceCard key={resource.id} resource={resource} />
                   ))}

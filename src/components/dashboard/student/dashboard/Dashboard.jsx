@@ -87,7 +87,7 @@ const StudentDashboard = () => {
 
 
   return (
-    <div className="p-6">
+    <div className=" lg:p-6">
       <div className="space-y-8">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
           <div className="bg-white rounded-lg border p-4 border-gray-300 shadow-sm">
@@ -96,7 +96,7 @@ const StudentDashboard = () => {
               <BookOpen className="h-4 w-4 text-gray-800" />
             </div>
             <div className="p-2">
-              <div className="text-2xl font-bold">{studentClasses.length}</div>
+              <div className="text-2xl font-bold text-black ">{studentClasses.length}</div>
               <p className="text-xs text-gray-800">
                 Enrolled classes
               </p>
@@ -237,7 +237,7 @@ const StudentDashboard = () => {
                 </div>
                 <div className="pt-4">
                   <button
-                    className="flex items-center justify-center gap-1 w-full border border-gray-300 rounded-md px-4 py-2 text-sm font-medium hover:bg-gray-50"
+                    className="flex items-center text-black  justify-center gap-1 w-full border border-gray-300 rounded-md px-4 py-2 text-sm font-medium hover:bg-gray-50"
                     onClick={handleViewAllExams}
                   >
                     View All Exams <ArrowRight className="h-4 w-4" />
@@ -361,7 +361,7 @@ const StudentDashboard = () => {
                 <div className="pb-4">
                   <div className="flex justify-between items-start">
                     <h3 className="font-bold text-black">Mathematics End of Term</h3>
-                    <span className="inline-flex text-black items-center rounded-full bg-yellow-100 px-2.5 py-0.5 text-xs font-semibold text-yellow-800">
+                    <span className="inline-flex  items-center rounded-full bg-yellow-100 px-2.5 py-0.5 text-xs font-semibold text-yellow-800">
                       Tomorrow
                     </span>
                   </div>
@@ -370,11 +370,11 @@ const StudentDashboard = () => {
                 <div className="space-y-3">
                   <div className="flex items-center gap-2 text-sm">
                     <Clock className="h-4 w-4 text-gray-800" />
-                    <span>45 minutes • 20 questions</span>
+                    <span className="text-black ">45 minutes • 20 questions</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm">
                     <BookOpen className="h-4 w-4 text-gray-800" />
-                    <span>Topics: Algebra, Geometry</span>
+                    <span className="text-black ">Topics: Algebra, Geometry</span>
                   </div>
                 </div>
                 <div className="pt-4">
@@ -400,11 +400,11 @@ const StudentDashboard = () => {
                 <div className="space-y-3">
                   <div className="flex items-center gap-2 text-sm">
                     <Clock className="h-4 w-4 text-gray-800" />
-                    <span>60 minutes • 25 questions</span>
+                    <span className="text-black ">60 minutes • 25 questions</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm">
                     <BookOpen className="h-4 w-4 text-gray-800" />
-                    <span>Topics: Reading, Grammar</span>
+                    <span className="text-black ">Topics: Reading, Grammar</span>
                   </div>
                 </div>
                 <div className="pt-4">
@@ -429,11 +429,11 @@ const StudentDashboard = () => {
                 <div className="space-y-3">
                   <div className="flex items-center gap-2 text-sm">
                     <Clock className="h-4 w-4 text-gray-800" />
-                    <span>30 minutes • 15 questions</span>
+                    <span className="text-black ">30 minutes • 15 questions</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm">
                     <BookOpen className="h-4 w-4 text-gray-800" />
-                    <span>Topics: Biology, Physics</span>
+                    <span className="text-black ">Topics: Biology, Physics</span>
                   </div>
                 </div>
                 <div className="pt-4">
@@ -458,11 +458,11 @@ const StudentDashboard = () => {
                 <div className="space-y-3">
                   <div className="flex items-center gap-2 text-sm">
                     <TimerIcon className="h-4 w-4 text-gray-800" />
-                    <span>No time limit • 10 questions</span>
+                    <span className="text-black ">No time limit • 10 questions</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm">
                     <BookOpen className="h-4 w-4 text-gray-800" />
-                    <span>Topic: Practice Problems</span>
+                    <span className="text-black ">Topic: Practice Problems</span>
                   </div>
                 </div>
                 <div className="pt-4">
@@ -507,7 +507,6 @@ const StudentDashboard = () => {
                       <div className="bg-green-500 h-2 rounded-full" style={{ width: "90%" }}></div>
                     </div>
                   </div>
-
                   <div className="rounded-lg border p-4 border-gray-300">
                     <div className="flex items-center justify-between mb-2">
                       <div className="flex items-center gap-3">

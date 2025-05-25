@@ -85,7 +85,7 @@ export default function TestsPage() {
   return (
     <div className="p-6">
       <div className="mb-6">
-        <h1 className="text-3xl font-bold tracking-tight">Tests</h1>
+        <h1 className="text-3xl font-bold tracking-tight text-black">Tests</h1>
         <p className="text-gray-500">View and take your upcoming tests or review past tests.</p>
       </div>
 
@@ -111,7 +111,7 @@ export default function TestsPage() {
               {upcomingTests.length === 0 ? (
                 <div className="flex flex-col items-center justify-center py-12 text-center">
                   <BookOpen className="h-12 w-12 text-gray-400 mb-4" />
-                  <h3 className="text-lg font-medium">No Upcoming Tests</h3>
+                  <h3 className="text-lg font-medium text-black">No Upcoming Tests</h3>
                   <p className="text-gray-500 mt-2">You don't have any upcoming tests scheduled.</p>
                 </div>
               ) : (
@@ -120,8 +120,8 @@ export default function TestsPage() {
                     <div className="p-6 border-b border-gray-300">
                       <div className="flex items-start justify-between">
                         <div>
-                          <h2 className="text-xl font-bold">{test.title}</h2>
-                          <p className="text-gray-600">{test.subject}</p>
+                          <h2 className="text-xl font-bold text-black">{test.title}</h2>
+                          <p className="text-gray-600 ">{test.subject}</p>
                         </div>
                         <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-700 text-white">
                           Upcoming
@@ -132,17 +132,17 @@ export default function TestsPage() {
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <div className="flex items-center">
                           <Calendar className="h-4 w-4 mr-2 text-gray-400" />
-                          <span>{formatDate(test.date)}</span>
+                          <span className="text-black">{formatDate(test.date)}</span>
                         </div>
                         <div className="flex items-center">
                           <Clock className="h-4 w-4 mr-2 text-gray-400" />
-                          <span>
+                          <span className="text-black">
                             {test.time} • {test.duration}
                           </span>
                         </div>
                         <div className="flex items-center">
                           <BookOpen className="h-4 w-4 mr-2 text-gray-400" />
-                          <span>{test.questions} Questions</span>
+                          <span className="text-black">{test.questions} Questions</span>
                         </div>
                       </div>
                     </div>
@@ -168,7 +168,7 @@ export default function TestsPage() {
               {pastTests.length === 0 ? (
                 <div className="flex flex-col items-center justify-center py-12 text-center">
                   <BookOpen className="h-12 w-12 text-gray-400 mb-4" />
-                  <h3 className="text-lg font-medium">No Past Tests</h3>
+                  <h3 className="text-lg font-medium text-black">No Past Tests</h3>
                   <p className="text-gray-500 mt-2">You haven't taken any tests yet.</p>
                 </div>
               ) : (
@@ -177,7 +177,7 @@ export default function TestsPage() {
                     <div className="p-6 border-b border-gray-300">
                       <div className="flex items-start justify-between">
                         <div>
-                          <h2 className="text-xl font-bold">{test.title}</h2>
+                          <h2 className="text-xl font-bold text-black">{test.title}</h2>
                           <p className="text-gray-600">{test.subject}</p>
                         </div>
                         <div className="flex flex-col items-end">
@@ -200,17 +200,17 @@ export default function TestsPage() {
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <div className="flex items-center">
                           <Calendar className="h-4 w-4 mr-2 text-gray-400" />
-                          <span>{formatDate(test.date)}</span>
+                          <span className="text-black">{formatDate(test.date)}</span>
                         </div>
                         <div className="flex items-center">
                           <Clock className="h-4 w-4 mr-2 text-gray-400" />
-                          <span>
+                          <span className="text-black">
                             {test.time} • {test.duration}
                           </span>
                         </div>
                         <div className="flex items-center">
                           <BookOpen className="h-4 w-4 mr-2 text-gray-400" />
-                          <span>{test.questions} Questions</span>
+                          <span className="text-black">{test.questions} Questions</span>
                         </div>
                       </div>
                     </div>

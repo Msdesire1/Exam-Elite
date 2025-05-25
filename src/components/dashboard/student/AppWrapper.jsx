@@ -44,7 +44,7 @@ export default function AppWrapper({ children }) {
       <div className="flex">
         {/* Sidebar */}
         <div
-          className={`fixed md:relative z-40 w-64 h-full bg-gray-200 transition-all duration-300 ease-in-out ${
+          className={`fixed md:relative z-40 w-64 h-full  transition-all duration-300 ease-in-out ${
             isMobile
               ? sidebarOpen
                 ? "left-0"

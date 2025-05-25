@@ -63,25 +63,25 @@ export default function Studentt() {
   return (
     <div className="min-h-screen bg-gray-50 p-6">
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-2xl font-bold">Students</h1>
+        <h1 className="text-2xl font-bold  text-black">Students</h1>
       </div>
 
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
         <div className="flex flex-col md:flex-row gap-4 w-full md:w-auto">
           <div className="relative w-full md:w-64">
-            <Search className="absolute left-3 top-3 w-4 h-4 text-gray-500" />
+            <Search className="absolute left-3 top-3 w-4 h-4 text-gray-900" />
             <input
               type="text"
               placeholder="Search students..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-10 pr-4 py-2 w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="pl-10 pr-4 py-2 w-full border  text-black border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
           <select
             value={classFilter}
             onChange={(e) => setClassFilter(e.target.value)}
-            className="border px-4 py-2 rounded-md focus:outline-none shadow-sm border-gray-300"
+            className="border px-4 py-2 rounded-md focus:outline-none shadow-sm  border-gray-300"
           >
             {classes.map((cls) => (
               <option key={cls} value={cls}>
@@ -91,13 +91,13 @@ export default function Studentt() {
           </select>
         </div>
         <div className="flex gap-2 w-full md:w-auto">
-          <button className="flex items-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm bg-white hover:bg-gray-100">
+          <button className="flex items-center px-4 py-2  text-black border border-gray-300 rounded-md shadow-sm text-sm bg-white hover:bg-gray-100">
             <Mail className="w-4 h-4 mr-2" />
             Email All
           </button>
           <button
   onClick={handleExportCSV}
-  className="flex items-center px-4 py-2 border border-gray-300 rounded-md shadow-sm text-sm bg-white hover:bg-gray-100"
+  className="flex items-center px-4 py-2 border  text-black border-gray-300 rounded-md shadow-sm text-sm bg-white hover:bg-gray-100"
 >
   <Download className="w-4 h-4 mr-2" />
   Export CSV
@@ -108,7 +108,7 @@ export default function Studentt() {
 
       <div className="overflow-x-auto rounded-lg shadow bg-white">
         <table className="w-full text-sm text-left">
-          <thead className="bg-gray-100 text-gray-600 uppercase text-xs">
+          <thead className="bg-gray-100 text-gray-900 uppercase text-xs">
             <tr>
               <th className="px-6 py-3">Name</th>
               <th className="px-6 py-3">Class</th>
@@ -127,12 +127,12 @@ export default function Studentt() {
                     {student.name.charAt(0)}
                   </div>
                   <div>
-                    <p className="font-medium">{student.name}</p>
-                    <p className="text-[14px] text-gray-500">{student.email}</p>
+                    <p className="font-medium  text-black">{student.name}</p>
+                    <p className="text-[14px] text-gray-900">{student.email}</p>
                   </div>
                 </td>
-                <td className="px-6 py-4">{student.class}</td>
-                <td className="px-6 py-4">{student.rollNumber}</td>
+                <td className="px-6 py-4  text-black">{student.class}</td>
+                <td className="px-6 py-4  text-black">{student.rollNumber}</td>
                 <td className="px-6 py-4">
                   <span
                     className={`px-2 py-1 text-xs font-medium rounded-full text-white ${
@@ -146,12 +146,12 @@ export default function Studentt() {
                     {student.averageScore}%
                   </span>
                 </td>
-                <td className="px-6 py-4">{student.testsCompleted}</td>
-                <td className="px-6 py-4">{student.lastActive}</td>
+                <td className="px-6 py-4  text-black">{student.testsCompleted}</td>
+                <td className="px-6 py-4  text-black">{student.lastActive}</td>
                 <td className="px-6 py-4 text-right space-x-2 ">
                     <div className='py-5'>
                     <a href={`/teacher/student/${student.id}`} >
-                    <button className="px-4 py-1  border  border-gray-300 rounded-md text-sm bg-gray-100 hover:bg-gray-200">
+                    <button className="px-4 py-1  border  text-black  border-gray-300 rounded-md text-sm bg-gray-100 hover:bg-gray-200">
                       View
                     </button>
                   </a>
@@ -164,7 +164,7 @@ export default function Studentt() {
             ))}
             {filteredStudents.length === 0 && (
               <tr>
-                <td colSpan="7" className="text-center py-6 text-gray-500">
+                <td colSpan="7" className="text-center py-6 text-gray-900">
                   No students found.
                 </td>
               </tr>

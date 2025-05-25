@@ -63,7 +63,7 @@ const Materials= ({ params }) => {
         >
           <ArrowLeft size={20} />
         </button>
-        <h1 className="text-2xl font-bold">{material.title}</h1>
+        <h1 className="text-2xl font-bold text-black">{material.title}</h1>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -72,10 +72,10 @@ const Materials= ({ params }) => {
             <div className="pb-4">
               <div className="flex items-center justify-between">
                 <div>
-                  <h2 className="text-xl font-semibold">{material.title}</h2>
+                  <h2 className="text-xl font-semibold text-black">{material.title}</h2>
                   <p className="text-sm text-gray-500">{material.class} • {material.teacher}</p>
                 </div>
-                <span className="inline-flex items-center rounded-md bg-gray-50 px-2.5 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+                <span className="inline-flex   items-center rounded-md bg-gray-50 px-2.5 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
                   {material.type}
                 </span>
               </div>
@@ -83,12 +83,12 @@ const Materials= ({ params }) => {
             <div className="space-y-4">
               <div>
                 <p className="text-sm text-gray-500">Description</p>
-                <p className="mt-1">{material.description}</p>
+                <p className="mt-1 text-black">{material.description}</p>
               </div>
 
               <div className="border-t my-4"></div>
 
-              <div className="prose max-w-none">
+              <div className="prose max-w-none text-black">
                 <div dangerouslySetInnerHTML={{ __html: material.content }} />
               </div>
             </div>
@@ -97,20 +97,20 @@ const Materials= ({ params }) => {
 
         <div>
           <div className="border rounded-lg shadow-md p-6 mb-6">
-            <h3 className="text-lg font-semibold pb-2">Attachments</h3>
+            <h3 className="text-lg font-semibold pb-2 text-black">Attachments</h3>
             <div className="space-y-3">
               {material.attachments.map((attachment) => (
                 <div
                   key={attachment.id}
-                  className="flex items-center justify-between p-3 border rounded-md hover:bg-gray-50"
+                  className="flex items-center justify-between  p-3 border rounded-md hover:bg-gray-50"
                 >
                   <div className="flex items-center">
                     <div className="mr-3">
                       <FileText className="h-5 w-5 text-blue-500" />
                     </div>
                     <div>
-                      <p className="font-medium">{attachment.name}</p>
-                      <p className="text-sm text-gray-500">{attachment.size}</p>
+                      <p className="font-medium text-black">{attachment.name}</p>
+                      <p className="text-sm text-gray-500 ">{attachment.size}</p>
                     </div>
                   </div>
                   <button className="p-1 rounded-md hover:bg-gray-100">
@@ -122,19 +122,19 @@ const Materials= ({ params }) => {
           </div>
 
           <div className="border rounded-lg shadow-md p-6">
-            <h3 className="text-lg font-semibold pb-2">Related Materials</h3>
+            <h3 className="text-lg font-semibold pb-2 text-black">Related Materials</h3>
             <div className="space-y-3">
               {material.relatedMaterials.map((relatedMaterial) => (
                 <Link
                   key={relatedMaterial.id}
                   href={`/student/classes/materials/${relatedMaterial.id}`}
-                  className="flex items-center p-3 border rounded-md hover:bg-gray-50 hover:border-blue-300"
+                  className="flex items-center  p-3 border rounded-md hover:bg-gray-50 hover:border-blue-300"
                 >
                   <div className="mr-3">
                     <BookOpen className="h-5 w-5 text-blue-500" />
                   </div>
                   <div>
-                    <p className="font-medium">{relatedMaterial.title}</p>
+                    <p className="font-medium text-black">{relatedMaterial.title}</p>
                     <p className="text-sm text-gray-500">{relatedMaterial.type}</p>
                   </div>
                 </Link>
@@ -147,7 +147,7 @@ const Materials= ({ params }) => {
       <div className="flex justify-between pt-4">
         <button
           onClick={() => router.push('/student/classes')}
-          className="inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium shadow-sm hover:bg-gray-50"
+          className="inline-flex text-black items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium shadow-sm hover:bg-gray-50"
         >
           Back to Classes
         </button>

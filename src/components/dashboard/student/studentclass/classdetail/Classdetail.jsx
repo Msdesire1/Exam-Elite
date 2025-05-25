@@ -97,14 +97,14 @@ const Classdetail = ({ params }) => {
         >
           <ArrowLeft size={20} />
         </button>
-        <h1 className="text-2xl font-bold">{classData.name}</h1>
+        <h1 className="text-2xl font-bold text-black">{classData.name}</h1>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2">
           <div className="border border-gray-300 rounded-lg shadow-md p-6 mb-6">
             <div className="pb-4">
-              <h2 className="text-xl font-semibold">{classData.name}</h2>
+              <h2 className="text-xl font-semibold text-black">{classData.name}</h2>
               <p className="text-sm text-gray-500">{classData.teacher}</p>
             </div>
             <div className="space-y-4">
@@ -113,7 +113,7 @@ const Classdetail = ({ params }) => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
                 <div>
                   <p className="text-gray-500">Schedule</p>
-                  <p className="font-medium">{classData.schedule}</p>
+                  <p className="font-medium text-black">{classData.schedule}</p>
                 </div>
                 <div>
                   <p className="text-gray-500">Location</p>
@@ -176,7 +176,7 @@ const Classdetail = ({ params }) => {
           </div>
 
           <div className="border border-gray-300 rounded-lg shadow-md p-6">
-            <h2 className="text-xl font-semibold pb-4">Classmates</h2>
+            <h2 className="text-xl font-semibold pb-4 text-black">Classmates</h2>
             <div className="flex flex-wrap gap-4">
               {classData.classmates.map((classmate) => (
                 <div key={classmate.id} className="flex flex-col items-center">

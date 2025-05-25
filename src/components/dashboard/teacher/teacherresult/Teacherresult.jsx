@@ -171,9 +171,9 @@ const Teacherresult = () => {
   const currentExam = exams.find(e => e.id === selectedExam);
 
   return (
-    <div className="p-6 space-y-6">
-      <div className="flex justify-between items-center">
-        <h2 className="text-3xl font-bold">Exam Results</h2>
+    <div className="lg:p-6 space-y-6">
+      <div className="flex justify-between items-center lg:flex-row flex-col">
+        <h2 className="text-3xl font-bold  text-black">Exam Results</h2>
         <button className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
           Generate Report
         </button>
@@ -191,10 +191,10 @@ const Teacherresult = () => {
                 <ChevronRight className="h-4 w-4 rotate-180" />
                 <span>Back</span>
               </button>
-              <h3 className="text-xl font-semibold">
+              <h3 className="text-xl font-semibold  text-black">
                 {currentExam?.title}
               </h3>
-              <span className="px-2 py-1 text-xs border rounded-full border-gray-300">
+              <span className="px-2 py-1 text-xs border  text-black rounded-full border-gray-300">
                 {currentExam?.class}
               </span>
             </div>
@@ -203,9 +203,9 @@ const Teacherresult = () => {
                 Date: {formatDate(currentExam?.date || "")}
               </p>
               {currentExam?.published ? (
-                <span className="px-2 py-1 text-xs bg-green-100 text-green-800 rounded-full">Published</span>
+                <span className="px-2 py-1 text-x bg-green-100 text-green-900 rounded-full">Published</span>
               ) : (
-                <span className="px-2 py-1 text-xs border rounded-full border-gray-300">Not Published</span>
+                <span className="px-2 py-1 text-xs  text-black border rounded-full border-gray-300">Not Published</span>
               )}
             </div>
           </div>
@@ -239,7 +239,7 @@ const Teacherresult = () => {
                     <h3 className="text-3xl font-bold text-blue-600">
                       {currentExam?.averageScore}%
                     </h3>
-                    <p className="text-sm text-gray-500">Average Score</p>
+                    <p className="text-sm text-gray-900">Average Score</p>
                   </div>
                 </div>
 
@@ -248,7 +248,7 @@ const Teacherresult = () => {
                     <h3 className="text-3xl font-bold text-green-600">
                       {examResults.grades[0].count + examResults.grades[1].count}
                     </h3>
-                    <p className="text-sm text-gray-500">A & B Grades</p>
+                    <p className="text-sm text-gray-900">A & B Grades</p>
                   </div>
                 </div>
 
@@ -257,21 +257,21 @@ const Teacherresult = () => {
                     <h3 className="text-3xl font-bold text-red-600">
                       {examResults.grades[4].count}
                     </h3>
-                    <p className="text-sm text-gray-500">Failed Students</p>
+                    <p className="text-sm text-gray-900">Failed Students</p>
                   </div>
                 </div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-white p-6 rounded-lg shadow">
-                  <h3 className="text-lg font-semibold">Grade Distribution</h3>
-                  <p className="text-sm text-gray-500 mb-4">
+                  <h3 className="text-lg font-semibold  text-black">Grade Distribution</h3>
+                  <p className="text-sm text-gray-900 mb-4">
                     Breakdown of student grades for this exam
                   </p>
                   <div className="h-[300px]">
                     {/* Replace with your chart implementation */}
                     <div className="flex items-center justify-center h-full bg-gray-100 rounded">
-                      <p>Grade Distribution Chart</p>
+                      <p className=" text-black">Grade Distribution Chart</p>
                     </div>
                   </div>
                 </div>
@@ -283,17 +283,17 @@ const Teacherresult = () => {
                   </p>
                   <div className="space-y-4">
                     {examResults.topStudents.map((student, index) => (
-                      <div key={student.id} className="flex items-center justify-between">
+                      <div key={student.id} className="flex items-center justify-between  text-black">
                         <div className="flex items-center gap-3">
                           <div className="h-8 w-8 rounded-full bg-blue-600 flex items-center justify-center text-white text-sm font-medium">
                             {index + 1}
                           </div>
-                          <div className="h-8 w-8 rounded-full bg-gray-200 flex items-center justify-center">
+                          <div className="h-8 w-8 rounded-full bg-gray-200 flex items-center justify-center  text-black">
                             {student.name.split(" ").map(n => n[0]).join("").toUpperCase()}
                           </div>
                           <div>
                             <p className="font-medium">{student.name}</p>
-                            <p className="text-xs text-gray-500">Time taken: {student.timeTaken}</p>
+                            <p className="text-xs text-gray-900">Time taken: {student.timeTaken}</p>
                           </div>
                         </div>
                         <div className="flex items-center gap-3">
@@ -319,15 +319,15 @@ const Teacherresult = () => {
           {activeTab === "questions" && (
             <div className="bg-white p-6 rounded-lg shadow">
               <h3 className="text-lg font-semibold">Question Analysis</h3>
-              <p className="text-sm text-gray-500 mb-6">
+              <p className="text-sm text-gray-900 mb-6">
                 Performance breakdown by question
               </p>
-              <div className="h-[300px] mb-6 bg-gray-100 rounded flex items-center justify-center">
+              <div className="h-[300px] mb-6 bg-gray-100 rounded   text-black flex items-center justify-center">
                 <p>Question Performance Chart</p>
               </div>
 
               <div className="space-y-4">
-                <h3 className="text-sm font-medium">Difficulty Analysis</h3>
+                <h3 className="text-sm font-medium  text-black">Difficulty Analysis</h3>
 
                 {examResults.performance.map((question, index) => {
                   const totalAnswers = question.correct + question.wrong;
@@ -350,8 +350,8 @@ const Teacherresult = () => {
                   return (
                     <div key={index} className="space-y-1">
                       <div className="flex justify-between items-center">
-                        <p className="text-sm font-medium">{question.name}</p>
-                        <p className={`text-sm font-medium ${color}`}>{difficulty}</p>
+                        <p className="text-sm font-medium  text-black">{question.name}</p>
+                        <p className={`text-sm font-medium   text-black ${color}`}>{difficulty}</p>
                       </div>
                       <div className="w-full bg-gray-200 rounded-full h-2">
                         <div
@@ -359,7 +359,7 @@ const Teacherresult = () => {
                           style={{ width: `${correctPercentage}%` }}
                         ></div>
                       </div>
-                      <p className="text-sm text-gray-500 text-right">{correctPercentage}% correct</p>
+                      <p className="text-sm text-gray-900 text-right">{correctPercentage}% correct</p>
                     </div>
                   );
                 })}
@@ -370,8 +370,8 @@ const Teacherresult = () => {
           {activeTab === "students" && (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-white p-6 rounded-lg shadow">
-                <h3 className="text-lg font-semibold">Class Comparison</h3>
-                <p className="text-sm text-gray-500 mb-4">
+                <h3 className="text-lg font-semibold  text-black">Class Comparison</h3>
+                <p className="text-sm text-gray-900 mb-4">
                   How this class performed compared to others
                 </p>
                 <div className="h-[300px] bg-gray-100 rounded flex items-center justify-center">
@@ -380,71 +380,71 @@ const Teacherresult = () => {
               </div>
 
               <div className="bg-white p-6 rounded-lg shadow">
-                <h3 className="text-lg font-semibold">Completion Statistics</h3>
-                <p className="text-sm text-gray-500 mb-4">
+                <h3 className="text-lg font-semibold  text-black">Completion Statistics</h3>
+                <p className="text-sm text-gray-900 mb-4">
                   Time taken and completion rates
                 </p>
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-sm font-medium mb-2">Average Completion Time</h3>
+                    <h3 className="text-sm font-medium mb-2  text-black">Average Completion Time</h3>
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
                         <div className="h-8 w-8 rounded-full bg-blue-100 flex items-center justify-center">
                           <Clock className="h-4 w-4 text-blue-600" />
                         </div>
-                        <span className="font-medium">52 minutes</span>
+                        <span className="font-medium  text-black">52 minutes</span>
                       </div>
-                      <div className="text-sm text-gray-500">
+                      <div className="text-sm text-gray-900">
                         out of 60 minutes allowed
                       </div>
                     </div>
                   </div>
 
                   <div>
-                    <h3 className="text-sm font-medium mb-2">Completion Rate</h3>
+                    <h3 className="text-sm font-medium mb-2  text-black">Completion Rate</h3>
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
                         <div className="h-8 w-8 rounded-full bg-green-100 flex items-center justify-center">
                           <CheckCircle className="h-4 w-4 text-green-600" />
                         </div>
-                        <span className="font-medium">95%</span>
+                        <span className="font-medium  text-black">95%</span>
                       </div>
-                      <div className="text-sm text-gray-500">
+                      <div className="text-sm text-gray-900">
                         33 out of 35 students completed all questions
                       </div>
                     </div>
                   </div>
 
                   <div>
-                    <h3 className="text-sm font-medium mb-4">Time Distribution</h3>
+                    <h3 className="text-sm font-medium mb-4  text-black">Time Distribution</h3>
                     <div className="space-y-2">
                       <div className="flex justify-between text-sm">
-                        <span>Under 30 minutes</span>
-                        <span>5 students</span>
+                        <span className=" text-black">Under 30 minutes</span>
+                        <span className=" text-black">5 students</span>
                       </div>
                       <div className="w-full bg-gray-200 rounded-full h-2">
                         <div className="bg-blue-600 h-2 rounded-full" style={{ width: '14%' }}></div>
                       </div>
 
                       <div className="flex justify-between text-sm">
-                        <span>30-45 minutes</span>
-                        <span>12 students</span>
+                        <span className=" text-black">30-45 minutes</span>
+                        <span  className=" text-black">12 students</span>
                       </div>
                       <div className="w-full bg-gray-200 rounded-full h-2">
                         <div className="bg-blue-600 h-2 rounded-full" style={{ width: '34%' }}></div>
                       </div>
 
                       <div className="flex justify-between text-sm">
-                        <span>45-55 minutes</span>
-                        <span>15 students</span>
+                        <span className=" text-black">45-55 minutes</span>
+                        <span className=" text-black">15 students</span>
                       </div>
                       <div className="w-full bg-gray-200 rounded-full h-2">
                         <div className="bg-blue-600 h-2 rounded-full" style={{ width: '43%' }}></div>
                       </div>
 
                       <div className="flex justify-between text-sm">
-                        <span>Over 55 minutes</span>
-                        <span>3 students</span>
+                        <span className=" text-black">Over 55 minutes</span>
+                        <span className=" text-black">3 students</span>
                       </div>
                       <div className="w-full bg-gray-200 rounded-full h-2">
                         <div className="bg-blue-600 h-2 rounded-full" style={{ width: '9%' }}></div>
@@ -464,8 +464,8 @@ const Teacherresult = () => {
             <div className="bg-white p-6 rounded-lg shadow">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm font-medium text-gray-500">Total Exams</p>
-                  <h3 className="text-2xl font-bold">{stats.totalExams}</h3>
+                  <p className="text-sm font-medium text-gray-900">Total Exams</p>
+                  <h3 className="text-2xl font-bold  text-black">{stats.totalExams}</h3>
                 </div>
                 <div className="bg-blue-100 p-2 rounded-full">
                   <FileText className="h-5 w-5 text-blue-600" />
@@ -476,8 +476,8 @@ const Teacherresult = () => {
             <div className="bg-white p-6 rounded-lg shadow">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm font-medium text-gray-500">Published Results</p>
-                  <h3 className="text-2xl font-bold">{stats.publishedExams}</h3>
+                  <p className="text-sm font-medium text-gray-900">Published Results</p>
+                  <h3 className="text-2xl font-bold  text-black">{stats.publishedExams}</h3>
                 </div>
                 <div className="bg-green-100 p-2 rounded-full">
                   <CheckCircle className="h-5 w-5 text-green-600" />
@@ -488,8 +488,8 @@ const Teacherresult = () => {
             <div className="bg-white p-6 rounded-lg shadow">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm font-medium text-gray-500">Completion Rate</p>
-                  <h3 className="text-2xl font-bold">{stats.completionRate}%</h3>
+                  <p className="text-sm font-medium text-gray-900">Completion Rate</p>
+                  <h3 className="text-2xl font-bold  text-black">{stats.completionRate}%</h3>
                 </div>
                 <div className="bg-blue-100 p-2 rounded-full">
                   <Users className="h-5 w-5 text-blue-600" />
@@ -500,8 +500,8 @@ const Teacherresult = () => {
             <div className="bg-white p-6 rounded-lg shadow">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm font-medium text-gray-500">Average Score</p>
-                  <h3 className="text-2xl font-bold">{stats.averageScore}%</h3>
+                  <p className="text-sm font-medium text-gray-900">Average Score</p>
+                  <h3 className="text-2xl font-bold  text-black">{stats.averageScore}%</h3>
                 </div>
                 <div className="bg-yellow-100 p-2 rounded-full">
                   <Award className="h-5 w-5 text-yellow-600" />
@@ -513,10 +513,10 @@ const Teacherresult = () => {
           {/* Search and Filters */}
           <div className="flex flex-col sm:flex-row gap-4">
             <div className="relative flex-1">
-              <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-gray-400" />
+              <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-gray-900" />
               <input
                 placeholder="Search exams by title..."
-                className="w-full pl-8 pr-4 py-2 border rounded-md border-gray-300"
+                className="w-full pl-8 pr-4 py-2 border rounded-md border-gray-300  text-black"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
@@ -525,7 +525,7 @@ const Teacherresult = () => {
               <select
                 value={filterSubject}
                 onChange={(e) => setFilterSubject(e.target.value)}
-                className="w-[150px] px-3 py-2 border rounded-md text-sm border-gray-300"
+                className="w-[150px] px-3 py-2 border rounded-md text-sm border-gray-300  text-black"
               >
                 <option value="all">All Subjects</option>
                 <option value="Mathematics">Mathematics</option>
@@ -535,7 +535,7 @@ const Teacherresult = () => {
               <select
                 value={filterClass}
                 onChange={(e) => setFilterClass(e.target.value)}
-                className="w-[130px] px-3 py-2 border rounded-md text-sm border-gray-300"
+                className="w-[130px] px-3 py-2 border rounded-md text-sm text-black border-gray-300"
               >
                 <option value="all">All Classes</option>
                 <option value="JSS 1A">JSS 1A</option>
@@ -552,7 +552,7 @@ const Teacherresult = () => {
               filteredExams.map((exam) => (
                 <div
                   key={exam.id}
-                  className="bg-white p-6 rounded-lg shadow border border-gray-300 cursor-pointer hover:border-blue-500 transition-colors"
+                  className="bg-white p-6 rounded-lg shadow border  text-black border-gray-300 cursor-pointer hover:border-blue-500 transition-colors"
                   onClick={() => setSelectedExam(exam.id)}
                 >
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
@@ -562,7 +562,7 @@ const Teacherresult = () => {
                       </div>
                       <div>
                         <h3 className="font-medium">{exam.title}</h3>
-                        <div className="flex items-center gap-2 text-sm text-gray-500">
+                        <div className="flex items-center gap-2 text-sm text-gray-900">
                           <span>{exam.class}</span>
                           <span>•</span>
                           <span>{exam.subject}</span>
@@ -574,8 +574,8 @@ const Teacherresult = () => {
 
                     <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
                       <div className="flex items-center gap-2">
-                        <BookOpen className="h-4 w-4 text-gray-400" />
-                        <span className="text-sm">
+                        <BookOpen className="h-4 w-4 text-gray-900" />
+                        <span className="text-sm  text-black">
                           {exam.students.submitted}/{exam.students.total} completed
                         </span>
                       </div>
@@ -586,7 +586,7 @@ const Teacherresult = () => {
                             <span className="px-2 py-1 text-xs bg-green-100 text-green-800 rounded-full">Published</span>
                             <div className="flex items-center gap-1">
                               <Award className="h-4 w-4 text-yellow-500" />
-                              <span className="font-medium">{exam.averageScore}%</span>
+                              <span className="font-medium  text-black">{exam.averageScore}%</span>
                             </div>
                           </>
                         ) : (
@@ -600,9 +600,9 @@ const Teacherresult = () => {
               ))
             ) : (
               <div className="text-center py-10">
-                <FileText className="mx-auto h-12 w-12 text-gray-300" />
+                <FileText className="mx-auto h-12 w-12 text-gray-900" />
                 <h3 className="mt-4 text-lg font-semibold">No Exams Found</h3>
-                <p className="text-gray-500">No exams match your search criteria.</p>
+                <p className="text-gray-900">No exams match your search criteria.</p>
               </div>
             )}
           </div>

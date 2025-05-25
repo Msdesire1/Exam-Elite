@@ -42,7 +42,7 @@ const Sidebar = ({ children }) => {
           aria-label="Toggle Menu"
           className="p-2 border border-gray-300 rounded-md bg-white hover:bg-gray-100"
         >
-          <Menu className="h-5 w-5" />
+          <Menu className="h-5 w-5  text-black" />
         </button>
       </div>
 

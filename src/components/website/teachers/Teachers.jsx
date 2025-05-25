@@ -129,7 +129,7 @@ export default function TeachersPage() {
                     </div>
                   </div>
 
-                  <button className="w-full px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50">
+                  <button className="w-full px-4 py-2  text-black border border-gray-300 rounded-md hover:bg-gray-50">
                     View Profile
                   </button>
                 </div>

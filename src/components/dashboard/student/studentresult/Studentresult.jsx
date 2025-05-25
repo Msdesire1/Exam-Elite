@@ -90,13 +90,13 @@ const Studentresult = () => {
   return (
     <div className="p-6 space-y-8">
       <div className="flex justify-between items-center">
-        <h2 className="text-3xl font-bold">Exam Results</h2>
-        <div className="flex items-center gap-2">
+        <h2 className="text-3xl font-bold text-black">Exam Results</h2>
+        <div className="flex items-center gap-2 lg:flex-row flex-col">
         <div className="">
           <button
-              className="w-full px-5 py-1.5 pr-8 rounded-md border cursor-pointer border-gray-300 bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500
+              className="w-full px-5 py-1.5 pr-8  text-black rounded-md border cursor-pointer border-gray-300 bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500
                "
-                            onClick={handleOpen}
+                       onClick={handleOpen}
                         >
                         Exam Results
                         </button>
@@ -105,7 +105,7 @@ const Studentresult = () => {
             <select
               value={filter}
               onChange={(e) => setFilter(e.target.value)}
-              className="block w-full px-4 py-2 pr-8 rounded-md border border-gray-300 bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="block w-full px-4 py-2 pr-8  text-black rounded-md border border-gray-300 bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
             >
               <option value="all">All Subjects</option>
               <option value="mathematics">Mathematics</option>
@@ -130,16 +130,16 @@ const Studentresult = () => {
       {/* Performance Overview */}
       <div className="border border-gray-300 rounded-lg bg-white shadow-sm">
         <div className="p-6">
-          <h3 className="text-lg font-semibold">Overall Performance</h3>
+          <h3 className="text-lg font-semibold  text-black">Overall Performance</h3>
           <p className="text-sm text-gray-500">Your aggregate score across all exams</p>
         </div>
         <div className="px-6 pb-6">
-          <div className="flex flex-col md:flex-row md:items-center gap-8">
+          <div className="flex flex-col lg::flex-row md:items-center gap-8">
             <div className="flex-1">
               <div className="space-y-4">
                 <div>
                   <div className="flex justify-between mb-1">
-                    <span className="text-sm font-medium">Overall Score</span>
+                    <span className="text-sm font-medium  text-black">Overall Score</span>
                     <span className="text-sm font-medium">{totalPercentage.toFixed(1)}%</span>
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-2">
@@ -149,19 +149,19 @@ const Studentresult = () => {
                     ></div>
                   </div>
                 </div>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid lg:grid-cols-2 gap-4 ">
                   <div>
-                    <div className="text-sm text-gray-500 mb-1">Exams Taken</div>
-                    <div className="text-2xl font-bold">{examResults.length}</div>
+                    <div className="text-sm  text-black mb-1">Exams Taken</div>
+                    <div className="text-2xl font-bold  text-black">{examResults.length}</div>
                   </div>
                   <div>
-                    <div className="text-sm text-gray-500 mb-1">Average Grade</div>
-                    <div className="text-2xl font-bold">{totalPercentage >= 80 ? 'A' : totalPercentage >= 70 ? 'B' : totalPercentage >= 60 ? 'C' : totalPercentage >= 50 ? 'D' : 'F'}</div>
+                    <div className="text-sm  text-black mb-1">Average Grade</div>
+                    <div className="text-2xl font-bold  text-black">{totalPercentage >= 80 ? 'A' : totalPercentage >= 70 ? 'B' : totalPercentage >= 60 ? 'C' : totalPercentage >= 50 ? 'D' : 'F'}</div>
                   </div>
 
                   <div className="bg-white rounded-lg shadow p-4">
-                 <h3 className="text-sm font-medium text-gray-500">Best Subject</h3>
-                            <div className="text-1xl font-bold">Science</div>
+                 <h3 className="text-sm font-medium  text-black">Best Subject</h3>
+                            <div className="text-1xl font-bold  text-black">Science</div>
                    </div>
                 </div>
               </div>

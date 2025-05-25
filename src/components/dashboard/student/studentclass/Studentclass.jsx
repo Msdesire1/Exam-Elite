@@ -103,7 +103,7 @@ const Studentclass = () => {
   return (
     <div className="space-y-8 p-4">
       <div>
-        <h1 className="text-3xl font-bold mb-2">My Classes</h1>
+        <h1 className="text-3xl font-bold mb-2 text-black">My Classes</h1>
         <p className="text-gray-500">Manage your classes, materials, and assignments</p>
       </div>
 
@@ -116,15 +116,15 @@ const Studentclass = () => {
                   {classItem.icon}
                 </span>
               </div>
-              <h3 className="mt-2 text-lg font-semibold">{classItem.name}</h3>
+              <h3 className="mt-2 text-lg font-semibold text-black">{classItem.name}</h3>
               <p className="text-sm text-gray-500">{classItem.teacher}</p>
             </div>
             <div className="px-4 pb-4">
               <div className="space-y-3">
                 <div>
                   <div className="flex justify-between text-sm mb-1">
-                    <span>Progress</span>
-                    <span>{classItem.progress}%</span>
+                    <span className="text-black ">Progress</span>
+                    <span className='text-black'>{classItem.progress}%</span>
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-2">
                     <div
@@ -135,22 +135,22 @@ const Studentclass = () => {
                 </div>
                 <div className="text-sm">
                   <p className="text-gray-500">Next class:</p>
-                  <p>{classItem.nextClass}</p>
+                  <p className="text-black ">{classItem.nextClass}</p>
                 </div>
               </div>
             </div>
             <div className="px-4 py-3 border-t border-gray-300">
               <div className="w-full grid grid-cols-3 gap-2 text-center text-sm">
                 <div>
-                  <p className="font-bold">{classItem.materials}</p>
+                  <p className="font-bold text-black">{classItem.materials}</p>
                   <p className="text-gray-500">Materials</p>
                 </div>
                 <div>
-                  <p className="font-bold">{classItem.assignments}</p>
+                  <p className="font-bold text-black">{classItem.assignments}</p>
                   <p className="text-gray-500">Assignments</p>
                 </div>
                 <div>
-                  <p className="font-bold">{classItem.exams}</p>
+                  <p className="font-bold text-black">{classItem.exams}</p>
                   <p className="text-gray-500">Exams</p>
                 </div>
               </div>
@@ -158,7 +158,7 @@ const Studentclass = () => {
             <div className="px-4 pb-4">
               <Link
                 href={"/dashboard/student/studentclass/classdetail"}
-                className="w-full inline-flex items-center justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium shadow-sm hover:bg-gray-50"
+                className="w-full text-black inline-flex items-center justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium shadow-sm hover:bg-gray-50"
               >
                 View Details
               </Link>
@@ -188,7 +188,7 @@ const Studentclass = () => {
         <div className="mt-6">
           <div className="border border-gray-300 rounded-lg shadow-sm overflow-hidden">
             <div className="p-6">
-              <h2 className="text-xl font-semibold">Recent Materials</h2>
+              <h2 className="text-xl font-semibold text-black">Recent Materials</h2>
               <p className="text-sm text-gray-500 mt-1">Study materials uploaded by your teachers</p>
             </div>
             <div className="px-6 pb-6">
@@ -196,7 +196,7 @@ const Studentclass = () => {
                 {recentMaterials.map((material) => (
                   <div key={material.id} className="border border-gray-300 p-4 rounded-lg flex justify-between items-center">
                     <div>
-                      <h3 className="font-medium">{material.title}</h3>
+                      <h3 className="font-medium text-black">{material.title}</h3>
                       <p className="text-sm text-gray-500">{material.class} • {material.date}</p>
                       <span className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10 mt-2">
                         {material.type}
@@ -204,7 +204,7 @@ const Studentclass = () => {
                     </div>
                     <Link
                       href={`/dashboard/student/studentclass/materials`}
-                      className="inline-flex items-center rounded-md border border-gray-300 bg-white px-3 py-1 text-sm font-medium shadow-sm hover:bg-gray-50"
+                      className="inline-flex text-black items-center rounded-md border border-gray-300 bg-white px-3 py-1 text-sm font-medium shadow-sm hover:bg-gray-50"
                     >
                       View
                     </Link>
@@ -228,7 +228,7 @@ const Studentclass = () => {
         <div className="mt-6">
           <div className="border border-gray-300 rounded-lg shadow-sm overflow-hidden">
             <div className="p-6">
-              <h2 className="text-xl font-semibold">Upcoming Assignments</h2>
+              <h2 className="text-xl font-semibold text-black">Upcoming Assignments</h2>
               <p className="text-sm text-gray-500 mt-1">Assignments due in the next two weeks</p>
             </div>
             <div className="px-6 pb-6">
@@ -236,7 +236,7 @@ const Studentclass = () => {
                 {upcomingAssignments.map((assignment) => (
                   <div key={assignment.id} className="border border-gray-300 p-4 rounded-lg flex justify-between items-center">
                     <div>
-                      <h3 className="font-medium">{assignment.title}</h3>
+                      <h3 className="font-medium text-black">{assignment.title}</h3>
                       <p className="text-sm text-gray-500">{assignment.class} • Due: {assignment.dueDate}</p>
                       <span className={`inline-flex items-center rounded-md px-2 py-1 text-xs font-medium mt-2 ${
                         assignment.status === 'In Progress'
@@ -248,7 +248,7 @@ const Studentclass = () => {
                     </div>
                     <Link
                       href={`/student/assignments/${assignment.id}`}
-                      className="inline-flex items-center rounded-md border border-gray-300 bg-white px-3 py-1 text-sm font-medium shadow-sm hover:bg-gray-50"
+                      className="inline-flex text-black items-center rounded-md border border-gray-300 bg-white px-3 py-1 text-sm font-medium shadow-sm hover:bg-gray-50"
                     >
                       Work On
                     </Link>

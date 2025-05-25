@@ -201,8 +201,8 @@ const TeacherClass = () => {
 
   return (
     <div className="p-6 space-y-6">
-      <div className="flex justify-between items-center">
-        <h2 className="text-3xl font-bold">My Classes</h2>
+      <div className="flex justify-between items-center lg:flex-row flex-col ">
+        <h2 className="text-3xl font-bold  text-black">My Classes</h2>
         <button className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
           Create Lesson Plan
         </button>
@@ -213,7 +213,7 @@ const TeacherClass = () => {
         <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-gray-400" />
         <input
           placeholder="Search classes..."
-          className="w-full pl-8 pr-4 py-2 border rounded-md border-gray-300"
+          className="w-full pl-8 pr-4 py-2  text-black border rounded-md border-gray-300"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
@@ -222,7 +222,7 @@ const TeacherClass = () => {
       {selectedClass ? (
         // Class details view
         <div className="space-y-6">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between  text-black">
             <div className="flex items-center gap-2">
               <button
                 onClick={() => setSelectedClass(null)}
@@ -231,19 +231,19 @@ const TeacherClass = () => {
                 <ChevronRight className="h-4 w-4 rotate-180" />
                 <span>Back</span>
               </button>
-              <h3 className="text-xl font-semibold">
+              <h3 className="text-xl font-semibold  text-black">
                 {currentClass?.name}
               </h3>
-              <span className="px-2 py-1 text-xs border rounded-full border-gray-300">
+              <span className="px-2 py-1  text-black text-xs border rounded-full border-gray-300">
                 {currentClass?.level}
               </span>
             </div>
-            <button className="px-4 py-2 border rounded-md hover:bg-gray-50 border-gray-300">
+            <button className="px-4 py-2 border  text-black rounded-md hover:bg-gray-50 border-gray-300">
               Take Attendance
             </button>
           </div>
 
-          <div className="flex space-x-2 overflow-x-auto pb-2">
+          <div className="flex space-x-2 overflow-x-auto pb-2 text-black">
             <button
               onClick={() => setActiveTab("overview")}
               className={`px-4 py-2 text-sm rounded-md whitespace-nowrap ${activeTab === "overview" ? 'bg-blue-100 text-blue-600' : 'bg-gray-100 text-gray-600'}`}
@@ -276,7 +276,7 @@ const TeacherClass = () => {
                 <div className="bg-white p-6 rounded-lg shadow">
                   <div className="flex justify-between items-center">
                     <div>
-                      <p className="text-sm font-medium text-gray-500">Students</p>
+                      <p className="text-sm font-medium text-gray-900">Students</p>
                       <h3 className="text-2xl font-bold">
                         {currentClass?.students}
                       </h3>
@@ -290,7 +290,7 @@ const TeacherClass = () => {
                 <div className="bg-white p-6 rounded-lg shadow">
                   <div className="flex justify-between items-center">
                     <div>
-                      <p className="text-sm font-medium text-gray-500">Upcoming Lessons</p>
+                      <p className="text-sm font-medium text-gray-900">Upcoming Lessons</p>
                       <h3 className="text-2xl font-bold">
                         {currentClass?.upcomingLessons}
                       </h3>
@@ -304,7 +304,7 @@ const TeacherClass = () => {
                 <div className="bg-white p-6 rounded-lg shadow">
                   <div className="flex justify-between items-center">
                     <div>
-                      <p className="text-sm font-medium text-gray-500">Pending Assignments</p>
+                      <p className="text-sm font-medium text-gray-900">Pending Assignments</p>
                       <h3 className="text-2xl font-bold">
                         {currentClass?.pendingAssignments}
                       </h3>
@@ -318,19 +318,19 @@ const TeacherClass = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-white p-6 rounded-lg shadow">
-                  <h3 className="text-lg font-semibold">Class Schedule</h3>
-                  <p className="text-sm text-gray-500 mb-4">
+                  <h3 className="text-lg font-semibold  text-black">Class Schedule</h3>
+                  <p className="text-sm text-gray-900 mb-4">
                     Regular schedule for {currentClass?.name}
                   </p>
                   <div className="space-y-4">
                     {currentClass?.schedule.map((schedule, index) => (
                       <div key={index} className="flex items-start gap-4">
                         <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
-                          <Clock className="h-5 w-5 text-gray-500" />
+                          <Clock className="h-5 w-5 text-gray-900" />
                         </div>
                         <div>
-                          <p className="font-medium">{schedule.day}</p>
-                          <p className="text-sm text-gray-500">{schedule.time}</p>
+                          <p className="font-medium  text-black">{schedule.day}</p>
+                          <p className="text-sm text-gray-900">{schedule.time}</p>
                         </div>
                       </div>
                     ))}
@@ -338,27 +338,27 @@ const TeacherClass = () => {
                 </div>
 
                 <div className="bg-white p-6 rounded-lg shadow">
-                  <h3 className="text-lg font-semibold">Recent Activity</h3>
-                  <p className="text-sm text-gray-500 mb-4">
+                  <h3 className="text-lg font-semibold  text-black">Recent Activity</h3>
+                  <p className="text-sm text-gray-900 mb-4">
                     Recent activities in {currentClass?.name}
                   </p>
                   <div className="space-y-4">
                     <div className="flex items-start gap-4">
                       <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
-                        <BookOpen className="h-5 w-5 text-gray-500" />
+                        <BookOpen className="h-5 w-5 text-gray-900" />
                       </div>
                       <div>
-                        <p className="font-medium">Lesson completed: Introduction to Algebra</p>
-                        <p className="text-sm text-gray-500">Yesterday at 10:30 AM</p>
+                        <p className="font-medium  text-black">Lesson completed: Introduction to Algebra</p>
+                        <p className="text-sm text-gray-900">Yesterday at 10:30 AM</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-4">
                       <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
-                        <ClipboardList className="h-5 w-5 text-gray-500" />
+                        <ClipboardList className="h-5 w-5 text-gray-900" />
                       </div>
                       <div>
-                        <p className="font-medium">Assignment submitted by 30 students</p>
-                        <p className="text-sm text-gray-500">2 days ago</p>
+                        <p className="font-medium  text-black">Assignment submitted by 30 students</p>
+                        <p className="text-sm text-gray-900">2 days ago</p>
                       </div>
                     </div>
                   </div>
@@ -369,8 +369,8 @@ const TeacherClass = () => {
 
           {activeTab === "students" && (
             <div className="bg-white p-6 rounded-lg shadow">
-              <h3 className="text-lg font-semibold">Student List</h3>
-              <p className="text-sm text-gray-500 mb-4">
+              <h3 className="text-lg font-semibold  text-black">Student List</h3>
+              <p className="text-sm text-gray-900 mb-4">
                 All students enrolled in {currentClass?.name}
               </p>
               <div className="space-y-4">
@@ -381,29 +381,29 @@ const TeacherClass = () => {
                         {student.name.split(" ").map(n => n[0]).join("").toUpperCase()}
                       </div>
                       <div>
-                        <p className="font-medium">{student.name}</p>
-                        <p className="text-xs text-gray-500">Last active: {student.lastActive}</p>
+                        <p className="font-medium  text-black">{student.name}</p>
+                        <p className="text-xs text-gray-900">Last active: {student.lastActive}</p>
                       </div>
                     </div>
                     <div className="flex items-center gap-6">
                       <div className="text-center">
-                        <p className="text-sm font-medium">{student.attendance}</p>
-                        <p className="text-xs text-gray-500">Attendance</p>
+                        <p className="text-sm font-medium  text-black">{student.attendance}</p>
+                        <p className="text-xs text-gray-900">Attendance</p>
                       </div>
                       <div className="text-center">
-                        <p className="text-sm font-medium">{student.avgScore}</p>
-                        <p className="text-xs text-gray-500">Avg. Score</p>
+                        <p className="text-sm font-medium  text-black">{student.avgScore}</p>
+                        <p className="text-xs text-gray-900">Avg. Score</p>
                       </div>
-                      <button className="px-2 py-1 text-sm hover:bg-gray-100 rounded-md">View</button>
+                      <button className="px-2 py-1 text-sm hover:bg-gray-100 rounded-md  text-black">View</button>
                     </div>
                   </div>
                 ))}
               </div>
               <div className="flex justify-between mt-4 pt-4 border-t border-gray-300">
-                <p className="text-sm text-gray-500">
+                <p className="text-sm text-gray-900">
                   Showing {sampleStudents.length} of {currentClass?.students} students
                 </p>
-                <button className="px-4 py-2 border border-gray-300 rounded-md text-sm hover:bg-gray-50">
+                <button className="px-4 py-2  text-black border border-gray-300 rounded-md text-sm hover:bg-gray-50">
                   View All
                 </button>
               </div>
@@ -414,8 +414,8 @@ const TeacherClass = () => {
             <div className="bg-white p-6 rounded-lg shadow">
               <div className="flex justify-between items-center mb-4">
                 <div>
-                  <h3 className="text-lg font-semibold">Lessons</h3>
-                  <p className="text-sm text-gray-500">
+                  <h3 className="text-lg font-semibold  text-black">Lessons</h3>
+                  <p className="text-sm text-gray-900">
                     All lessons for {currentClass?.name}
                   </p>
                 </div>
@@ -425,11 +425,11 @@ const TeacherClass = () => {
               </div>
               <div className="space-y-4">
                 {sampleLessons.map((lesson) => (
-                  <div key={lesson.id} className="p-4 border border-gray-300 rounded-lg hover:bg-gray-50">
+                  <div key={lesson.id} className="p-4 border  text-black border-gray-300 rounded-lg hover:bg-gray-50">
                     <div className="flex justify-between items-start">
                       <div>
-                        <h4 className="font-medium">{lesson.title}</h4>
-                        <p className="text-sm text-gray-500">
+                        <h4 className="font-medium  text-black">{lesson.title}</h4>
+                        <p className="text-sm text-gray-900">
                           {formatDate(lesson.date)} • {lesson.time}
                         </p>
                       </div>
@@ -451,8 +451,8 @@ const TeacherClass = () => {
             <div className="bg-white p-6 rounded-lg shadow">
               <div className="flex justify-between items-center mb-4">
                 <div>
-                  <h3 className="text-lg font-semibold">Assignments</h3>
-                  <p className="text-sm text-gray-500">
+                  <h3 className="text-lg font-semibold  text-black">Assignments</h3>
+                  <p className="text-sm text-gray-900">
                     All assignments for {currentClass?.name}
                   </p>
                 </div>
@@ -473,7 +473,7 @@ const TeacherClass = () => {
                         {assignment.status.charAt(0).toUpperCase() + assignment.status.slice(1)}
                       </span>
                     </div>
-                    <p className="text-sm text-gray-500 mb-2">
+                    <p className="text-sm text-gray-900 mb-2">
                       Due: {formatDate(assignment.dueDate)}
                     </p>
                     <div className="w-full bg-gray-200 rounded-full h-2.5">
@@ -482,7 +482,7 @@ const TeacherClass = () => {
                         style={{ width: `${(assignment.submitted / assignment.total) * 100}%` }}
                       ></div>
                     </div>
-                    <p className="text-sm text-gray-500 mt-1">
+                    <p className="text-sm text-gray-900 mt-1">
                       {assignment.submitted} of {assignment.total} students submitted
                     </p>
                   </div>
@@ -502,30 +502,30 @@ const TeacherClass = () => {
                 onClick={() => setSelectedClass(cls.id)}
               >
                 <div className="flex justify-between mb-2">
-                  <span className="px-2 py-1 text-xs border  border-gray-300 rounded-full">{cls.level}</span>
+                  <span className="px-2 py-1 text-xs border  border-gray-300 rounded-full  text-black">{cls.level}</span>
                   <span className="px-2 py-1 text-xs bg-blue-100 text-blue-600 rounded-full">
                     {cls.subjects.join(", ")}
                   </span>
                 </div>
-                <h3 className="text-xl font-semibold mb-1">{cls.name}</h3>
-                <p className="text-sm text-gray-500 mb-4">{cls.students} Students</p>
+                <h3 className="text-xl font-semibold mb-1  text-black">{cls.name}</h3>
+                <p className="text-sm text-gray-900 mb-4">{cls.students} Students</p>
 
                 <div className="space-y-3 mb-4">
                   {cls.schedule.map((schedule, index) => (
                     <div key={index} className="flex items-center text-sm">
-                      <Clock className="h-4 w-4 mr-2 text-gray-400" />
-                      <span>{schedule.day}: {schedule.time}</span>
+                      <Clock className="h-4 w-4 mr-2 text-gray-900" />
+                      <span className=" text-black">{schedule.day}: {schedule.time}</span>
                     </div>
                   ))}
                 </div>
 
                 <div className="flex justify-between items-center pt-4 border-t border-gray-300">
-                  <div className="flex items-center text-sm text-gray-500">
+                  <div className="flex items-center text-sm text-gray-900">
                     <CalendarDays className="h-4 w-4 mr-1" />
-                    <span>{cls.upcomingLessons} upcoming</span>
+                    <span className=" text-black">{cls.upcomingLessons} upcoming</span>
                   </div>
                   <button
-                    className="px-2 py-1 text-sm hover:bg-gray-100 rounded-md"
+                    className="px-2 py-1 text-sm hover:bg-gray-100 rounded-md  text-black"
                     onClick={(e) => {
                       e.stopPropagation();
                       setSelectedClass(cls.id);
@@ -538,9 +538,9 @@ const TeacherClass = () => {
             ))
           ) : (
             <div className="col-span-full text-center py-10">
-              <BookOpen className="mx-auto h-12 w-12 text-gray-300" />
+              <BookOpen className="mx-auto h-12 w-12 text-gray-900" />
               <h3 className="mt-4 text-lg font-semibold">No Classes Found</h3>
-              <p className="text-gray-500">No classes match your search criteria.</p>
+              <p className="text-gray-900">No classes match your search criteria.</p>
             </div>
           )}
         </div>

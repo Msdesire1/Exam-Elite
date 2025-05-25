@@ -81,7 +81,7 @@ const Teacherprofile = () => {
   };
 
   return (
-    <div className="p-6 space-y-6">
+    <div className="lg:p-6 space-y-6">
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div className="flex items-center gap-4">
           <div className="h-16 w-16 rounded-full border-2 border-blue-600 overflow-hidden">
@@ -96,39 +96,39 @@ const Teacherprofile = () => {
             />
           </div>
           <div>
-            <h2 className="text-3xl font-bold">{profile.name}</h2>
+            <h2 className="text-3xl font-bold  text-black">{profile.name}</h2>
             <div className="flex items-center gap-2">
               <span className="px-2 py-1 text-xs bg-blue-100 text-blue-800 rounded-full">Teacher</span>
-              <span className="text-sm text-gray-500">{profile.email}</span>
+              <span className="text-sm text-gray-900">{profile.email}</span>
             </div>
           </div>
         </div>
-        <button className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+        <button className="lg:px-4 py-2  bg-blue-600 text-white rounded-md hover:bg-blue-700">
           Edit Profile
         </button>
       </div>
 
-      <div className="flex border-b border-gray-300">
+      <div className="flex border-b border-gray-300 lg:flew-row flex-col">
         <button
           onClick={() => setActiveTab("personal")}
           className={`px-4 py-2 flex items-center gap-2 ${activeTab === "personal" ? 'border-b-2 border-blue-600 text-blue-600' : 'text-gray-500'}`}
         >
           <User className="h-4 w-4" />
-          <span>Personal Information</span>
+          <span className=" text-black">Personal Information</span>
         </button>
         <button
           onClick={() => setActiveTab("security")}
           className={`px-4 py-2 flex items-center gap-2 ${activeTab === "security" ? 'border-b-2 border-blue-600 text-blue-600' : 'text-gray-500'}`}
         >
           <Shield className="h-4 w-4" />
-          <span>Security</span>
+          <span className=" text-black">Security</span>
         </button>
         <button
           onClick={() => setActiveTab("notifications")}
           className={`px-4 py-2 flex items-center gap-2 ${activeTab === "notifications" ? 'border-b-2 border-blue-600 text-blue-600' : 'text-gray-500'}`}
         >
           <Bell className="h-4 w-4" />
-          <span>Notifications</span>
+          <span className=" text-black">Notifications</span>
         </button>
       </div>
 
@@ -137,27 +137,27 @@ const Teacherprofile = () => {
         <div className="grid gap-6 md:grid-cols-2">
           <div className="bg-white p-6 rounded-lg shadow">
             <div className="mb-6">
-              <h3 className="text-xl font-semibold">Basic Information</h3>
-              <p className="text-sm text-gray-500">
+              <h3 className="text-xl font-semibold text-black">Basic Information</h3>
+              <p className="text-sm text-gray-900">
                 Update your personal details
               </p>
             </div>
             <div className="space-y-4">
               <div className="space-y-2">
-                <label htmlFor="name" className="block text-sm font-medium">Full Name</label>
+                <label htmlFor="name" className="block text-sm font-medium  text-black">Full Name</label>
                 <input
                   id="name"
-                  className="w-full px-3 py-2 border rounded-md border-gray-300"
+                  className="w-full px-3 py-2 border rounded-md border-gray-300  text-black"
                   value={profile.name}
                   onChange={(e) => setProfile({...profile, name: e.target.value})}
                 />
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="email" className="block text-sm font-medium">Email Address</label>
+                <label htmlFor="email" className="block text-sm font-medium  text-black">Email Address</label>
                 <div className="flex items-center bg-gray-100 border  border-gray-300 rounded-md px-3 py-2 text-gray-500">
                   <Mail className="mr-2 h-4 w-4" />
-                  <span>{profile.email}</span>
+                  <span className=" text-black">{profile.email}</span>
                 </div>
                 <p className="text-xs text-gray-500">
                   Contact the administrator to change your email address.
@@ -165,7 +165,7 @@ const Teacherprofile = () => {
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="phone" className="block text-sm font-medium">Phone Number</label>
+                <label htmlFor="phone" className="block text-sm font-medium  text-black">Phone Number</label>
                 <input
                   id="phone"
                   className="w-full px-3 py-2 border rounded-md border-gray-300"
@@ -175,7 +175,7 @@ const Teacherprofile = () => {
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="address" className="block text-sm font-medium">Address</label>
+                <label htmlFor="address" className="block text-sm font-medium text-black ">Address</label>
                 <textarea
                   id="address"
                   className="w-full px-3 py-2 border rounded-md border-gray-300"
@@ -186,7 +186,7 @@ const Teacherprofile = () => {
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="avatar" className="block text-sm font-medium">Profile Picture</label>
+                <label htmlFor="avatar" className="block text-sm font-medium  text-black">Profile Picture</label>
                 <div className="flex items-center gap-4">
                   <div className="h-16 w-16 rounded-full overflow-hidden">
                     <img
@@ -206,14 +206,14 @@ const Teacherprofile = () => {
 
           <div className="bg-white p-6 rounded-lg shadow">
             <div className="mb-6">
-              <h3 className="text-xl font-semibold">Professional Information</h3>
-              <p className="text-sm text-gray-500">
+              <h3 className="text-xl font-semibold  text-black">Professional Information</h3>
+              <p className="text-sm text-gray-900">
                 Update your professional details
               </p>
             </div>
             <div className="space-y-4">
               <div className="space-y-2">
-                <label htmlFor="bio" className="block text-sm font-medium">Professional Bio</label>
+                <label htmlFor="bio" className="block text-sm font-medium  text-black">Professional Bio</label>
                 <textarea
                   id="bio"
                   className="w-full px-3 py-2 border border-gray-300 rounded-md"

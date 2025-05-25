@@ -234,17 +234,17 @@ const Resourceid = () => {
               </div>
             </div>
             <div className="p-6">
-              <h2 className="text-xl font-semibold mb-4">Description</h2>
-              <p className="text-gray-700 mb-6">{resource.description}</p>
+              <h2 className="text-xl font-semibold mb-4  text-black">Description</h2>
+              <p className=" text-black mb-6">{resource.description}</p>
 
-              <h2 className="text-xl font-semibold mb-4">Content</h2>
+              <h2 className="text-xl font-semibold mb-4  text-black">Content</h2>
               <div className="max-w-none prose">
-                <p>{resource.content}</p>
+                <p className=' text-black'>{resource.content}</p>
 
                 {resource.type === 'document' && (
                   <div className="mt-6 p-6 bg-gray-50 rounded-lg border border-gray-300">
                     <div className="flex items-center justify-center flex-col gap-2 text-gray-500">
-                      <BookOpen className="h-12 w-12" />
+                      <BookOpen className="h-12 w-12  text-black" />
                       <p>Document preview would be displayed here</p>
                     </div>
                   </div>

@@ -119,38 +119,38 @@ const Studentprofile = () => {
         </div>
 
             </div>
-            <h3 className="mt-4 text-xl font-semibold py-10">{studentData.name}</h3>
+            <h3 className="mt-4 text-xl font-semibold py-10  text-black">{studentData.name}</h3>
             <div className="mt-2">
               <span className="inline-flex items-center rounded-full bg-blue-500 px-3 py-1 text-xs font-medium text-white">
                 {studentData.currentClass}
               </span>
             </div>
-            <p className="mt-2 text-sm text-gray-500">{studentData.studentId}</p>
+            <p className="mt-2 text-sm  text-black ">{studentData.studentId}</p>
           </div>
           <div className="p-6 pt-0">
             <div className="space-y-4">
               <div className="flex items-center gap-2">
-                <User className="h-4 w-4 text-gray-400" />
-                <span className="text-sm">{studentData.gender}</span>
+                <User className="h-4 w-4  text-black" />
+                <span className="text-sm  text-black">{studentData.gender}</span>
               </div>
               <div className="flex items-center gap-2">
-                <Mail className="h-4 w-4 text-gray-400" />
-                <span className="text-sm">{studentData.email}</span>
+                <Mail className="h-4 w-4  text-black" />
+                <span className="text-sm  text-black">{studentData.email}</span>
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="h-4 w-4 text-gray-400" />
-                <span className="text-sm">{studentData.phone}</span>
+                <Phone className="h-4 w-4  text-black" />
+                <span className="text-sm  text-black">{studentData.phone}</span>
               </div>
               <div className="flex items-center gap-2">
-                <GraduationCap className="h-4 w-4 text-gray-400" />
-                <span className="text-sm">Admitted: {new Date(studentData.admissionDate).toLocaleDateString()}</span>
+                <GraduationCap className="h-4 w-4  text-black" />
+                <span className="text-sm  text-black">Admitted: {new Date(studentData.admissionDate).toLocaleDateString()}</span>
               </div>
             </div>
           </div>
           <div className="p-6 pt-0">
             {!isEditing && (
               <button
-                className="w-full inline-flex items-center justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium shadow-sm hover:bg-gray-50"
+                className="w-full inline-flex  text-black items-center justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium shadow-sm hover:bg-gray-50"
                 onClick={() => setIsEditing(true)}
               >
                 Edit Profile
@@ -164,13 +164,13 @@ const Studentprofile = () => {
           <div className="mb-4 flex border-b border-gray-300">
             <button
               onClick={() => setActiveTab('profile')}
-              className={`px-4 py-2 text-sm font-medium ${activeTab === 'profile' ? "border-b-2 border-blue-500 text-blue-600" : "text-gray-500"}`}
+              className={`px-4 py-2 text-sm  text-black font-medium ${activeTab === 'profile' ? "border-b-2 border-blue-500 text-blue-600" : " text-black"}`}
             >
               Profile Details
             </button>
             <button
               onClick={() => setActiveTab('security')}
-              className={`px-4 py-2 text-sm font-medium ${activeTab === 'security' ? "border-b-2 border-blue-500 text-blue-600" : "text-gray-500"}`}
+              className={`px-4 py-2 text-sm  text-black font-medium ${activeTab === 'security' ? "border-b-2 border-blue-500 text-blue-600" : " text-black"}`}
             >
               Security
             </button>
@@ -182,8 +182,8 @@ const Studentprofile = () => {
                 <div className="p-6">
                   <div className="flex justify-between items-center">
                     <div>
-                      <h3 className="text-lg font-semibold">Personal Information</h3>
-                      <p className="text-sm text-gray-500">Manage your personal details</p>
+                      <h3 className="text-lg font-semibold  text-black">Personal Information</h3>
+                      <p className="text-sm  text-black">Manage your personal details</p>
                     </div>
                     {!isEditing && (
                       <button
@@ -200,51 +200,51 @@ const Studentprofile = () => {
                   <form onSubmit={handleProfileSubmit}>
                     <div className="grid gap-6 md:grid-cols-2">
                       <div className="space-y-2">
-                        <label htmlFor="name" className="block text-sm font-medium">Full Name</label>
+                        <label htmlFor="name" className="block text-sm font-medium  text-black">Full Name</label>
                         <input
                           id="name"
-                          className="w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500"
+                          className="w-full rounded-md border  text-black border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500"
                           value={studentData.name}
                           onChange={(e) => setStudentData({...studentData, name: e.target.value})}
                           disabled={!isEditing}
                         />
                       </div>
                       <div className="space-y-2">
-                        <label htmlFor="email" className="block text-sm font-medium">Email</label>
+                        <label htmlFor="email" className="block text-sm font-medium  text-black">Email</label>
                         <input
                           id="email"
                           type="email"
-                          className="w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500"
+                          className="w-full rounded-md  text-black border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500"
                           value={studentData.email}
                           onChange={(e) => setStudentData({...studentData, email: e.target.value})}
                           disabled={!isEditing}
                         />
                       </div>
                       <div className="space-y-2">
-                        <label htmlFor="phone" className="block text-sm font-medium">Phone Number</label>
+                        <label htmlFor="phone" className="block text-sm font-medium  text-black">Phone Number</label>
                         <input
                           id="phone"
-                          className="w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500"
+                          className="w-full rounded-md  text-black border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500"
                           value={studentData.phone}
                           onChange={(e) => setStudentData({...studentData, phone: e.target.value})}
                           disabled={!isEditing}
                         />
                       </div>
                       <div className="space-y-2">
-                        <label htmlFor="address" className="block text-sm font-medium">Address</label>
+                        <label htmlFor="address" className="block text-sm font-medium  text-black">Address</label>
                         <input
                           id="address"
-                          className="w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500"
+                          className="w-full  text-black rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500"
                           value={studentData.address}
                           onChange={(e) => setStudentData({...studentData, address: e.target.value})}
                           disabled={!isEditing}
                         />
                       </div>
                       <div className="space-y-2">
-                        <label htmlFor="gender" className="block text-sm font-medium">Gender</label>
+                        <label htmlFor="gender" className="block text-sm font-medium  text-black">Gender</label>
                         <select
                           id="gender"
-                          className="w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500"
+                          className="w-full  text-black rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500"
                           value={studentData.gender}
                           onChange={(e) => setStudentData({...studentData, gender: e.target.value})}
                           disabled={!isEditing}
@@ -255,11 +255,11 @@ const Studentprofile = () => {
                         </select>
                       </div>
                       <div className="space-y-2">
-                        <label htmlFor="dob" className="block text-sm font-medium">Date of Birth</label>
+                        <label htmlFor="dob" className="block text-sm font-medium  text-black">Date of Birth</label>
                         <input
                           id="dob"
                           type="date"
-                          className="w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500"
+                          className="w-full rounded-md border  text-black border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500"
                           value={studentData.dateOfBirth}
                           onChange={(e) => setStudentData({...studentData, dateOfBirth: e.target.value})}
                           disabled={!isEditing}
@@ -270,34 +270,34 @@ const Studentprofile = () => {
                     <div className="my-6 border-t  border-gray-300"></div>
 
                     <div>
-                      <h3 className="text-lg font-medium mb-4">Parent/Guardian Information</h3>
+                      <h3 className="text-lg font-medium mb-4  text-black">Parent/Guardian Information</h3>
                       <div className="grid gap-6 md:grid-cols-2">
                         <div className="space-y-2">
-                          <label htmlFor="parentName" className="block text-sm font-medium">Parent/Guardian Name</label>
+                          <label htmlFor="parentName" className="block text-sm font-medium  text-black">Parent/Guardian Name</label>
                           <input
                             id="parentName"
-                            className="w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500"
+                            className="w-full rounded-md   text-black border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500"
                             value={studentData.parentName}
                             onChange={(e) => setStudentData({...studentData, parentName: e.target.value})}
                             disabled={!isEditing}
                           />
                         </div>
                         <div className="space-y-2">
-                          <label htmlFor="parentPhone" className="block text-sm font-medium">Parent/Guardian Phone</label>
+                          <label htmlFor="parentPhone" className="block  text-black text-sm font-medium">Parent/Guardian Phone</label>
                           <input
                             id="parentPhone"
-                            className="w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500"
+                            className="w-full rounded-md  text-black border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500"
                             value={studentData.parentPhone}
                             onChange={(e) => setStudentData({...studentData, parentPhone: e.target.value})}
                             disabled={!isEditing}
                           />
                         </div>
                         <div className="space-y-2">
-                          <label htmlFor="parentEmail" className="block text-sm font-medium">Parent/Guardian Email</label>
+                          <label htmlFor="parentEmail" className="block  text-black text-sm font-medium">Parent/Guardian Email</label>
                           <input
                             id="parentEmail"
                             type="email"
-                            className="w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500"
+                            className="w-full  text-black rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500"
                             value={studentData.parentEmail}
                             onChange={(e) => setStudentData({...studentData, parentEmail: e.target.value})}
                             disabled={!isEditing}
@@ -331,25 +331,25 @@ const Studentprofile = () => {
                <div className="py-3">
                <div className="border rounded-lg bg-white shadow-sm border-gray-300">
                 <div className="p-6">
-                  <h3 className="text-lg font-semibold">Academic Information</h3>
-                  <p className="text-sm text-gray-500">Your enrollment and class details</p>
+                  <h3 className="text-lg font-semibold  text-black">Academic Information</h3>
+                  <p className="text-sm  text-black">Your enrollment and class details</p>
                 </div>
                 <div className="px-6 pb-6">
                   <div className="grid gap-6 md:grid-cols-2">
                     <div>
-                      <div className="text-sm font-medium">Student ID</div>
-                      <div className="mt-1">{studentData.studentId}</div>
+                      <div className="text-sm font-medium  text-black">Student ID</div>
+                      <div className="mt-1  text-black">{studentData.studentId}</div>
                     </div>
                     <div>
-                      <div className="text-sm font-medium">Current Class</div>
-                      <div className="mt-1">{studentData.currentClass}</div>
+                      <div className="text-sm font-medium  text-black">Current Class</div>
+                      <div className="mt-1  text-black">{studentData.currentClass}</div>
                     </div>
                     <div>
-                      <div className="text-sm font-medium">Admission Date</div>
-                      <div className="mt-1">{new Date(studentData.admissionDate).toLocaleDateString()}</div>
+                      <div className="text-sm font-medium  text-black">Admission Date</div>
+                      <div className="mt-1  text-black">{new Date(studentData.admissionDate).toLocaleDateString()}</div>
                     </div>
                     <div>
-                      <div className="text-sm font-medium">Academic Status</div>
+                      <div className="text-sm font-medium  text-black">Academic Status</div>
                       <div className="mt-1">
                         <span className="inline-flex items-center rounded-full bg-green-500 px-3 py-1 text-xs font-medium text-white">
                           Active
@@ -366,8 +366,8 @@ const Studentprofile = () => {
   <div className="">
  <div className="border rounded-lg bg-white shadow-sm border-gray-300">
               <div className="p-6">
-                <h3 className="text-lg font-semibold">Change Password</h3>
-                <p className="text-sm text-gray-500">Update your password to keep your account secure</p>
+                <h3 className="text-lg font-semibold  text-black">Change Password</h3>
+                <p className="text-sm  text-black">Update your password to keep your account secure</p>
               </div>
               <div className="px-6 pb-6">
                 <form onSubmit={handlePasswordSubmit}>
@@ -396,20 +396,20 @@ const Studentprofile = () => {
                         />
                         <button
                           type="button"
-                          className="absolute right-0 top-0 h-full px-3 text-gray-400 hover:text-gray-500"
+                          className="absolute right-0 top-0 h-full px-3  text-black hover: "
                           onClick={() => setShowPassword(!showPassword)}
                         >
                           {showPassword ? (
-                            <EyeOff className="h-4 w-4" />
+                            <EyeOff className="h-4 w-4  text-black" />
                           ) : (
-                            <Eye className="h-4 w-4" />
+                            <Eye className="h-4 w-4  text-black" />
                           )}
                         </button>
                       </div>
                     </div>
 
                     <div className="space-y-2">
-                      <label htmlFor="newPassword" className="block text-sm font-medium">New Password</label>
+                      <label htmlFor="newPassword" className="block text-sm font-medium  text-black">New Password</label>
                       <div className="relative">
                         <input
                           id="newPassword"
@@ -420,20 +420,20 @@ const Studentprofile = () => {
                         />
                         <button
                           type="button"
-                          className="absolute right-0 top-0 h-full px-3 text-gray-400 hover:text-gray-500"
+                          className="absolute right-0 top-0 h-full px-3  text-black hover: "
                           onClick={() => setShowNewPassword(!showNewPassword)}
                         >
                           {showNewPassword ? (
-                            <EyeOff className="h-4 w-4" />
+                            <EyeOff className="h-4 w-4  text-black" />
                           ) : (
-                            <Eye className="h-4 w-4" />
+                            <Eye className="h-4 w-4  text-black" />
                           )}
                         </button>
                       </div>
                     </div>
 
                     <div className="space-y-2">
-                      <label htmlFor="confirmPassword" className="block text-sm font-medium">Confirm New Password</label>
+                      <label htmlFor="confirmPassword" className="block text-sm font-medium  text-black">Confirm New Password</label>
                       <div className="relative">
                         <input
                           id="confirmPassword"
@@ -444,7 +444,7 @@ const Studentprofile = () => {
                         />
                         <button
                           type="button"
-                          className="absolute right-0 top-0 h-full px-3 text-gray-400 hover:text-gray-500"
+                          className="absolute right-0 top-0 h-full px-3  text-black hover: text-black"
                           onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                         >
                           {showConfirmPassword ? (
@@ -460,7 +460,7 @@ const Studentprofile = () => {
                   <div className="flex justify-end mt-6">
                     <button
                       type="submit"
-                      className="inline-flex items-center justify-center rounded-md bg-blue-500 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-blue-600 disabled:opacity-50"
+                      className="inline-flex items-center  text-black justify-center rounded-md bg-blue-500 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-blue-600 disabled:opacity-50"
                       disabled={!passwordForm.currentPassword || !passwordForm.newPassword || !passwordForm.confirmPassword}
                     >
                       Update Password

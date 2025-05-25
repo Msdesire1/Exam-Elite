@@ -1,8 +1,4 @@
 
-
-
-
-
 "use client"
 
 import { useState } from "react"
@@ -60,15 +56,15 @@ export default function Analytics() {
   }
 
   return (
-    <div className="min-h-screen p-6 bg-gray-50">
+    <div className="min-h-screen lg:p-6 bg-gray-50">
       <div className="mb-6">
-        <h1 className="text-3xl font-bold mb-2">Analytics Overview</h1>
+        <h1 className="text-3xl font-bold mb-2  text-black">Analytics Overview</h1>
         <p className="text-gray-600">Performance summary across tests</p>
       </div>
 
       <div className="flex flex-wrap gap-4 mb-6">
         <select
-          className="p-2 border rounded w-40 border-gray-300"
+          className="p-2 border rounded w-40 border-gray-300  text-black"
           value={timeRange}
           onChange={(e) => setTimeRange(e.target.value)}
         >
@@ -79,7 +75,7 @@ export default function Analytics() {
         </select>
 
         <select
-          className="p-2 border rounded w-40 border-gray-300"
+          className="p-2 border rounded w-40 border-gray-300  text-black"
           value={subjectFilter}
           onChange={(e) => setSubjectFilter(e.target.value)}
         >
@@ -91,7 +87,7 @@ export default function Analytics() {
         </select>
 
         <select
-          className="p-2 border rounded w-40 border-gray-300"
+          className="p-2 border rounded w-40 border-gray-300  text-black"
           value={classFilter}
           onChange={(e) => setClassFilter(e.target.value)}
         >
@@ -103,7 +99,7 @@ export default function Analytics() {
         </select>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8  text-black">
         <div className="bg-white p-4 rounded shadow">
           <p className="text-gray-500 text-sm mb-1">Average Score</p>
           <h2 className="text-2xl font-semibold">82%</h2>
@@ -121,7 +117,7 @@ export default function Analytics() {
         </div>
       </div>
 
-      <div className="bg-white p-6 rounded shadow">
+      <div className="bg-white p-6 rounded shadow  text-black">
         <h2 className="text-xl font-semibold mb-4">Average Scores by Test</h2>
         <Bar data={chartData} options={chartOptions} />
       </div>

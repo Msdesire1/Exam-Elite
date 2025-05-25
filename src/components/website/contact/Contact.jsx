@@ -283,9 +283,9 @@ const Contact = () => {
             </p>
             <a
               href="mailto:support@examelite.com"
-              className="inline-flex items-center px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50"
+              className="inline-flex items-center text-black px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50"
             >
-              <Mail className="mr-2 h-4 w-4  text-black" />
+              <Mail className="mr-2 h-4 w-4 text-black" />
               Email Support
             </a>
           </div>

@@ -359,7 +359,7 @@ const Login = () => {
                     placeholder="••••••••"
                     value={formData.password}
                     onChange={handleChange}
-                    className="block w-full pl-10 h-11 rounded-md border border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                    className="block w-full text-black  pl-10 h-11 rounded-md border border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                     required
                   />
                   <button

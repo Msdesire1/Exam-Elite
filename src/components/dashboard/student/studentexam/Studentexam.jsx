@@ -97,7 +97,7 @@ const Studentexam = () => {
   return (
     <div className="space-y-8 p-6">
       <div>
-        <h1 className="text-3xl font-bold mb-2">Examinations</h1>
+        <h1 className="text-3xl font-bold mb-2  text-black">Examinations</h1>
         <p className="text-gray-500">View all your exams, prepare for upcoming tests, and review past results</p>
       </div>
 
@@ -119,7 +119,7 @@ const Studentexam = () => {
           <select
             value={subjectFilter}
             onChange={(e) => setSubjectFilter(e.target.value)}
-            className="block w-[60%] pl-3 pr-20 py-2 text-base border border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md"
+            className="block w-[60%] pl-3 text-black pr-20 py-2 text-base border border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md"
           >
             {subjects.map((subject) => (
               <option key={subject} value={subject}>
@@ -159,7 +159,7 @@ const Studentexam = () => {
           {filteredUpcomingExams.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {filteredUpcomingExams.map((exam, index) => (
-                <div key={index} className="border border-gray-300 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <div key={index} className="border  text-black border-gray-300 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                   <div className="p-6 pb-2">
                     <div className="flex justify-between items-start">
                       <div>
@@ -208,7 +208,7 @@ const Studentexam = () => {
           {filteredCompletedExams.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {filteredCompletedExams.map((exam, index) => (
-                <div key={index} className="border border-gray-300 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                <div key={index} className="border  text-black border-gray-300 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
                   <div className="p-6 pb-2">
                     <div className="flex justify-between items-start">
                       <div>
@@ -252,7 +252,7 @@ const Studentexam = () => {
       <div className="flex flex-col md:flex-row justify-between items-center p-6 border border-gray-300 rounded-lg">
         <div className="mb-4 md:mb-0">
           <p className="text-gray-500">Need help preparing for exams?</p>
-          <p>Check out our study resources and tips.</p>
+          <p className=' text-black'>Check out our study resources and tips.</p>
         </div>
         <button
           onClick={() => router.push('/dashboard/student/studentexam/resources')}

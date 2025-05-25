@@ -44,7 +44,7 @@ const Sidebar = ({ children }) => {
           aria-label="Toggle Menu"
           className="p-2 border border-gray-300 rounded-md bg-white hover:bg-gray-100"
         >
-          <Menu className="h-5 w-5" />
+          <Menu className="h-5 w-5 text-black" />
         </button>
       </div>
 
@@ -71,12 +71,12 @@ const Sidebar = ({ children }) => {
               onClick={toggleSidebar}
               className="lg:hidden text-gray-600 hover:text-gray-800"
             >
-              <X className="h-5 w-5" />
+              <X className="h-3 w-3" />
             </button>
           </div>
 
           <div className="flex-1 overflow-auto py-4 px-3">
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col gap-1 text-black">
               <NavItem to="/dashboard/student/dashboard" icon={FileText} label="Dashboard" />
               <NavItem to="/dashboard/student/studentclass" icon={Book} label="Classes" />
               <NavItem to="/dashboard/student/studentexam" icon={FileText} label="Examinations" />
@@ -88,7 +88,7 @@ const Sidebar = ({ children }) => {
           <div className="p-4 border-t border-gray-200">
             <Link href={"/"}
               onClick={handleLogout}
-              className="w-full flex items-center justify-start gap-2 px-4 py-2 border border-gray-300 rounded-md text-sm text-gray-700 hover:bg-gray-100"
+              className="w-full flex items-center text-black justify-start gap-2 px-4 py-2 border border-gray-300 rounded-md text-sm  hover:bg-gray-100"
             >
               <LogOut className="h-4 w-4" />
               Log out
