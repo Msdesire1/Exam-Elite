@@ -46,8 +46,8 @@ export default function EnglishResultsPage() {
           <div className="p-6 border-b border-gray-300">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
               <div>
-                <h1 className="text-2xl font-bold">{testData.title}</h1>
-                <p className="text-gray-500">{testData.subject}</p>
+                <h1 className="text-2xl font-bold text-black">{testData.title}</h1>
+                <p className="text-gray-900">{testData.subject}</p>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-16 h-16 rounded-full bg-green-50 flex items-center justify-center">
@@ -60,18 +60,18 @@ export default function EnglishResultsPage() {
           <div className="p-6">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
               <div className="bg-gray-50 p-4 rounded-lg">
-                <p className="text-sm text-gray-500">Date Taken</p>
-                <p className="font-medium">{testData.date}</p>
+                <p className="text-sm text-gray-900">Date Taken</p>
+                <p className="font-medium text-black">{testData.date}</p>
               </div>
               <div className="bg-gray-50 p-4 rounded-lg">
-                <p className="text-sm text-gray-500">Time</p>
-                <p className="font-medium">
+                <p className="text-sm text-gray-900">Time</p>
+                <p className="font-medium text-black">
                   {testData.time} ({testData.duration})
                 </p>
               </div>
               <div className="bg-gray-50 p-4 rounded-lg">
-                <p className="text-sm text-gray-500">Score</p>
-                <p className="font-medium">
+                <p className="text-sm text-gray-900">Score</p>
+                <p className="font-medium text-black">
                   {testData.correctAnswers} out of {testData.totalQuestions} correct
                 </p>
               </div>
@@ -79,11 +79,11 @@ export default function EnglishResultsPage() {
 
             <div className="space-y-6">
               <div>
-                <h3 className="font-medium mb-2">Performance Summary</h3>
+                <h3 className="font-medium mb-2 text-black">Performance Summary</h3>
                 <div className="bg-gray-50 p-4 rounded-lg">
-                  <div className="flex justify-between mb-1">
+                  <div className="flex justify-between mb-1 text-black">
                     <span>Overall Score</span>
-                    <span className="font-medium">{percentageScore}%</span>
+                    <span className="font-medium text-black">{percentageScore}%</span>
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-2 mb-4">
                     <div
@@ -96,15 +96,15 @@ export default function EnglishResultsPage() {
                     <div className="flex items-center gap-2">
                       <CheckCircle className="h-5 w-5 text-green-500" />
                       <div>
-                        <p className="text-sm font-medium">Correct Answers</p>
-                        <p className="text-sm text-gray-500">{testData.correctAnswers} questions</p>
+                        <p className="text-sm font-medium text-black">Correct Answers</p>
+                        <p className="text-sm text-gray-900">{testData.correctAnswers} questions</p>
                       </div>
                     </div>
                     <div className="flex items-center gap-2">
                       <AlertCircle className="h-5 w-5 text-red-500" />
                       <div>
-                        <p className="text-sm font-medium">Incorrect Answers</p>
-                        <p className="text-sm text-gray-500">{incorrectAnswers} questions</p>
+                        <p className="text-sm font-medium text-black">Incorrect Answers</p>
+                        <p className="text-sm text-gray-900">{incorrectAnswers} questions</p>
                       </div>
                     </div>
                   </div>
@@ -112,13 +112,13 @@ export default function EnglishResultsPage() {
               </div>
 
               <div>
-                <h3 className="font-medium mb-2">Topic Analysis</h3>
+                <h3 className="font-medium mb-2 text-black">Topic Analysis</h3>
                 <div className="space-y-3">
                   {topicAnalysis.map((topic, index) => (
                     <div key={index} className="bg-gray-50 p-4 rounded-lg">
-                      <div className="flex justify-between mb-1">
+                      <div className="flex justify-between mb-1 text-black">
                         <span>{topic.topic}</span>
-                        <span className="font-medium">{topic.percentage}%</span>
+                        <span className="font-medium text-black">{topic.percentage}%</span>
                       </div>
                       <div className="w-full bg-gray-200 rounded-full h-2">
                         <div
@@ -129,7 +129,7 @@ export default function EnglishResultsPage() {
                           style={{ width: `${topic.percentage}%` }}
                         ></div>
                       </div>
-                      <p className="text-sm text-gray-500 mt-1">
+                      <p className="text-sm text-gray-900 mt-1">
                         {topic.correct} out of {topic.total} correct
                       </p>
                     </div>
@@ -138,10 +138,10 @@ export default function EnglishResultsPage() {
               </div>
 
               <div>
-                <h3 className="font-medium mb-2">Question Details</h3>
+                <h3 className="font-medium mb-2 text-black">Question Details</h3>
                 <div className="space-y-4">
                   {testData.questions.map((question, index) => (
-                    <div key={index} className="bg-gray-50 p-4 rounded-lg">
+                    <div key={index} className="bg-gray-50 p-4 rounded-lg text-black">
                       <div className="flex items-start gap-2">
                         {question.userAnswer === question.correctAnswer ? (
                           <CheckCircle className="h-5 w-5 text-green-500 shrink-0 mt-0.5" />
@@ -149,10 +149,10 @@ export default function EnglishResultsPage() {
                           <AlertCircle className="h-5 w-5 text-red-500 shrink-0 mt-0.5" />
                         )}
                         <div>
-                          <p className="font-medium">
+                          <p className="font-medium text-black">
                             {index + 1}. {question.question}
                           </p>
-                          <p className="text-sm text-gray-500">Your answer: {question.options[question.userAnswer]}</p>
+                          <p className="text-sm text-gray-900">Your answer: {question.options[question.userAnswer]}</p>
                           {question.userAnswer !== question.correctAnswer && (
                             <p className="text-sm text-green-600">
                               Correct answer: {question.options[question.correctAnswer]}
@@ -170,7 +170,7 @@ export default function EnglishResultsPage() {
           <div className="p-6 border-t border-gray-300">
             <Link
               href="/dashboard/student/studentresult"
-              className="inline-flex items-center justify-center px-4 py-2 bg-[#FF7F46] text-white rounded-md hover:bg-black focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-black focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
               Back to Dashboard
             </Link>

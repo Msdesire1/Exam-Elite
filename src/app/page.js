@@ -24,8 +24,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-50  ">
-
-      {/* Hero */}
+ {/* Hero */}
       <section className="relative py-20 md:py-28 bg-gradient-to-br from-blue-100  to-gray-100 overflow-hidden">
         <div className="absolute inset-0 bg-[url('/placeholder.svg')] bg-center bg-no-repeat bg-cover opacity-5"></div>
         <div className=" relative px-4 sm:px-6 lg:px-20">

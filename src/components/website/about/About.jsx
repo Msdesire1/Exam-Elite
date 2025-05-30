@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="py-28 bg-gradient-to-b from-education-primary/20 from-blue-100 to-white dark:from-education-primary/10 dark:to-gray-900">
+      <section className="py-28 bg-gradient-to-b from-education-primary/20 from-blue-100 to-white dark:from-education-primary/10">
         <div className="px-4 mx-auto max-w-6xl">
           <div className="flex flex-col items-center text-center">
             <h1 className="text-4xl md:text-5xl font-bold  text-black  mb-6">

@@ -10,7 +10,7 @@ export default function TeachersPage() {
       id: 1,
       name: "Dr. Sarah Johnson",
       role: "Mathematics Department Head",
-      image: "/asset/classroom.svg",
+      image: "/asset/Classroom.svg",
       expertise: "Advanced Calculus, Algebra",
       experience: "15+ years",
       education: "Ph.D. in Mathematics, Harvard University",
@@ -20,7 +20,7 @@ export default function TeachersPage() {
       id: 2,
       name: "Prof. Michael Chen",
       role: "Science Department Head",
-      image: "/asset/lesson.svg",
+      image: "/asset/Lesson.svg",
       expertise: "Physics, Chemistry",
       experience: "12+ years",
       education: "Ph.D. in Physics, MIT",
@@ -116,11 +116,11 @@ export default function TeachersPage() {
 
                   <div className="space-y-2 mb-4">
                     <div className="flex items-start">
-                      <BookOpen className="h-5 w-5 text-gray-500 mt-0.5 mr-2" />
-                      <span className="text-gray-700">{teacher.expertise}</span>
+                      <BookOpen className="h-5 w-5 text-gray-900 mt-0.5 mr-2" />
+                      <span className="text-gray-900">{teacher.expertise}</span>
                     </div>
                     <div className="flex items-start">
-                      <GraduationCap className="h-5 w-5 text-gray-500 mt-0.5 mr-2" />
+                      <GraduationCap className="h-5 w-5 text-gray-900 mt-0.5 mr-2" />
                       <span className="text-gray-700">{teacher.education}</span>
                     </div>
                     <div className="flex items-start">

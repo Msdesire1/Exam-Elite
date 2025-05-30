@@ -385,12 +385,12 @@ const Studentprofile = () => {
 
                   <div className="space-y-4">
                     <div className="space-y-2">
-                      <label htmlFor="currentPassword" className="block text-sm font-medium">Current Password</label>
+                      <label htmlFor="currentPassword" className="block text-black text-sm font-medium">Current Password</label>
                       <div className="relative">
                         <input
                           id="currentPassword"
                           type={showPassword ? "text" : "password"}
-                          className="w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500"
+                          className="w-full rounded-md border text-black border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500"
                           value={passwordForm.currentPassword}
                           onChange={(e) => setPasswordForm({...passwordForm, currentPassword: e.target.value})}
                         />
@@ -414,7 +414,7 @@ const Studentprofile = () => {
                         <input
                           id="newPassword"
                           type={showNewPassword ? "text" : "password"}
-                          className="w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500"
+                          className="w-full rounded-md border text-black border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500"
                           value={passwordForm.newPassword}
                           onChange={(e) => setPasswordForm({...passwordForm, newPassword: e.target.value})}
                         />
@@ -438,7 +438,7 @@ const Studentprofile = () => {
                         <input
                           id="confirmPassword"
                           type={showConfirmPassword ? "text" : "password"}
-                          className="w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500"
+                          className="w-full rounded-md border text-black border-gray-300 px-3 py-2 shadow-sm focus:border-blue-500 focus:outline-none focus:ring-blue-500"
                           value={passwordForm.confirmPassword}
                           onChange={(e) => setPasswordForm({...passwordForm, confirmPassword: e.target.value})}
                         />
@@ -460,7 +460,7 @@ const Studentprofile = () => {
                   <div className="flex justify-end mt-6">
                     <button
                       type="submit"
-                      className="inline-flex items-center  text-black justify-center rounded-md bg-blue-500 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-blue-600 disabled:opacity-50"
+                      className="inline-flex items-center justify-center rounded-md bg-blue-500 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-blue-600 disabled:opacity-50"
                       disabled={!passwordForm.currentPassword || !passwordForm.newPassword || !passwordForm.confirmPassword}
                     >
                       Update Password

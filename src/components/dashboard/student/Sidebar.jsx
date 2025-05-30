@@ -27,7 +27,7 @@ const Sidebar = ({ children }) => {
   const NavItem = ({ to, icon: Icon, label }) => (
     <Link
       href={to}
-      className="flex items-center gap-3 rounded-md px-3 py-2 text-sm text-gray-500 hover:bg-gray-100  hover:text-gray-900"
+      className="flex items-center gap-3 rounded-md px-3 py-2 text-sm text-black hover:bg-gray-100  hover:text-gray-900"
       onClick={() => window.innerWidth < 1024 && setSidebarOpen(false)}
     >
       <Icon className="h-4 w-4" />
@@ -50,7 +50,7 @@ const Sidebar = ({ children }) => {
 
       {/* Sidebar */}
       <div
-        className={`fixed inset-0 z-30 flex transform transition-transform duration-300 ease-in-out lg:relative lg:translate-x-0 ${
+        className={`fixed inset-0 z-30 flex  transform transition-transform duration-300 ease-in-out lg:relative lg:translate-x-0 ${
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >

@@ -146,7 +146,7 @@ const Materials= ({ params }) => {
 
       <div className="flex justify-between pt-4">
         <button
-          onClick={() => router.push('/student/classes')}
+          onClick={() => router.push('/dashboard/student/studentclass')}
           className="inline-flex text-black items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium shadow-sm hover:bg-gray-50"
         >
           Back to Classes

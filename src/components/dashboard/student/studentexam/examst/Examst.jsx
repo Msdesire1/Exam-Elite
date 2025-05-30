@@ -156,13 +156,13 @@ const Examst = () => {
 
           <div className="flex items-center gap-4">
             <div className="text-sm">
-              <div className="text-gray-500">Time Remaining</div>
-              <div className="font-bold text-lg">{formatTime(timeLeft)}</div>
+              <div className="text-gray-900">Time Remaining</div>
+              <div className="font-bold text-lg text-black">{formatTime(timeLeft)}</div>
             </div>
 
             <button
               onClick={() => setShowEndExamDialog(true)}
-              className="inline-flex text-black items-center px-4  py-2 bg-red-600 text-white rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500"
+              className="inline-flex text-white items-center px-4  py-2 bg-red-600 rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500"
             >
               End Exam
             </button>

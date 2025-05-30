@@ -38,7 +38,7 @@ const Navbar = () => {
             <Link href="/" className="flex items-center">
             <div className="flex items-center gap-2">
               <User2Icon className="h-5 w-5 text-blue-600" />
-              <span className="font-bold text-lg">Admin Dashboard</span>
+              <span className="font-bold text-lg text-black">Admin Dashboard</span>
             </div>
             </Link>
           </div>

@@ -44,7 +44,7 @@ const Prepareexam = () => {
     <div className="space-y-6 p-6">
       <div className="flex items-center space-x-2 mb-6">
         <button
-          onClick={() => router.push('/student/dashboard')}
+          onClick={() => router.push('/dashboard/student/dashboard')}
           className=" text-black hover:text-gray-700"
         >
           <ArrowLeft size={20} />

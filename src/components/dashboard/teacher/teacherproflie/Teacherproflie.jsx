@@ -159,7 +159,7 @@ const Teacherprofile = () => {
                   <Mail className="mr-2 h-4 w-4" />
                   <span className=" text-black">{profile.email}</span>
                 </div>
-                <p className="text-xs text-gray-500">
+                <p className="text-xs text-gray-900">
                   Contact the administrator to change your email address.
                 </p>
               </div>
@@ -168,7 +168,7 @@ const Teacherprofile = () => {
                 <label htmlFor="phone" className="block text-sm font-medium  text-black">Phone Number</label>
                 <input
                   id="phone"
-                  className="w-full px-3 py-2 border rounded-md border-gray-300"
+                  className="w-full px-3 py-2 border  text-black rounded-md border-gray-300"
                   value={profile.phone}
                   onChange={(e) => setProfile({...profile, phone: e.target.value})}
                 />
@@ -178,7 +178,7 @@ const Teacherprofile = () => {
                 <label htmlFor="address" className="block text-sm font-medium text-black ">Address</label>
                 <textarea
                   id="address"
-                  className="w-full px-3 py-2 border rounded-md border-gray-300"
+                  className="w-full px-3 py-2 border text-black rounded-md border-gray-300"
                   value={profile.address}
                   onChange={(e) => setProfile({...profile, address: e.target.value})}
                   rows={3}
@@ -192,11 +192,11 @@ const Teacherprofile = () => {
                     <img
                       src={profile.avatar}
                       alt={profile.name}
-                      className="h-full w-full object-cover"
+                      className="h-full w-full object-cover text-black"
                     />
                   </div>
-                  <button className="px-4 py-2 border border-gray-300 rounded-md flex items-center gap-2">
-                    <Upload className="h-4 w-4" />
+                  <button className="px-4 py-2 border text-black border-gray-300 rounded-md flex items-center gap-2">
+                    <Upload className="h-4 w-4 text-black" />
                     Upload Image
                   </button>
                 </div>
@@ -216,7 +216,7 @@ const Teacherprofile = () => {
                 <label htmlFor="bio" className="block text-sm font-medium  text-black">Professional Bio</label>
                 <textarea
                   id="bio"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                  className="w-full px-3 py-2 border text-black border-gray-300 rounded-md"
                   value={profile.bio}
                   onChange={(e) => setProfile({...profile, bio: e.target.value})}
                   rows={4}
@@ -224,40 +224,40 @@ const Teacherprofile = () => {
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="qualification" className="block text-sm font-medium">Qualifications</label>
+                <label htmlFor="qualification" className="block  text-black text-sm font-medium">Qualifications</label>
                 <input
                   id="qualification"
-                  className="w-full px-3 py-2 border  border-gray-300 rounded-md"
+                  className="w-full px-3 py-2 border text-black  border-gray-300 rounded-md"
                   value={profile.qualification}
                   onChange={(e) => setProfile({...profile, qualification: e.target.value})}
                 />
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="experience" className="block text-sm font-medium">Years of Experience</label>
+                <label htmlFor="experience" className="block text-black text-sm font-medium">Years of Experience</label>
                 <input
                   id="experience"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                  className="w-full px-3 py-2 border text-black border-gray-300 rounded-md"
                   value={profile.experience}
                   onChange={(e) => setProfile({...profile, experience: e.target.value})}
                 />
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="specialization" className="block text-sm font-medium">Subject Specialization</label>
+                <label htmlFor="specialization" className="block text-black text-sm font-medium">Subject Specialization</label>
                 <input
                   id="specialization"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                  className="w-full px-3 py-2 border text-black border-gray-300 rounded-md"
                   value={profile.specialization}
                   onChange={(e) => setProfile({...profile, specialization: e.target.value})}
                 />
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="interests" className="block text-sm font-medium">Interests</label>
+                <label htmlFor="interests" className="block text-black text-sm font-medium">Interests</label>
                 <input
                   id="interests"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md"
+                  className="w-full px-3 py-2  text-black border border-gray-300 rounded-md"
                   value={profile.interests}
                   onChange={(e) => setProfile({...profile, interests: e.target.value})}
                 />
@@ -266,7 +266,7 @@ const Teacherprofile = () => {
             <div className="mt-6 flex justify-end">
               <button
                 onClick={handleSaveProfile}
-                className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 flex items-center gap-2"
+                className="px-4 py-2  bg-blue-600 text-white rounded-md hover:bg-blue-700 flex items-center gap-2"
               >
                 <Save className="h-4 w-4" />
                 Save Changes
@@ -281,19 +281,19 @@ const Teacherprofile = () => {
         <div className="grid gap-6 md:grid-cols-2">
           <div className="bg-white p-6 rounded-lg shadow">
             <div className="mb-6">
-              <h3 className="text-xl font-semibold">Change Password</h3>
-              <p className="text-sm text-gray-500">
+              <h3 className="text-xl font-semibold text-black">Change Password</h3>
+              <p className="text-sm text-gray-900">
                 Update your password to keep your account secure
               </p>
             </div>
             <form onSubmit={handleChangePassword} className="space-y-4">
               <div className="space-y-2">
-                <label htmlFor="currentPassword" className="block text-sm font-medium">Current Password</label>
+                <label htmlFor="currentPassword" className="block text-sm font-medium text-black">Current Password</label>
                 <div className="relative">
                   <input
                     id="currentPassword"
                     type={showPassword ? "text" : "password"}
-                    className="w-full px-3 py-2 border rounded-md border-gray-300"
+                    className="w-full px-3 py-2 border rounded-md text-black border-gray-300"
                     value={passwordForm.currentPassword}
                     onChange={(e) => setPasswordForm({...passwordForm, currentPassword: e.target.value})}
                     required
@@ -313,11 +313,11 @@ const Teacherprofile = () => {
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="newPassword" className="block text-sm font-medium">New Password</label>
+                <label htmlFor="newPassword" className="block text-black text-sm font-medium">New Password</label>
                 <input
                   id="newPassword"
                   type={showPassword ? "text" : "password"}
-                  className="w-full px-3 py-2 border rounded-md border-gray-300"
+                  className="w-full px-3 py-2 border text-black rounded-md border-gray-300"
                   value={passwordForm.newPassword}
                   onChange={(e) => setPasswordForm({...passwordForm, newPassword: e.target.value})}
                   required
@@ -325,11 +325,11 @@ const Teacherprofile = () => {
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="confirmPassword" className="block text-sm font-medium">Confirm New Password</label>
+                <label htmlFor="confirmPassword" className="block text-black text-sm font-medium">Confirm New Password</label>
                 <input
                   id="confirmPassword"
                   type={showPassword ? "text" : "password"}
-                  className="w-full px-3 py-2 border rounded-md border-gray-300"
+                  className="w-full px-3 py-2 border text-black rounded-md border-gray-300"
                   value={passwordForm.confirmPassword}
                   onChange={(e) => setPasswordForm({...passwordForm, confirmPassword: e.target.value})}
                   required
@@ -338,7 +338,7 @@ const Teacherprofile = () => {
 
               <div className="flex items-center border-l-4 border-yellow-500 pl-3 py-2 bg-yellow-100">
                 <AlertTriangle className="h-4 w-4 text-yellow-500 mr-2" />
-                <p className="text-sm">
+                <p className="text-sm text-black">
                   Your password should be at least 8 characters and include a mix of letters, numbers, and symbols.
                 </p>
               </div>
@@ -351,8 +351,8 @@ const Teacherprofile = () => {
 
           <div className="bg-white p-6 rounded-lg shadow">
             <div className="mb-6">
-              <h3 className="text-xl font-semibold">Login Activity</h3>
-              <p className="text-sm text-gray-500">
+              <h3 className="text-xl font-semibold text-black">Login Activity</h3>
+              <p className="text-sm text-gray-900">
                 Recent login sessions on your account
               </p>
             </div>
@@ -366,8 +366,8 @@ const Teacherprofile = () => {
                     <p className="font-medium">Current Session</p>
                     <span className="ml-2 px-2 py-1 text-xs bg-green-100 text-green-800 rounded-full">Active</span>
                   </div>
-                  <p className="text-sm text-gray-500">Today at 10:45 AM</p>
-                  <div className="flex items-center mt-1 text-xs text-gray-500">
+                  <p className="text-sm text-gray-900">Today at 10:45 AM</p>
+                  <div className="flex items-center mt-1 text-xs text-gray-900">
                     <MapPin className="h-3 w-3 mr-1" />
                     <span>Lagos, Nigeria • Chrome on Windows</span>
                   </div>
@@ -376,13 +376,13 @@ const Teacherprofile = () => {
 
               <div className="flex items-start gap-4 p-3 border rounded-md border-gray-300">
                 <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center shrink-0">
-                  <Smartphone className="h-5 w-5 text-gray-500" />
+                  <Smartphone className="h-5 w-5 text-gray-900" />
                 </div>
                 <div>
-                  <p className="font-medium">Mobile Device</p>
-                  <p className="text-sm text-gray-500">Yesterday at 2:30 PM</p>
+                  <p className="font-medium text-black">Mobile Device</p>
+                  <p className="text-sm text-gray-900">Yesterday at 2:30 PM</p>
                   <div className="flex items-center mt-1 text-xs text-gray-500">
-                    <MapPin className="h-3 w-3 mr-1" />
+                    <MapPin className="h-3 w-3 mr-1 text-black" />
                     <span>Lagos, Nigeria • Safari on iOS</span>
                   </div>
                 </div>
@@ -390,20 +390,20 @@ const Teacherprofile = () => {
 
               <div className="flex items-start gap-4 p-3 border rounded-md border-gray-300">
                 <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center shrink-0">
-                  <Laptop className="h-5 w-5 text-gray-500" />
+                  <Laptop className="h-5 w-5 text-gray-900" />
                 </div>
                 <div>
-                  <p className="font-medium">Library Computer</p>
-                  <p className="text-sm text-gray-500">3 days ago at 5:15 PM</p>
+                  <p className="font-medium text-black">Library Computer</p>
+                  <p className="text-sm text-gray-900">3 days ago at 5:15 PM</p>
                   <div className="flex items-center mt-1 text-xs text-gray-500">
-                    <MapPin className="h-3 w-3 mr-1" />
+                    <MapPin className="h-3 w-3 mr-1 text-black" />
                     <span>Lagos, Nigeria • Firefox on Windows</span>
                   </div>
                 </div>
               </div>
             </div>
             <div className="mt-6">
-              <button className="w-full px-4 py-2 border  border-gray-300 rounded-md hover:bg-gray-50">
+              <button className="w-full px-4 py-2 border text-black  border-gray-300 rounded-md hover:bg-gray-50">
                 Sign Out All Other Sessions
               </button>
             </div>
@@ -415,8 +415,8 @@ const Teacherprofile = () => {
       {activeTab === "notifications" && (
         <div className="bg-white p-6 rounded-lg shadow">
           <div className="mb-6">
-            <h3 className="text-xl font-semibold">Notification Preferences</h3>
-            <p className="text-sm text-gray-500">
+            <h3 className="text-xl font-semibold text-black">Notification Preferences</h3>
+            <p className="text-sm text-gray-900">
               Manage how and when you receive notifications
             </p>
           </div>
@@ -424,7 +424,7 @@ const Teacherprofile = () => {
             <div className="flex items-center justify-between">
               <div>
                 <h3 className="font-medium">Email Notifications</h3>
-                <p className="text-sm text-gray-500">
+                <p className="text-sm text-gray-900">
                   Receive notifications via email
                 </p>
               </div>
@@ -440,12 +440,12 @@ const Teacherprofile = () => {
             </div>
 
             <div className="border-t pt-6 border-gray-300">
-              <h3 className="font-medium mb-4">Notification Types</h3>
+              <h3 className="font-medium mb-4 text-black">Notification Types</h3>
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="font-medium">Exam Reminders</p>
-                    <p className="text-sm text-gray-500">Get notified about upcoming exams you've created</p>
+                    <p className="font-medium text-black">Exam Reminders</p>
+                    <p className="text-sm text-gray-900">Get notified about upcoming exams you've created</p>
                   </div>
                   <label className="relative inline-flex items-center cursor-pointer">
                     <input
@@ -461,8 +461,8 @@ const Teacherprofile = () => {
 
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="font-medium">Student Submissions</p>
-                    <p className="text-sm text-gray-500">Get notified when students submit assignments or exams</p>
+                    <p className="font-medium text-black">Student Submissions</p>
+                    <p className="text-sm text-gray-900">Get notified when students submit assignments or exams</p>
                   </div>
                   <label className="relative inline-flex items-center cursor-pointer">
                     <input
@@ -478,8 +478,8 @@ const Teacherprofile = () => {
 
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="font-medium">System Updates</p>
-                    <p className="text-sm text-gray-500">Get notified about platform updates and maintenance</p>
+                    <p className="font-medium text-black">System Updates</p>
+                    <p className="text-sm text-gray-900">Get notified about platform updates and maintenance</p>
                   </div>
                   <label className="relative inline-flex items-center cursor-pointer">
                     <input
@@ -495,8 +495,8 @@ const Teacherprofile = () => {
 
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="font-medium">Class Assignments</p>
-                    <p className="text-sm text-gray-500">Get notified when you're assigned to new classes</p>
+                    <p className="font-medium text-black">Class Assignments</p>
+                    <p className="text-sm text-gray-900">Get notified when you're assigned to new classes</p>
                   </div>
                   <label className="relative inline-flex items-center cursor-pointer">
                     <input
@@ -506,7 +506,7 @@ const Teacherprofile = () => {
                       onChange={(e) => setNotificationSettings({...notificationSettings, classAssignments: e.target.checked})}
                       disabled={!notificationSettings.emailNotifications}
                     />
-                    <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600 peer-disabled:opacity-50"></div>
+                    <div className="w-11 h-6 text-black bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600 peer-disabled:opacity-50"></div>
                   </label>
                 </div>
               </div>

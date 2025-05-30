@@ -77,35 +77,35 @@ import {
   return (
     <div className="space-y-6 p-4">
       <div className="flex items-center">
-        <Settings className="mr-2 h-6 w-6" />
-        <h2 className="text-3xl font-bold">System Settings</h2>
+        <Settings className="mr-2 h-6 w-6 text-black" />
+        <h2 className="text-3xl font-bold text-black">System Settings</h2>
       </div>
 
       {/* Tabs Navigation */}
       <div className="flex flex-col sm:flex-row gap-2 border-b border-gray-300">
         <button
-          className={`px-4 py-2 flex items-center ${activeTab === "general" ? "border-b-2 border-blue-500 text-blue-600" : "text-gray-500"}`}
+          className={`px-4 py-2 flex items-center text-black ${activeTab === "general" ? "border-b-2 border-blue-500 text-blue-600" : "text-gray-500"}`}
           onClick={() => setActiveTab("general")}
         >
           <Building className="mr-2 h-4 w-4" />
           <span>General</span>
         </button>
         <button
-          className={`px-4 py-2 flex items-center ${activeTab === "notifications" ? "border-b-2 border-blue-500 text-blue-600" : "text-gray-500"}`}
+          className={`px-4 py-2 flex items-center text-black ${activeTab === "notifications" ? "border-b-2 border-blue-500 text-blue-600" : "text-gray-500"}`}
           onClick={() => setActiveTab("notifications")}
         >
           <Bell className="mr-2 h-4 w-4" />
           <span>Notifications</span>
         </button>
         <button
-          className={`px-4 py-2 flex items-center ${activeTab === "security" ? "border-b-2 border-blue-500 text-blue-600" : "text-gray-500"}`}
+          className={`px-4 py-2 flex items-center text-black ${activeTab === "security" ? "border-b-2 border-blue-500 text-blue-600" : "text-gray-500"}`}
           onClick={() => setActiveTab("security")}
         >
           <Shield className="mr-2 h-4 w-4" />
           <span>Security</span>
         </button>
         <button
-          className={`px-4 py-2 flex items-center ${activeTab === "users" ? "border-b-2 border-blue-500 text-blue-600" : "text-gray-500"}`}
+          className={`px-4 py-2 flex items-center text-black ${activeTab === "users" ? "border-b-2 border-blue-500 text-blue-600" : "text-gray-500"}`}
           onClick={() => setActiveTab("users")}
         >
           <UserCog className="mr-2 h-4 w-4" />
@@ -117,27 +117,27 @@ import {
       {activeTab === "general" && (
         <div className="border rounded-lg shadow-sm border-gray-300">
           <div className="p-4 border-b border-gray-300">
-            <h3 className="text-lg font-semibold">General Settings</h3>
-            <p className="text-gray-500">
+            <h3 className="text-lg font-semibold text-black">General Settings</h3>
+            <p className="text-gray-900">
               Manage your institution's basic information and appearance
             </p>
           </div>
           <div className="p-4 space-y-6">
             <div className="space-y-2">
-              <label htmlFor="schoolName" className="block text-sm font-medium">Institution Name</label>
+              <label htmlFor="schoolName" className="block text-sm font-medium text-black">Institution Name</label>
               <input
                 id="schoolName"
-                className="w-full h-10 rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full h-10 rounded-md text-black border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 value={generalSettings.schoolName}
                 onChange={(e) => setGeneralSettings({...generalSettings, schoolName: e.target.value})}
               />
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="address" className="block text-sm font-medium">Address</label>
+              <label htmlFor="address" className="block text-sm font-medium text-black">Address</label>
               <textarea
                 id="address"
-                className="w-full rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full rounded-md border text-black border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 value={generalSettings.address}
                 onChange={(e) => setGeneralSettings({...generalSettings, address: e.target.value})}
               />
@@ -145,20 +145,20 @@ import {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-2">
-                <label htmlFor="phone" className="block text-sm font-medium">Phone Number</label>
+                <label htmlFor="phone" className="block text-sm font-medium text-black">Phone Number</label>
                 <input
                   id="phone"
-                  className="w-full h-10 rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full h-10 rounded-md border text-black border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   value={generalSettings.phone}
                   onChange={(e) => setGeneralSettings({...generalSettings, phone: e.target.value})}
                 />
               </div>
               <div className="space-y-2">
-                <label htmlFor="email" className="block text-sm font-medium">Email Address</label>
+                <label htmlFor="email" className="block text-sm font-medium text-black">Email Address</label>
                 <input
                   id="email"
                   type="email"
-                  className="w-full h-10 rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full h-10 rounded-md border text-black border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   value={generalSettings.email}
                   onChange={(e) => setGeneralSettings({...generalSettings, email: e.target.value})}
                 />
@@ -166,31 +166,31 @@ import {
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="website" className="block text-sm font-medium">Website</label>
+              <label htmlFor="website" className="block text-sm font-medium text-black">Website</label>
               <input
                 id="website"
-                className="w-full h-10 rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full h-10 rounded-md border text-black border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 value={generalSettings.website}
                 onChange={(e) => setGeneralSettings({...generalSettings, website: e.target.value})}
               />
             </div>
 
             <div className="space-y-2">
-              <label className="block text-sm font-medium">Institution Logo</label>
+              <label className="block text-sm font-medium text-black">Institution Logo</label>
               <div className="flex items-center gap-4">
-                <div className="h-20 w-20 rounded-md border border-gray-300 overflow-hidden">
+                <div className="h-20 w-20 text-black rounded-md border border-gray-300 overflow-hidden">
                   <img
                     src={generalSettings.logo}
                     alt="School logo"
                     className="h-full w-full object-cover"
                   />
                 </div>
-                <button className="border  border-gray-300 px-4 py-2 rounded-md flex items-center gap-2 hover:bg-gray-50">
+                <button className="border  text-black border-gray-300 px-4 py-2 rounded-md flex items-center gap-2 hover:bg-gray-50">
                   <Upload className="h-4 w-4" />
                   Upload New Logo
                 </button>
               </div>
-              <p className="text-xs text-gray-500 mt-1">
+              <p className="text-xs text-gray-900 mt-1">
                 Recommended size: 200x200 pixels. Max file size: 2MB.
               </p>
             </div>
@@ -211,16 +211,16 @@ import {
       {activeTab === "notifications" && (
         <div className="border rounded-lg shadow-sm border-gray-300">
           <div className="p-4 border-b border-gray-300">
-            <h3 className="text-lg font-semibold">Notification Settings</h3>
-            <p className="text-gray-500">
+            <h3 className="text-lg font-semibold text-black">Notification Settings</h3>
+            <p className="text-gray-900">
               Configure how and when notifications are sent
             </p>
           </div>
           <div className="p-4 space-y-6">
             <div className="flex items-center justify-between">
               <div>
-                <h3 className="font-medium">Email Notifications</h3>
-                <p className="text-sm text-gray-500">
+                <h3 className="font-medium text-black">Email Notifications</h3>
+                <p className="text-sm text-gray-900">
                   Enable email notifications for admins and teachers
                 </p>
               </div>
@@ -231,12 +231,12 @@ import {
                   checked={notificationSettings.emailNotifications}
                   onChange={(e) => setNotificationSettings({...notificationSettings, emailNotifications: e.target.checked})}
                 />
-                <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+                <div className="w-11 h-6 text-black bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
               </label>
             </div>
 
             <div className="border-t pt-4 border-gray-300">
-              <h3 className="font-medium mb-4">Notification Preferences</h3>
+              <h3 className="font-medium mb-4 text-black">Notification Preferences</h3>
               <div className="space-y-4">
                 {[
                   {
@@ -272,8 +272,8 @@ import {
                 ].map((item) => (
                   <div key={item.name} className="flex items-center justify-between">
                     <div>
-                      <p className="font-medium">{item.title}</p>
-                      <p className="text-sm text-gray-500">{item.description}</p>
+                      <p className="font-medium text-black">{item.title}</p>
+                      <p className="text-sm text-gray-900">{item.description}</p>
                     </div>
                     <label className="relative inline-flex items-center cursor-pointer">
                       <input
@@ -283,7 +283,7 @@ import {
                         onChange={(e) => setNotificationSettings({...notificationSettings, [item.name]: e.target.checked})}
                         disabled={!notificationSettings.emailNotifications}
                       />
-                      <div className={`w-11 h-6 ${!notificationSettings.emailNotifications ? 'bg-gray-100' : 'bg-gray-200'} peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600`}></div>
+                      <div className={`w-11 h-6 ${!notificationSettings.emailNotifications ? 'bg-gray-100' : 'bg-gray-200'} peer-focus:outline-none rounded-full text-black peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600`}></div>
                     </label>
                   </div>
                 ))}
@@ -324,8 +324,8 @@ import {
       {activeTab === "security" && (
         <div className="border rounded-lg shadow-sm border-gray-300">
           <div className="p-4 border-b border-gray-300">
-            <h3 className="text-lg font-semibold">Security Settings</h3>
-            <p className="text-gray-500">
+            <h3 className="text-lg font-semibold text-black">Security Settings</h3>
+            <p className="text-gray-900">
               Configure security options to protect your data and users
             </p>
           </div>
@@ -354,45 +354,45 @@ import {
             ].map((item) => (
               <div key={item.name} className="flex items-center justify-between">
                 <div>
-                  <h3 className="font-medium">{item.title}</h3>
-                  <p className="text-sm text-gray-500">{item.description}</p>
+                  <h3 className="font-medium text-black">{item.title}</h3>
+                  <p className="text-sm text-gray-900">{item.description}</p>
                 </div>
-                <label className="relative inline-flex items-center cursor-pointer">
+                <label className="relative inline-flex items-center text-black cursor-pointer">
                   <input
                     type="checkbox"
                     className="sr-only peer"
                     checked={securitySettings[item.name]}
                     onChange={(e) => setSecuritySettings({...securitySettings, [item.name]: e.target.checked})}
                   />
-                  <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+                  <div className="w-11 h-6 text-black bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
                 </label>
               </div>
             ))}
 
             <div className="space-y-2">
-              <label htmlFor="passwordExpiry" className="block text-sm font-medium">Password Expiry (Days)</label>
+              <label htmlFor="passwordExpiry" className="block text-sm font-medium text-black">Password Expiry (Days)</label>
               <input
                 id="passwordExpiry"
                 type="number"
-                className="w-full h-10 rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full h-10 rounded-md border text-black border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 value={securitySettings.passwordExpiry}
                 onChange={(e) => setSecuritySettings({...securitySettings, passwordExpiry: parseInt(e.target.value)})}
               />
-              <p className="text-xs text-gray-500">
+              <p className="text-xs text-gray-900">
                 Number of days before users are required to change their password. Set to 0 to disable.
               </p>
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="sessionTimeout" className="block text-sm font-medium">Session Timeout (Minutes)</label>
+              <label htmlFor="sessionTimeout" className="block text-black text-sm font-medium">Session Timeout (Minutes)</label>
               <input
                 id="sessionTimeout"
                 type="number"
-                className="w-full h-10 rounded-md border  border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full h-10 text-black rounded-md border  border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 value={securitySettings.sessionTimeout}
                 onChange={(e) => setSecuritySettings({...securitySettings, sessionTimeout: parseInt(e.target.value)})}
               />
-              <p className="text-xs text-gray-500">
+              <p className="text-xs text-gray-900">
                 Automatically log out inactive users after this period of inactivity.
               </p>
             </div>
@@ -413,8 +413,8 @@ import {
       {activeTab === "users" && (
         <div className="border rounded-lg shadow-sm border-gray-300">
           <div className="p-4 border-b border-gray-300">
-            <h3 className="text-lg font-semibold">User Management Settings</h3>
-            <p className="text-gray-500">
+            <h3 className="text-lg font-semibold text-black">User Management Settings</h3>
+            <p className="text-gray-900">
               Configure user registration and default permissions
             </p>
           </div>
@@ -445,27 +445,27 @@ import {
             ].map((item) => (
               <div key={item.name} className="flex items-center justify-between">
                 <div>
-                  <h3 className="font-medium">{item.title}</h3>
-                  <p className="text-sm text-gray-500">{item.description}</p>
+                  <h3 className="font-medium text-black">{item.title}</h3>
+                  <p className="text-sm text-gray-900">{item.description}</p>
                 </div>
                 <label className="relative inline-flex items-center cursor-pointer">
                   <input
                     type="checkbox"
-                    className="sr-only peer"
+                    className="sr-only peer text-black"
                     checked={userSettings[item.name]}
                     onChange={(e) => setUserSettings({...userSettings, [item.name]: e.target.checked})}
                     disabled={item.disabled}
                   />
-                  <div className={`w-11 h-6 ${item.disabled ? 'bg-gray-100' : 'bg-gray-200'} peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600`}></div>
+                  <div className={`w-11 h-6 ${item.disabled ? 'bg-gray-100' : 'bg-gray-200'} text-black  peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600`}></div>
                 </label>
               </div>
             ))}
 
             <div className="space-y-2">
-              <label htmlFor="defaultTeacherRole" className="block text-sm font-medium">Default Teacher Role</label>
+              <label htmlFor="defaultTeacherRole" className="block text-sm text-black font-medium">Default Teacher Role</label>
               <select
                 id="defaultTeacherRole"
-                className="w-full h-10 rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full h-10 text-black rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 value={userSettings.defaultTeacherRole}
                 onChange={(e) => setUserSettings({...userSettings, defaultTeacherRole: e.target.value})}
               >
@@ -473,23 +473,23 @@ import {
                 <option value="teacher_limited">Limited Teacher</option>
                 <option value="teacher_admin">Teacher Admin</option>
               </select>
-              <p className="text-xs text-gray-500">
+              <p className="text-xs text-gray-900">
                 The default role assigned to new teacher accounts.
               </p>
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="defaultStudentRole" className="block text-sm font-medium">Default Student Role</label>
+              <label htmlFor="defaultStudentRole" className="block text-sm font-medium text-black">Default Student Role</label>
               <select
                 id="defaultStudentRole"
-                className="w-full h-10 rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full h-10 rounded-md border text-black border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 value={userSettings.defaultStudentRole}
                 onChange={(e) => setUserSettings({...userSettings, defaultStudentRole: e.target.value})}
               >
                 <option value="student">Standard Student</option>
                 <option value="student_monitor">Student Monitor</option>
               </select>
-              <p className="text-xs text-gray-500">
+              <p className="text-xs text-gray-900">
                 The default role assigned to new student accounts.
               </p>
             </div>

@@ -81,7 +81,7 @@ export default function Studentt() {
           <select
             value={classFilter}
             onChange={(e) => setClassFilter(e.target.value)}
-            className="border px-4 py-2 rounded-md focus:outline-none shadow-sm  border-gray-300"
+            className="border px-4 py-2 rounded-md text-black focus:outline-none shadow-sm  border-gray-300"
           >
             {classes.map((cls) => (
               <option key={cls} value={cls}>

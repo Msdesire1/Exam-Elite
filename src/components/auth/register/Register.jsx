@@ -15,13 +15,6 @@ const Register = () => {
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
 
-  const schools = [
-    { id: '1', name: 'Riverside High School' },
-    { id: '2', name: 'Oakwood Academy' },
-    { id: '3', name: 'Pine Valley College' },
-    { id: '4', name: 'Lakeshore University' },
-    { id: '5', name: 'Other' },
-  ];
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -133,26 +126,20 @@ const Register = () => {
                   required
                 />
               </div>
-
-              <div>
+                <div>
                 <label htmlFor="school" className="block text-sm font-medium text-gray-700 mb-1">
-                  Select Your School
+                  Enter Your School
                 </label>
-                <select
-                  id="school"
-                  name="school"
-                  value={formData.school}
-                  onChange={handleSchoolChange}
-                  className="w-full h-11 rounded-md text-black  border border-gray-300 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  required
-                >
-                  <option value="">Select a school</option>
-                  {schools.map((school) => (
-                    <option key={school.id} value={school.id}>
-                      {school.name}
-                    </option>
-                  ))}
-                </select>
+                 <input
+                    id="school"
+                    name="text"
+                    type="text"
+                    placeholder="okc nur&pry"
+                    value={formData.school}
+                    onChange={ handleSchoolChange}
+                    className="block w-full  text-gray-700 pl-10 h-11 rounded-md border border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                    required
+                  />
               </div>
 
               <div>

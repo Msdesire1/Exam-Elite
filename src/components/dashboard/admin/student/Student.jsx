@@ -166,7 +166,7 @@ const classes = [
   return (
     <div className="space-y-6 p-4">
       <div className="flex justify-between items-center">
-        <h2 className="text-3xl font-bold">Students</h2>
+        <h2 className="text-3xl font-bold text-black">Students</h2>
         <div className="flex items-center gap-2">
           <button
             className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md flex items-center"
@@ -176,7 +176,7 @@ const classes = [
             Add Student
           </button>
 
-          <button className="border border-gray-300 px-4 py-2 rounded-md flex items-center hover:bg-gray-50">
+          <button className="border border-gray-300 text-black px-4 py-2 rounded-md flex items-center hover:bg-gray-50">
             <Upload className="mr-2 h-4 w-4" />
             Import
           </button>
@@ -186,10 +186,10 @@ const classes = [
       {/* Search and Filter */}
       <div className="flex flex-col sm:flex-row gap-4">
         <div className="relative flex-1">
-          <SearchIcon className="absolute left-2.5 top-2.5 h-4 w-4 text-gray-400" />
+          <SearchIcon className="absolute left-2.5 top-2.5 h-4 w-4 text-gray-900" />
           <input
             placeholder="Search by name, email, or ID..."
-            className="pl-8 w-full h-10 rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="pl-8 w-full h-10 rounded-md border text-black border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
@@ -197,7 +197,7 @@ const classes = [
         <select
           value={filterClass}
           onChange={(e) => setFilterClass(e.target.value)}
-          className="w-[180px] h-10 rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-[180px] h-10 rounded-md border text-black border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
           <option value="all">All Classes</option>
           {classes.map((cls) => (
@@ -210,15 +210,15 @@ const classes = [
       <div className="border rounded-lg shadow-sm border-gray-300">
         <div className="p-4 border-b flex justify-between items-center border-gray-300">
           <div>
-            <h3 className="text-lg font-semibold">Student List</h3>
-            <p className="text-gray-500">Manage and view all registered students</p>
+            <h3 className="text-lg font-semibold text-black">Student List</h3>
+            <p className="text-gray-900">Manage and view all registered students</p>
           </div>
-          <button className="border px-4 py-2 rounded-md flex items-center hover:bg-gray-50 border-gray-300">
+          <button className="border px-4 py-2 text-black rounded-md flex items-center hover:bg-gray-50 border-gray-300">
             <DownloadIcon className="mr-2 h-4 w-4" />
             Export
           </button>
         </div>
-        <div className="p-4 overflow-x-auto">
+        <div className="p-4 overflow-x-auto text-black">
           <table className="w-full">
             <thead>
               <tr className="border-b border-gray-300">
@@ -233,14 +233,14 @@ const classes = [
             <tbody>
               {filteredStudents.length === 0 ? (
                 <tr>
-                  <td colSpan={6} className="h-24 text-center py-4">
+                  <td colSpan={6} className="h-24 text-center text-black py-4">
                     No students found matching your search.
                   </td>
                 </tr>
               ) : (
                 filteredStudents.map((student) => (
                   <tr key={student.id} className="border-b border-gray-300 hover:bg-gray-50">
-                    <td className="py-3 px-4 font-medium">{student.studentId}</td>
+                    <td className="py-3 px-4 font-medium text-black">{student.studentId}</td>
                     <td className="py-3 px-4">
                       <div className="flex items-center gap-2">
                         <div className="h-8 w-8 rounded-full bg-gray-200 flex items-center justify-center">
@@ -251,8 +251,8 @@ const classes = [
                         {student.name}
                       </div>
                     </td>
-                    <td className="py-3 px-4">{student.email}</td>
-                    <td className="py-3 px-4">{student.class}</td>
+                    <td className="py-3 px-4 text-black">{student.email}</td>
+                    <td className="py-3 px-4 text-black">{student.class}</td>
                     <td className="py-3 px-4">
                       <span className={`px-2 py-1 text-xs rounded-full ${
                         student.status === 'active'
@@ -285,18 +285,18 @@ const classes = [
           </table>
         </div>
         <div className="p-4 border-t border-gray-300 flex justify-between items-center">
-          <div className="text-sm text-gray-500">
+          <div className="text-sm text-gray-900">
             Showing {filteredStudents.length} of {students.length} students
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 text-black">
             <button
-              className="border border-gray-300 px-4 py-2 rounded-md text-sm hover:bg-gray-50 disabled:opacity-50"
+              className="border border-gray-300 px-4 text-black py-2 rounded-md text-sm hover:bg-gray-50 disabled:opacity-50"
               disabled
             >
               Previous
             </button>
             <button
-              className="border border-gray-300 px-4 py-2 rounded-md text-sm hover:bg-gray-50 disabled:opacity-50"
+              className="border border-gray-300 px-4 text-black  py-2 rounded-md text-sm hover:bg-gray-50 disabled:opacity-50"
               disabled
             >
               Next
@@ -308,8 +308,8 @@ const classes = [
       {/* Class Distribution */}
       <div className="border rounded-lg shadow-sm border-gray-300">
         <div className="p-4 border-b border-gray-300">
-          <h3 className="text-lg font-semibold">Class Distribution</h3>
-          <p className="text-gray-500">Number of students in each class</p>
+          <h3 className="text-lg font-semibold text-black">Class Distribution</h3>
+          <p className="text-gray-900">Number of students in each class</p>
         </div>
         <div className="p-4">
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
@@ -318,8 +318,8 @@ const classes = [
               return (
                 <div key={cls} className="border-2 border-gray-300 rounded-lg">
                   <div className="p-4 text-center">
-                    <div className="text-2xl font-bold">{count}</div>
-                    <div className="text-sm text-gray-500">{cls}</div>
+                    <div className="text-2xl font-bold text-black">{count}</div>
+                    <div className="text-sm text-gray-900">{cls}</div>
                   </div>
                 </div>
               );
@@ -333,8 +333,8 @@ const classes = [
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
           <div className="bg-white rounded-lg shadow-lg max-w-md w-full max-h-[90vh] overflow-y-auto">
             <div className="p-4 border-b border-gray-300">
-              <h3 className="text-lg font-semibold">Add New Student</h3>
-              <p className="text-gray-500">
+              <h3 className="text-lg font-semibold text-black">Add New Student</h3>
+              <p className="text-gray-900">
                 Enter the student details below to register them in the system.
               </p>
             </div>
@@ -342,19 +342,19 @@ const classes = [
             <form onSubmit={handleAddStudent}>
               <div className="p-4 space-y-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-1">
+                  <label htmlFor="name" className="block text-black text-sm font-medium mb-1">
                     Full Name
                   </label>
                   <input
                     id="name"
                     value={studentForm.name}
                     onChange={(e) => setStudentForm({...studentForm, name: e.target.value})}
-                    className="w-full h-10 rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full h-10 rounded-md text-black border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     required
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-1">
+                  <label htmlFor="email" className="block text-black text-sm font-medium mb-1">
                     Email
                   </label>
                   <input
@@ -362,19 +362,19 @@ const classes = [
                     type="email"
                     value={studentForm.email}
                     onChange={(e) => setStudentForm({...studentForm, email: e.target.value})}
-                    className="w-full h-10 rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full h-10 rounded-md text-black border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     required
                   />
                 </div>
                 <div>
-                  <label htmlFor="class" className="block text-sm font-medium mb-1">
+                  <label htmlFor="class" className="block text-black text-sm font-medium mb-1">
                     Class
                   </label>
                   <select
                     id="class"
                     value={studentForm.class}
                     onChange={(e) => setStudentForm({...studentForm, class: e.target.value})}
-                    className="w-full h-10 rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full h-10 rounded-md text-black border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     required
                   >
                     <option value="">Select class</option>
@@ -384,14 +384,14 @@ const classes = [
                   </select>
                 </div>
                 <div>
-                  <label htmlFor="gender" className="block text-sm font-medium mb-1">
+                  <label htmlFor="gender" className="block text-black text-sm font-medium mb-1">
                     Gender
                   </label>
                   <select
                     id="gender"
                     value={studentForm.gender}
                     onChange={(e) => setStudentForm({...studentForm, gender: e.target.value})}
-                    className="w-full h-10 rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full h-10 rounded-md text-black border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     required
                   >
                     <option value="">Select gender</option>
@@ -405,7 +405,7 @@ const classes = [
                 <button
                   type="button"
                   onClick={() => setIsAddDialogOpen(false)}
-                  className="px-4 py-2 border  border-gray-300 rounded-md hover:bg-gray-50"
+                  className="px-4 py-2 border  text-black border-gray-300 rounded-md hover:bg-gray-50"
                 >
                   Cancel
                 </button>

@@ -121,7 +121,7 @@ export default function StudentResults({ isVisible, onClose,}) {
   >
     <div  onClick={handleModalClick} className=" bg-gray-50 p-6 rounded-2xl overflow-y-auto lg:w-1/2">
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-2xl font-bold">My Results</h1>
+        <h1 className="text-2xl font-bold text-black">My Results</h1>
       </div>
 
       <div className="flex flex-col md:flex-row gap-4 mb-6">
@@ -129,7 +129,7 @@ export default function StudentResults({ isVisible, onClose,}) {
           <select
             value={subjectFilter}
             onChange={(e) => setSubjectFilter(e.target.value)}
-            className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full p-2 border text-black  border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             {subjects.map((subject) => (
               <option key={subject} value={subject}>
@@ -144,15 +144,15 @@ export default function StudentResults({ isVisible, onClose,}) {
             placeholder="Search by test title or subject..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full p-2 border text-black border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
       </div>
 
       <div className="bg-white rounded-lg shadow overflow-hidden">
         <div className="p-6 border-b border-gray-300">
-          <h2 className="text-lg font-bold">Test Results</h2>
-          <p className="text-gray-500">Your performance in all tests</p>
+          <h2 className="text-lg font-bold text-black">Test Results</h2>
+          <p className="text-gray-900">Your performance in all tests</p>
         </div>
         <div className="p-6">
           {filteredResults.length > 0 ? (
@@ -161,10 +161,10 @@ export default function StudentResults({ isVisible, onClose,}) {
                 <div key={result.id} className="space-y-2 border-b border-gray-300 pb-4">
                   <div className="flex flex-col md:flex-row md:items-center justify-between gap-2">
                     <div>
-                      <h3 className="font-medium">{result.title}</h3>
+                      <h3 className="font-medium text-black">{result.title}</h3>
                       <div className="flex items-center gap-2 mt-1">
-                        <span className="px-2 py-1 text-xs border border-gray-300 rounded-full">{result.subject}</span>
-                        <span className="text-sm text-gray-500">{result.date}</span>
+                        <span className="px-2 py-1 text-xs border text-black border-gray-300 rounded-full">{result.subject}</span>
+                        <span className="text-sm text-gray-900">{result.date}</span>
                       </div>
                     </div>
                     <div className="flex items-center gap-2">
@@ -176,14 +176,14 @@ export default function StudentResults({ isVisible, onClose,}) {
                         {result.score}%
                       </span>
                       <Link href={result.path}>
-                        <button className="px-3 py-1 text-sm border border-gray-300 rounded-md hover:bg-gray-50">
+                        <button className="px-3 py-1 text-sm border text-black border-gray-300 rounded-md hover:bg-gray-50">
                           View Details
                         </button>
                       </Link>
                     </div>
                   </div>
                   <div className="space-y-1">
-                    <div className="flex justify-between text-sm">
+                    <div className="flex justify-between text-sm text-black">
                       <span>
                         Score: {result.score}/{result.totalMarks}
                       </span>
@@ -207,7 +207,7 @@ export default function StudentResults({ isVisible, onClose,}) {
             </div>
           ) : (
             <div className="text-center py-6">
-              <p className="text-gray-500">No results found matching your filters.</p>
+              <p className="text-gray-900">No results found matching your filters.</p>
             </div>
           )}
         </div>

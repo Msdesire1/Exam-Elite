@@ -7,7 +7,7 @@ const Features = () => {
   return (
     <div className="bg-gray-50 ">
       {/* Hero Section */}
-      <section className="py-10 bg-gradient-to-b from-education-primary/20 from-blue-100 to-white dark:from-education-primary/10 dark:to-gray-900">
+      <section className="py-10 bg-gradient-to-b from-education-primary/20 from-blue-100 to-white dark:from-education-primary/10">
         <div className=" px-4 mx-auto max-w-6xl lg:pt-20 pt-10">
           <div className="flex flex-col items-center text-center">
             <h1 className="text-4xl md:text-5xl font-bold  text-black  mb-6">

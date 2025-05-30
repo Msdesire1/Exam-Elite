@@ -122,7 +122,7 @@ const Studentresult = () => {
             className="inline-flex items-center justify-center rounded-md border border-gray-300 bg-white p-2 shadow-sm hover:bg-gray-50"
             onClick={handleDownloadResults}
           >
-            <Download className="h-4 w-4" />
+            <Download className="h-4 w-4  text-black" />
           </button>
         </div>
       </div>
@@ -134,22 +134,22 @@ const Studentresult = () => {
           <p className="text-sm text-gray-500">Your aggregate score across all exams</p>
         </div>
         <div className="px-6 pb-6">
-          <div className="flex flex-col lg::flex-row md:items-center gap-8">
+          <div className="flex flex-col lg:flex-row md:items-center gap-8">
             <div className="flex-1">
               <div className="space-y-4">
                 <div>
                   <div className="flex justify-between mb-1">
                     <span className="text-sm font-medium  text-black">Overall Score</span>
-                    <span className="text-sm font-medium">{totalPercentage.toFixed(1)}%</span>
+                    <span className="text-sm font-medium  text-black">{totalPercentage.toFixed(1)}%</span>
                   </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div className="w-full bg-gray-200 rounded-full h-2 ">
                     <div
                       className="bg-blue-500 h-2 rounded-full"
-                      style={{ width: `${totalPercentage}%` }}
+                      style={{ width: `${totalPercentage}% ` }}
                     ></div>
                   </div>
                 </div>
-                <div className="grid lg:grid-cols-2 gap-4 ">
+                <div className="grid lg:grid-cols-2 gap-4  text-black">
                   <div>
                     <div className="text-sm  text-black mb-1">Exams Taken</div>
                     <div className="text-2xl font-bold  text-black">{examResults.length}</div>
@@ -169,8 +169,8 @@ const Studentresult = () => {
             <div className="flex-1 flex justify-center">
               <div className="w-full max-w-[200px] aspect-square rounded-full border-8 border-blue-100 flex items-center justify-center">
                 <div className="text-center">
-                  <div className="text-4xl font-bold">{totalPercentage.toFixed(1)}%</div>
-                  <div className="text-sm text-gray-500">Average Score</div>
+                  <div className="text-4xl font-bold text-black">{totalPercentage.toFixed(1)}%</div>
+                  <div className="text-sm text-gray-900">Average Score</div>
                 </div>
               </div>
             </div>
@@ -181,27 +181,27 @@ const Studentresult = () => {
       {/* Results Table */}
       <div className="border rounded-lg bg-white shadow-sm border-gray-300">
         <div className="p-6">
-          <h3 className="text-lg font-semibold">Exam History</h3>
-          <p className="text-sm text-gray-500">Detailed view of your past exam results</p>
+          <h3 className="text-lg font-semibold text-black">Exam History</h3>
+          <p className="text-sm text-gray-600">Detailed view of your past exam results</p>
         </div>
         <div className="px-6 pb-6">
           <div className="overflow-x-auto">
             <table className="min-w-full divide-y divide-gray-200">
               <thead className="bg-gray-50">
                 <tr>
-                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Exam</th>
-                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Subject</th>
-                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
-                  <th scope="col" className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">Score</th>
-                  <th scope="col" className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">Percentage</th>
-                  <th scope="col" className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">Grade</th>
+                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider">Exam</th>
+                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider">Subject</th>
+                  <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-900 uppercase tracking-wider">Date</th>
+                  <th scope="col" className="px-6 py-3 text-right text-xs font-medium text-gray-900 uppercase tracking-wider">Score</th>
+                  <th scope="col" className="px-6 py-3 text-right text-xs font-medium text-gray-900 uppercase tracking-wider">Percentage</th>
+                  <th scope="col" className="px-6 py-3 text-right text-xs font-medium text-gray-900 uppercase tracking-wider">Grade</th>
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-gray-200">
                 {filteredResults.length === 0 ? (
                   <tr>
                     <td colSpan={6} className="px-6 py-12 text-center">
-                      <FileText className="h-8 w-8 mx-auto text-gray-400 mb-2" />
+                      <FileText className="h-8 w-8 mx-auto text-gray-600 mb-2" />
                       <p className="text-gray-500">No results found</p>
                     </td>
                   </tr>
@@ -209,15 +209,15 @@ const Studentresult = () => {
                   filteredResults.map((result) => (
                     <tr key={result.id} className="hover:bg-gray-50">
                       <td className="px-6 py-4 whitespace-nowrap font-medium text-gray-900">{result.title}</td>
-                      <td className="px-6 py-4 whitespace-nowrap text-gray-500">{result.subject}</td>
-                      <td className="px-6 py-4 whitespace-nowrap text-gray-500">{result.date}</td>
-                      <td className="px-6 py-4 whitespace-nowrap text-right text-gray-500">{result.score}/{result.total}</td>
+                      <td className="px-6 py-4 whitespace-nowrap text-gray-900">{result.subject}</td>
+                      <td className="px-6 py-4 whitespace-nowrap text-gray-900">{result.date}</td>
+                      <td className="px-6 py-4 whitespace-nowrap text-right text-gray-900">{result.score}/{result.total}</td>
                       <td className="px-6 py-4 whitespace-nowrap text-right">
                         <span className={`inline-flex items-center rounded-full px-3 py-1 text-xs font-medium text-white ${getBadgeColor(result.percentage)}`}>
                           {result.percentage}%
                         </span>
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-right text-gray-500">{result.grade}</td>
+                      <td className="px-6 py-4 whitespace-nowrap text-right text-gray-900">{result.grade}</td>
                     </tr>
                   ))
                 )}
@@ -226,11 +226,11 @@ const Studentresult = () => {
           </div>
         </div>
         <div className="px-6 py-4 border-t flex justify-between items-center border-gray-300">
-          <div className="text-sm text-gray-500">
+          <div className="text-sm text-gray-900">
             Showing {filteredResults.length} of {examResults.length} results
           </div>
           <button
-            className="inline-flex items-center justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium shadow-sm hover:bg-gray-50"
+            className="inline-flex text-black items-center justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium shadow-sm hover:bg-gray-50"
             onClick={handleViewReportCard}
           >
             <FileText className="mr-2 h-4 w-4" />

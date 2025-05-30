@@ -277,7 +277,7 @@ const TeacherClass = () => {
                   <div className="flex justify-between items-center">
                     <div>
                       <p className="text-sm font-medium text-gray-900">Students</p>
-                      <h3 className="text-2xl font-bold">
+                      <h3 className="text-2xl font-bold text-black">
                         {currentClass?.students}
                       </h3>
                     </div>
@@ -291,7 +291,7 @@ const TeacherClass = () => {
                   <div className="flex justify-between items-center">
                     <div>
                       <p className="text-sm font-medium text-gray-900">Upcoming Lessons</p>
-                      <h3 className="text-2xl font-bold">
+                      <h3 className="text-2xl font-bold text-black">
                         {currentClass?.upcomingLessons}
                       </h3>
                     </div>
@@ -305,7 +305,7 @@ const TeacherClass = () => {
                   <div className="flex justify-between items-center">
                     <div>
                       <p className="text-sm font-medium text-gray-900">Pending Assignments</p>
-                      <h3 className="text-2xl font-bold">
+                      <h3 className="text-2xl font-bold text-black">
                         {currentClass?.pendingAssignments}
                       </h3>
                     </div>
@@ -464,7 +464,7 @@ const TeacherClass = () => {
                 {sampleAssignments.map((assignment) => (
                   <div key={assignment.id} className="p-4 border border-gray-300 rounded-lg hover:bg-gray-50">
                     <div className="flex justify-between items-start mb-2">
-                      <h4 className="font-medium">{assignment.title}</h4>
+                      <h4 className="font-medium text-black">{assignment.title}</h4>
                       <span className={`px-2 py-1 text-xs rounded-full ${
                         assignment.status === 'past' ? 'bg-gray-100 text-gray-800' :
                         assignment.status === 'active' ? 'bg-yellow-100 text-yellow-800' :

@@ -190,7 +190,7 @@ export default function Exam() {
   return (
     <div className="space-y-6 p-4 md:p-6">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-        <h2 className="text-2xl md:text-3xl font-bold">Exams</h2>
+        <h2 className="text-2xl md:text-3xl font-bold text-black">Exams</h2>
         <button
           className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md flex items-center w-full sm:w-auto justify-center"
           onClick={() => router.push('/exams/create')}
@@ -205,8 +205,8 @@ export default function Exam() {
         <div className="border rounded-lg p-4 md:p-6 border-gray-300">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm font-medium text-gray-500">Total Exams</p>
-              <h3 className="text-xl md:text-2xl font-bold">{exams.length}</h3>
+              <p className="text-sm font-medium text-gray-900">Total Exams</p>
+              <h3 className="text-xl md:text-2xl font-bold text-black">{exams.length}</h3>
             </div>
             <div className="bg-blue-100 p-2 rounded-full">
               <FileText className="h-5 w-5 text-blue-600" />
@@ -217,8 +217,8 @@ export default function Exam() {
         <div className="border rounded-lg p-4 md:p-6 border-gray-300">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm font-medium text-gray-500">Completed</p>
-              <h3 className="text-xl md:text-2xl font-bold">{exams.filter(e => e.status === 'completed').length}</h3>
+              <p className="text-sm font-medium text-gray-900">Completed</p>
+              <h3 className="text-xl md:text-2xl font-bold text-black">{exams.filter(e => e.status === 'completed').length}</h3>
             </div>
             <div className="bg-green-100 p-2 rounded-full">
               <CheckCircle className="h-5 w-5 text-green-600" />
@@ -229,8 +229,8 @@ export default function Exam() {
         <div className="border rounded-lg p-4 md:p-6 border-gray-300">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm font-medium text-gray-500">Ongoing</p>
-              <h3 className="text-xl md:text-2xl font-bold">{exams.filter(e => e.status === 'ongoing').length}</h3>
+              <p className="text-sm font-medium text-gray-900">Ongoing</p>
+              <h3 className="text-xl md:text-2xl font-bold text-black">{exams.filter(e => e.status === 'ongoing').length}</h3>
             </div>
             <div className="bg-blue-100 p-2 rounded-full">
               <Clock className="h-5 w-5 text-blue-600" />
@@ -241,8 +241,8 @@ export default function Exam() {
         <div className="border rounded-lg p-4 md:p-6 border-gray-300">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm font-medium text-gray-500">Scheduled</p>
-              <h3 className="text-xl md:text-2xl font-bold">{exams.filter(e => e.status === 'scheduled').length}</h3>
+              <p className="text-sm font-medium text-gray-900">Scheduled</p>
+              <h3 className="text-xl md:text-2xl font-bold text-black">{exams.filter(e => e.status === 'scheduled').length}</h3>
             </div>
             <div className="bg-yellow-100 p-2 rounded-full">
               <Calendar className="h-5 w-5 text-yellow-600" />
@@ -254,10 +254,10 @@ export default function Exam() {
       {/* Search and Filters */}
       <div className="flex flex-col gap-4">
         <div className="relative w-full">
-          <SearchIcon className="absolute left-2.5 top-2.5 h-4 w-4 text-gray-400" />
+          <SearchIcon className="absolute left-2.5 top-2.5 h-4 w-4 text-gray-900" />
           <input
             placeholder="Search exams by title or teacher..."
-            className="pl-8 w-full h-10 rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="pl-8 w-full h-10 rounded-md border text-black border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
@@ -266,7 +266,7 @@ export default function Exam() {
           <select
             value={filterSubject}
             onChange={(e) => setFilterSubject(e.target.value)}
-            className="flex-1 min-w-[150px] h-10 rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="flex-1 min-w-[150px] h-10 rounded-md text-black border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             <option value="all">All Subjects</option>
             {subjects.map((subject) => (
@@ -277,7 +277,7 @@ export default function Exam() {
           <select
             value={filterClass}
             onChange={(e) => setFilterClass(e.target.value)}
-            className="flex-1 min-w-[130px] h-10 rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="flex-1 min-w-[130px] h-10 rounded-md text-black border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             <option value="all">All Classes</option>
             {classes.map((cls) => (
@@ -288,7 +288,7 @@ export default function Exam() {
           <select
             value={filterStatus}
             onChange={(e) => setFilterStatus(e.target.value)}
-            className="flex-1 min-w-[130px] h-10 rounded-md border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="flex-1 min-w-[130px] h-10 rounded-md text-black border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             <option value="all">All Status</option>
             <option value="completed">Completed</option>
@@ -302,10 +302,10 @@ export default function Exam() {
       {/* Exams Table */}
       <div className="border rounded-lg shadow-sm border-gray-300 overflow-hidden">
         <div className="p-4 border-b border-gray-300">
-          <h3 className="text-lg font-semibold">Exam List</h3>
-          <p className="text-gray-500">Manage and monitor all exams in the system</p>
+          <h3 className="text-lg font-semibold text-black">Exam List</h3>
+          <p className="text-gray-900">Manage and monitor all exams in the system</p>
         </div>
-        <div className="p-4 overflow-x-auto">
+        <div className="p-4 overflow-x-auto text-black">
           <table className="w-full min-w-[800px]">
             <thead>
               <tr className="border-b border-gray-300">
@@ -340,10 +340,10 @@ export default function Exam() {
                       </div>
                     </td>
                     <td className="py-3 px-4">
-                      <span className="inline-block px-2 py-1 text-xs rounded-md border border-gray-200 mb-1">
+                      <span className="inline-block text-black px-2 py-1 text-xs rounded-md border border-gray-200 mb-1">
                         {exam.subject}
                       </span>
-                      <div className="text-xs text-gray-500">
+                      <div className="text-xs text-gray-900">
                         {exam.class}
                       </div>
                     </td>
@@ -352,23 +352,23 @@ export default function Exam() {
                     </td>
                     <td className="py-3 px-4">
                       <div className="flex items-center">
-                        <Clock className="h-3 w-3 mr-1 text-gray-400" />
+                        <Clock className="h-3 w-3 mr-1 text-gray-900" />
                         {exam.duration} mins
                       </div>
                     </td>
                     <td className="py-3 px-4">
                       <div className="w-[100px]">
                         <div className="flex items-center justify-between mb-1">
-                          <span className="text-xs text-gray-500">
+                          <span className="text-xs text-gray-900">
                             {exam.students.completed}/{exam.students.total} students
                           </span>
-                          <span className="text-xs font-medium">
+                          <span className="text-xs font-medium text-black">
                             {Math.round((exam.students.completed / exam.students.total) * 100) || 0}%
                           </span>
                         </div>
                         <div className="w-full bg-gray-200 rounded-full h-1.5">
                           <div
-                            className="bg-blue-600 h-1.5 rounded-full"
+                            className="bg-blue-600 h-1.5 rounded-full text-black"
                             style={{ width: `${(exam.students.completed / exam.students.total) * 100}%` }}
                           ></div>
                         </div>
@@ -377,7 +377,7 @@ export default function Exam() {
                     <td className="py-3 px-4">
                       {getStatusBadge(exam.status)}
                       {exam.status === 'completed' && exam.avgScore !== null && (
-                        <div className="text-xs text-gray-500 mt-1">
+                        <div className="text-xs text-gray-900 mt-1">
                           Avg. Score: {exam.avgScore}%
                         </div>
                       )}
@@ -385,14 +385,14 @@ export default function Exam() {
                     <td className="py-3 px-4 text-right">
                       <div className="flex justify-end gap-2">
                         <button
-                          className="p-1 rounded-md hover:bg-gray-100"
+                          className="p-1 rounded-md hover:bg-gray-100 text-black"
                           onClick={() => router.push(`/exams/${exam.id}`)}
                         >
                           <Eye className="h-4 w-4" />
                         </button>
                         {(exam.status === 'draft' || exam.status === 'scheduled') && (
                           <button
-                            className="p-1 rounded-md hover:bg-gray-100"
+                            className="p-1 rounded-md hover:bg-gray-100 text-black"
                             onClick={() => router.push(`/exams/${exam.id}/edit`)}
                           >
                             <Edit className="h-4 w-4" />
@@ -417,8 +417,8 @@ export default function Exam() {
       {/* Recent Activity */}
       <div className="border rounded-lg shadow-sm border-gray-300">
         <div className="p-4 border-b border-gray-300">
-          <h3 className="text-lg font-semibold">Recent Exam Activity</h3>
-          <p className="text-gray-500">Latest updates from the examination system</p>
+          <h3 className="text-lg font-semibold text-black">Recent Exam Activity</h3>
+          <p className="text-gray-900">Latest updates from the examination system</p>
         </div>
         <div className="p-4 space-y-4">
           <div className="flex items-start gap-4">
@@ -426,9 +426,9 @@ export default function Exam() {
               <CheckCircle className="h-4 w-4 text-green-600" />
             </div>
             <div>
-              <p className="text-sm font-medium">Mid-Term Mathematics Test completed</p>
-              <p className="text-xs text-gray-500">All 35 students have completed the exam with an average score of 72%</p>
-              <p className="text-xs text-gray-500 mt-1">2 hours ago</p>
+              <p className="text-sm font-medium text-black">Mid-Term Mathematics Test completed</p>
+              <p className="text-xs text-gray-900">All 35 students have completed the exam with an average score of 72%</p>
+              <p className="text-xs text-gray-900 mt-1">2 hours ago</p>
             </div>
           </div>
 
@@ -437,9 +437,9 @@ export default function Exam() {
               <Clock className="h-4 w-4 text-blue-600" />
             </div>
             <div>
-              <p className="text-sm font-medium">Physics Final Examination started</p>
-              <p className="text-xs text-gray-500">15 out of 24 students have started the exam</p>
-              <p className="text-xs text-gray-500 mt-1">4 hours ago</p>
+              <p className="text-sm font-medium text-black">Physics Final Examination started</p>
+              <p className="text-xs text-gray-900">15 out of 24 students have started the exam</p>
+              <p className="text-xs text-gray-900 mt-1">4 hours ago</p>
             </div>
           </div>
 
@@ -448,9 +448,9 @@ export default function Exam() {
               <Calendar className="h-4 w-4 text-yellow-600" />
             </div>
             <div>
-              <p className="text-sm font-medium">Biology Practical Test scheduled</p>
-              <p className="text-xs text-gray-500">Test scheduled for October 25, 2023 at 10:00 AM</p>
-              <p className="text-xs text-gray-500 mt-1">Yesterday</p>
+              <p className="text-sm font-medium text-black">Biology Practical Test scheduled</p>
+              <p className="text-xs text-gray-900">Test scheduled for October 25, 2023 at 10:00 AM</p>
+              <p className="text-xs text-gray-900 mt-1">Yesterday</p>
             </div>
           </div>
 
@@ -459,9 +459,9 @@ export default function Exam() {
               <FileText className="h-4 w-4 text-blue-600" />
             </div>
             <div>
-              <p className="text-sm font-medium">Computer Science Quiz created</p>
-              <p className="text-xs text-gray-500">45-minute quiz with 30 questions created by Mr. David Okafor</p>
-              <p className="text-xs text-gray-500 mt-1">2 days ago</p>
+              <p className="text-sm font-medium text-black">Computer Science Quiz created</p>
+              <p className="text-xs text-gray-900">45-minute quiz with 30 questions created by Mr. David Okafor</p>
+              <p className="text-xs text-gray-900 mt-1">2 days ago</p>
             </div>
           </div>
         </div>
